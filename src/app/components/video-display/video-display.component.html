@@ -1,0 +1,14 @@
+<div class="video-call-details">
+  <div class="form-group">
+    <label for="approvalStatus">Approval Status</label>
+    <input type="text" id="approvalStatus" class="form-control" [value]="approvalStatus | uppercase" readonly>
+  </div>
+  <div class="form-group">
+    <label for="approvalSubstatus">Approval Substatus</label>
+    <input type="text" id="approvalSubstatus" class="form-control" [value]="approvalSubstatus | uppercase" readonly>
+  </div>
+  <div class="form-group">
+    <label for="remarks">Remarks</label>
+    <textarea id="remarks" class="form-control" [value]="remarks" readonly></textarea>
+  </div>
+</div>

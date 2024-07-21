@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Spouse Financial Details</h2>
+  <form #spouseForm="ngForm">
+    <div class="form-group">
+      <label for="proofType">Proof Type:</label>
+      <input type="text" id="proofType" name="proofType" class="form-control" [(ngModel)]="proofType" required>
+    </div>
+    <div class="form-group">
+      <label for="grossIncome">Gross Income:</label>
+      <input type="number" id="grossIncome" name="grossIncome" class="form-control" [(ngModel)]="grossIncome" required>
+    </div>
+    <div class="form-group">
+      <label for="exemptedIncome">Exempted Income:</label>
+      <input type="number" id="exemptedIncome" name="exemptedIncome" class="form-control" [(ngModel)]="exemptedIncome" required>
+    </div>
+    <div class="form-group">
+      <label for="oneTimeIncome">One-Time Income:</label>
+      <input type="number" id="oneTimeIncome" name="oneTimeIncome" class="form-control" [(ngModel)]="oneTimeIncome" required>
+    </div>
+    <div class="form-group">
+      <label for="deductions">Deductions:</label>
+      <input type="number" id="deductions" name="deductions" class="form-control" [(ngModel)]="deductions" required>
+    </div>
+    <div class="form-group">
+      <label for="tax">Tax:</label>
+      <input type="number" id="tax" name="tax" class="form-control" [(ngModel)]="tax" required>
+    </div>
+    <div class="form-group">
+      <label for="totalIncome">Total Income:</label>
+      <input type="number" id="totalIncome" name="totalIncome" class="form-control" [(ngModel)]="totalIncome" readonly>
+    </div>
+    <div class="form-group">
+      <label for="netIncome">Net Income:</label>
+      <input type="number" id="netIncome" name="netIncome" class="form-control" [(ngModel)]="netIncome" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="saveSpouseFinancialDetails()">Save</button>
+  </form>
+</div>

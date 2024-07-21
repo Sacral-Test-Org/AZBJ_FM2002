@@ -1,0 +1,27 @@
+/* Styles for input field for partner name */
+.partner-name-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for display fields for gender, age, test number, and timestamp */
+.display-field {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.display-field label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.display-field span {
+  color: #333;
+}

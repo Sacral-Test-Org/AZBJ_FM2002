@@ -1,0 +1,22 @@
+<div class="search-cp-container">
+  <h2>Customer Partner Information</h2>
+  <div *ngIf="isSearching">Searching for partner ID...</div>
+  <div *ngIf="!isSearching && partnerInfo">
+    <div *ngIf="warningMessage" class="warning-message">{{ warningMessage }}</div>
+    <div class="partner-details">
+      <p><strong>Partner ID:</strong> {{ partnerInfo.partnerId }}</p>
+      <p><strong>Name:</strong> {{ partnerInfo.name }}</p>
+      <p><strong>Age:</strong> {{ partnerInfo.age }}</p>
+      <p><strong>Occupation:</strong> {{ partnerInfo.occupation }}</p>
+      <p><strong>Industry:</strong> {{ partnerInfo.industry }}</p>
+      <p><strong>Entry Age:</strong> {{ partnerInfo.entryAge }}</p>
+      <p><strong>Occupation Class:</strong> {{ partnerInfo.occupationClass }}</p>
+      <p><strong>Occupation Percentage:</strong> {{ partnerInfo.occupationPercentage }}</p>
+      <p><strong>NRI Loading:</strong> {{ partnerInfo.nriLoading }}</p>
+      <p><strong>Income Proof:</strong> {{ partnerInfo.incomeProof }}</p>
+    </div>
+  </div>
+  <div *ngIf="!isSearching && !partnerInfo">
+    No partner information available.
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="covers-block" *ngIf="isCoversBlockActive">
+  <!-- Covers Block Content -->
+  <div class="form-group">
+    <label for="percentageIncreaseSA" class="control-label" style="text-align: right;">% Increasing in SA</label>
+    <input type="text" id="percentageIncreaseSA" class="form-control" maxlength="30" placeholder="% Increasing in SA" [(ngModel)]="percentageIncreaseSA" (input)="onPercentageIncreaseSAInput($event)" />
+  </div>
+  <div class="form-group" *ngIf="isCashBonusVisible">
+    <label for="cashBonus" class="control-label" style="text-align: right; font-weight: bold;">Cash Bonus</label>
+    <input type="text" id="cashBonus" class="form-control" [(ngModel)]="cashBonus" (input)="onCashBonusInput($event)" />
+  </div>
+</div>

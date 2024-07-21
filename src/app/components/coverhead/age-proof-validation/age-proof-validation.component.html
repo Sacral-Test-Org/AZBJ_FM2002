@@ -1,0 +1,12 @@
+<div>
+  <h2>Age Proof Validation</h2>
+  <div *ngIf="ageProofType === 'Y'">
+    <p>Standard Age Proof</p>
+  </div>
+  <div *ngIf="ageProofType === 'N'">
+    <p>Non-standard Age Proof</p>
+  </div>
+  <div *ngIf="errorMessage">
+    <p class="error">{{ errorMessage }}</p>
+  </div>
+</div>

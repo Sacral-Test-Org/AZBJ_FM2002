@@ -1,0 +1,24 @@
+<div class="underwriting-details-container">
+  <div class="underwriting-record" *ngFor="let record of underwritingRecords | slice:0:5">
+    <div class="record-field">
+      <label>Underwriting Number:</label>
+      <span>{{ record.underwritingNumber }}</span>
+    </div>
+    <div class="record-field">
+      <label>User ID:</label>
+      <span>{{ record.userId }}</span>
+    </div>
+    <div class="record-field">
+      <label>Underwriting Date:</label>
+      <span>{{ record.underwritingDate | date }}</span>
+    </div>
+  </div>
+  <div class="scrollbar" *ngIf="underwritingRecords.length > 5">
+    <button (click)="scrollUp()">&#9650;</button>
+    <button (click)="scrollDown()">&#9660;</button>
+  </div>
+  <div class="record-actions">
+    <button (click)="addRecord()">Add Record</button>
+    <button (click)="updateRecord()">Update Record</button>
+  </div>
+</div>

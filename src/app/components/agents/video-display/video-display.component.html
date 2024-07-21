@@ -1,0 +1,6 @@
+<div *ngIf="videoUrl; else errorTemplate">
+  <iframe [src]="videoUrl | safeUrl" width="600" height="400" frameborder="0" allowfullscreen></iframe>
+</div>
+<ng-template #errorTemplate>
+  <p>Error: Unable to load the video. Please try again later.</p>
+</ng-template>

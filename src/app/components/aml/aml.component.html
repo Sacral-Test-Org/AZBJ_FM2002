@@ -1,0 +1,59 @@
+<div class="aml-container">
+  <form>
+    <div class="form-group">
+      <label for="documentDescription">Document Description</label>
+      <input type="text" id="documentDescription" class="form-control" [(ngModel)]="documentDescription" name="documentDescription">
+    </div>
+    <div class="form-group">
+      <label for="documentType">Document Type</label>
+      <input type="text" id="documentType" class="form-control" [(ngModel)]="documentType" name="documentType">
+    </div>
+    <div class="form-group">
+      <label for="mandatoryFlag">Mandatory Flag</label>
+      <input type="checkbox" id="mandatoryFlag" class="form-control" [(ngModel)]="mandatoryFlag" name="mandatoryFlag">
+    </div>
+    <div class="form-group">
+      <label for="value">Value</label>
+      <input type="text" id="value" class="form-control" [(ngModel)]="value" name="value" (input)="value = value.toUpperCase()" [readonly]="!isValueEditable">
+    </div>
+    <div class="form-group">
+      <label for="proofType">Proof Type</label>
+      <select id="proofType" class="form-control" [(ngModel)]="proofType" name="proofType">
+        <option *ngFor="let proof of proofTypes" [value]="proof.type">{{ proof.desc }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="documentId">Document ID</label>
+      <input type="text" id="documentId" class="form-control" [(ngModel)]="documentId" name="documentId" (input)="documentId = documentId.toUpperCase()" [readonly]="!isDocumentIdEditable">
+    </div>
+    <div class="form-group">
+      <label for="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" class="form-control" [(ngModel)]="expiryDate" name="expiryDate" placeholder="DD/MM/RRRR">
+    </div>
+    <div class="form-group">
+      <label for="oldPolicyReference">Old Policy Reference</label>
+      <input type="text" id="oldPolicyReference" class="form-control" [(ngModel)]="oldPolicyReference" name="oldPolicyReference">
+    </div>
+    <div class="form-group">
+      <label for="proofDescription">Proof Description</label>
+      <select id="proofDescription" class="form-control" [(ngModel)]="proofDescription" name="proofDescription">
+        <option *ngFor="let proof of proofDescriptions" [value]="proof.desc">{{ proof.desc }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="documentRemarks">Document Remarks</label>
+      <input type="text" id="documentRemarks" class="form-control" [(ngModel)]="documentRemarks" name="documentRemarks" maxlength="300" (blur)="onDocumentRemarksBlur()">
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="onPopulateAmlDetails()">Populate AML Details</button>
+    </div>
+    <div class="form-group">
+      <label for="editAmlDetails">Edit AML Details</label>
+      <input type="checkbox" id="editAmlDetails" class="form-control" [(ngModel)]="editAmlDetails" name="editAmlDetails" (change)="onEditAmlDetailsChange()">
+    </div>
+    <div class="form-group">
+      <label for="messageField">Message</label>
+      <input type="text" id="messageField" class="form-control" [(ngModel)]="messageField" name="messageField" readonly>
+    </div>
+  </form>
+</div>

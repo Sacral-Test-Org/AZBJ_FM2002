@@ -1,0 +1,37 @@
+.surrogate-income-proof-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.surrogate-income-proof-detail h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.surrogate-income-proof-detail .field {
+  margin-bottom: 15px;
+}
+
+.surrogate-income-proof-detail .field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.surrogate-income-proof-detail .field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.surrogate-income-proof-detail .error {
+  color: red;
+  margin-top: 10px;
+}

@@ -1,0 +1,24 @@
+<div class="approval-details">
+  <h2>Approval Details</h2>
+  <div class="detail-field">
+    <label for="approvalId">Approval ID:</label>
+    <span id="approvalId">{{ approval.id }}</span>
+  </div>
+  <div class="detail-field">
+    <label for="approvalName">Approval Name:</label>
+    <span id="approvalName">{{ approval.name }}</span>
+  </div>
+  <div class="detail-field">
+    <label for="approvalDate">Approval Date:</label>
+    <span id="approvalDate">{{ approval.date | date:'shortDate' }}</span>
+  </div>
+  <div class="detail-field">
+    <label for="approvalTime">Approval Time:</label>
+    <span id="approvalTime">{{ approval.time | date:'shortTime' }}</span>
+  </div>
+  <div class="detail-field">
+    <label for="approvalDecision">Approval Decision:</label>
+    <span id="approvalDecision">{{ approval.decision }}</span>
+  </div>
+  <button (click)="exitButtonHandler()">Exit</button>
+</div>

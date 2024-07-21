@@ -1,0 +1,30 @@
+<div class="duplicate-contact-no-container">
+  <h2>Duplicate Contact Numbers</h2>
+  <div *ngIf="duplicateContacts.length > 0; else noDuplicates">
+    <table>
+      <thead>
+        <tr>
+          <th>Policy Number/Agent Code</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>IP Number</th>
+          <th>Participant ID</th>
+          <th>CHKSUP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of duplicateContacts">
+          <td>{{ contact.policyNumberOrAgentCode }}</td>
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.contact }}</td>
+          <td>{{ contact.ipNumber }}</td>
+          <td>{{ contact.participantId }}</td>
+          <td><input type="checkbox" [(ngModel)]="contact.chksup" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noDuplicates>
+    <p>No duplicate contact numbers found.</p>
+  </ng-template>
+</div>

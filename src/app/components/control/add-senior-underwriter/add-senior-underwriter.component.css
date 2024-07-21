@@ -1,0 +1,18 @@
+/* Styles for the Add Senior Underwriter view */
+
+/* Input Field Styles */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

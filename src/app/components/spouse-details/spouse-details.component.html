@@ -1,0 +1,39 @@
+<div class="spouse-details">
+  <form>
+    <!-- Spouse Surname Field -->
+    <div>
+      <label for="spouseSurname">Spouse Surname:</label>
+      <input type="text" id="spouseSurname" name="spouseSurname" (input)="validateSpouseSurname()">
+    </div>
+
+    <!-- Spouse Name Field -->
+    <div>
+      <label for="spouseName">Spouse Name:</label>
+      <input type="text" id="spouseName" name="spouseName" (input)="validateSpouseName()">
+    </div>
+
+    <!-- Spouse Date of Birth Field -->
+    <div>
+      <label for="spouseDOB">Spouse Date of Birth:</label>
+      <input type="date" id="spouseDOB" name="spouseDOB" (input)="validateSpouseDOB()">
+      <div id="dobWarning" class="warning-message"></div>
+    </div>
+
+    <!-- Proof Type Field -->
+    <div>
+      <label for="proofType">Proof Type:</label>
+      <select id="proofType" name="proofType" (change)="onProofTypeSelect($event)">
+        <option *ngFor="let proofType of proofTypes" [value]="proofType.id">{{ proofType.name }}</option>
+      </select>
+    </div>
+
+    <!-- Calculated Net Profit Field -->
+    <div>
+      <label for="netProfit">Calculated Net Profit:</label>
+      <input type="text" id="netProfit" name="netProfit" [value]="calculatedNetProfit" readonly>
+    </div>
+
+    <!-- Toolbar Buttons -->
+    <app-horizontal-toolbar></app-horizontal-toolbar>
+  </form>
+</div>

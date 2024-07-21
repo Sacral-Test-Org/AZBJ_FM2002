@@ -1,0 +1,35 @@
+<div class="crm-comments-section" style="background-color: gray; padding: 20px;">
+  <div *ngFor="let comment of comments; let i = index" 
+       [ngStyle]="{'display': i < 8 ? 'block' : 'none'}" 
+       class="comment-record" 
+       style="margin-bottom: 10px; padding: 10px; background-color: white; color: black;">
+    <div class="question" style="margin-bottom: 5px;">
+      <strong>Question:</strong> {{comment.question}}
+    </div>
+    <div class="comment" style="margin-bottom: 5px;">
+      <strong>Comment:</strong> {{comment.comment}}
+    </div>
+    <div class="user" style="margin-bottom: 5px;">
+      <strong>User:</strong> {{comment.user}}
+    </div>
+    <div class="date">
+      <strong>Date:</strong> {{comment.date | date:'shortDate'}}
+    </div>
+  </div>
+  <div *ngIf="comments.length > 8" class="scrollbar" style="overflow-y: scroll; height: 200px;">
+    <div *ngFor="let comment of comments.slice(8)" class="comment-record" style="margin-bottom: 10px; padding: 10px; background-color: white; color: black;">
+      <div class="question" style="margin-bottom: 5px;">
+        <strong>Question:</strong> {{comment.question}}
+      </div>
+      <div class="comment" style="margin-bottom: 5px;">
+        <strong>Comment:</strong> {{comment.comment}}
+      </div>
+      <div class="user" style="margin-bottom: 5px;">
+        <strong>User:</strong> {{comment.user}}
+      </div>
+      <div class="date">
+        <strong>Date:</strong> {{comment.date | date:'shortDate'}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="client-environment-validation">
+  <!-- Validation Status Display -->
+  <div *ngIf="validationStatus" class="validation-status">
+    {{ validationStatus }}
+  </div>
+
+  <!-- Error Messages Display -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Rate Button -->
+  <button mat-raised-button (click)="onRateButtonClick()" matTooltip="Validate Policy">
+    Rate
+  </button>
+
+  <!-- Validate Policy Button -->
+  <button mat-raised-button (click)="onValidatePolicyClick()">
+    Validate Policy
+  </button>
+
+  <!-- Validate Button -->
+  <button mat-raised-button (click)="onValidateButtonClick()">
+    Validate
+  </button>
+
+  <!-- Reason for Manual Button -->
+  <button mat-raised-button (click)="onReasonForManualClick()">
+    Reason for Manual
+  </button>
+
+  <!-- Manual Case Push Messages Display -->
+  <div *ngIf="manualCasePushMessages" class="manual-case-push-messages">
+    <div *ngFor="let message of manualCasePushMessages">
+      {{ message }}
+    </div>
+  </div>
+</div>

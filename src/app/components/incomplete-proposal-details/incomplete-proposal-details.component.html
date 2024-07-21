@@ -1,0 +1,32 @@
+<div class="incomplete-proposal-details">
+  <h2>Incomplete Proposal Details</h2>
+  <div>
+    <label for="proposalFormField">Proposal Form Field</label>
+    <select id="proposalFormField" [(ngModel)]="selectedProposalFormField">
+      <option *ngFor="let field of proposalFormFields" [value]="field">{{ field }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="detailsReceived">Details Received</label>
+    <select id="detailsReceived" [(ngModel)]="detailsReceived">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+  </div>
+  <div>
+    <label for="comments">Comments</label>
+    <textarea id="comments" [(ngModel)]="comments" maxlength="1000"></textarea>
+  </div>
+  <div>
+    <button (click)="onSaveClick()">Save</button>
+    <button (click)="onAddRowClick()">Add Row</button>
+    <button (click)="onDeleteClick()">Delete</button>
+    <button (click)="onBackButtonClick()">Back</button>
+  </div>
+  <div *ngFor="let detail of incompleteProposalDetails; let i = index">
+    <input type="checkbox" [(ngModel)]="detail.selected" />
+    <span>{{ detail.field }}</span>
+    <span>{{ detail.received }}</span>
+    <span>{{ detail.comment }}</span>
+  </div>
+</div>

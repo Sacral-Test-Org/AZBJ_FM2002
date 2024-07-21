@@ -1,0 +1,44 @@
+/* Styles for the SOM Details Component */
+
+/* Cancel Button Styles */
+.cancel-button {
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  font-size: 14px; /* Font size */
+  padding: 10px 20px; /* Padding */
+  margin: 10px 0; /* Margin */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* SOM ID Field Styles */
+.som-id-field {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  position: absolute; /* Absolute positioning */
+  left: 89px; /* X coordinate */
+  top: 77px; /* Y coordinate */
+  font-family: Tahoma; /* Font family */
+  font-size: 8px; /* Font size */
+  font-weight: 300; /* Demilight weight */
+}
+
+/* SOM ID Field Prompt Styles */
+.som-id-prompt {
+  font-family: Tahoma; /* Font family */
+  font-size: 9px; /* Font size */
+  font-weight: bold; /* Bold weight */
+}
+
+/* Read-only Field Styles */
+.read-only-field {
+  pointer-events: none; /* Disable interactions */
+}
+
+/* Disable Double-click Action */
+.no-double-click {
+  -webkit-user-select: none; /* Disable text selection for double-click */
+  -moz-user-select: none; /* Disable text selection for double-click */
+  -ms-user-select: none; /* Disable text selection for double-click */
+  user-select: none; /* Disable text selection for double-click */
+}

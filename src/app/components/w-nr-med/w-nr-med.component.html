@@ -1,0 +1,25 @@
+<div>
+  <form>
+    <div>
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" (input)="validateComments()" (mouseenter)="showTooltip()" (mousemove)="showTooltip()" (dblclick)="showTooltip()"></textarea>
+      <div *ngIf="commentsError" class="error">{{ commentsError }}</div>
+      <div *ngIf="tooltipContent" class="tooltip">{{ tooltipContent }}</div>
+    </div>
+    <div>
+      <label for="testNo">Test No:</label>
+      <input id="testNo" name="testNo" disabled (click)="onTestNoClick()" (focus)="onTestNoEnter()" />
+    </div>
+    <div>
+      <label for="dateCalled">Date Called:</label>
+      <input id="dateCalled" name="dateCalled" [value]="dateCalled" readonly />
+    </div>
+    <div>
+      <label for="receiptStatus">Receipt Status:</label>
+      <select id="receiptStatus" name="receiptStatus" (change)="handleReceiptStatusChange($event)">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,259 @@
+<div>
+  <!-- Exit Button to navigate to comments section -->
+  <button (click)="onExit()">Exit</button>
+
+  <!-- Clear Button to navigate to CFT section and reset data -->
+  <button (click)="clearButtonHandler()">Clear</button>
+
+  <!-- Populate Questions Button and fields for question description and question ID -->
+  <button (click)="onPopulateQuestionButtonClick()">Populate question</button>
+  <input type="text" placeholder="Question Description" [(ngModel)]="questionDescription" />
+  <input type="text" placeholder="Question ID" [(ngModel)]="questionId" />
+
+  <!-- Save Button for saving responses to questions -->
+  <button (click)="saveResponses()">Save</button>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  <div *ngIf="confirmationMessage">{{ confirmationMessage }}</div>
+
+  <!-- Relation with Staff field in Policy Holder tab -->
+  <input type="text" placeholder="Relation with Staff" style="position: absolute; left: 621px; top: 600px; background-color: white; font-family: Tahoma; font-weight: bold;" />
+
+  <!-- CRM Comments Button and Section -->
+  <button (click)="crmCommentsButtonHandler()">CRM comments</button>
+  <div *ngIf="crmComments">
+    <div *ngFor="let comment of crmComments">
+      <p>{{ comment.description }}</p>
+    </div>
+  </div>
+
+  <!-- Exit Button to return to main tab view -->
+  <button (click)="onExit()">Exit</button>
+
+  <!-- Show PH Signature Button -->
+  <button (click)="showPhSignatureButton()">Show PH Signature</button>
+
+  <!-- Cancel Button to navigate to insured person details -->
+  <button (click)="onCancel()">Cancel</button>
+
+  <!-- Proof of Relationship field with validation message -->
+  <input type="text" placeholder="Proof of Relationship" (input)="validateProofOfRelationship($event)" />
+  <div *ngIf="proofOfRelationshipError">{{ proofOfRelationshipError }}</div>
+
+  <!-- Save Button for duplicate contact handling -->
+  <button (click)="saveDuplicateContact()">Save</button>
+  <div *ngIf="duplicateContactNotification" class="notification">Duplicate contact detected</div>
+  <div *ngIf="insuredPersonDetails">
+    <input type="text" [(ngModel)]="insuredPersonName" />
+  </div>
+
+  <!-- Enrichment Details Button -->
+  <button (click)="handleEnrichmentDetailsClick()">Enrichment Details</button>
+
+  <!-- Relationship Status Dropdown, Approve Button, Supervisor Check Checkbox, Save Button -->
+  <select [(ngModel)]="relationshipStatus" (change)="onRelationshipStatusChange()">
+    <option *ngFor="let status of relationshipStatuses" [value]="status">{{ status }}</option>
+  </select>
+  <button (click)="approve()">Approve</button>
+  <input type="checkbox" [(ngModel)]="supervisorCheck" />
+  <button (click)="save()">Save</button>
+
+  <!-- Partner Type Selection and relevant data display fields -->
+  <select [(ngModel)]="partnerType" (change)="onPartnerTypeChange()">
+    <option *ngFor="let type of partnerTypes" [value]="type">{{ type }}</option>
+  </select>
+  <div *ngIf="partnerData">
+    <!-- Display partner data here -->
+  </div>
+
+  <!-- Beneficial Ownership Button -->
+  <button (click)="onBeneficialOwnershipButtonClick()">Beneficial Ownership</button>
+
+  <!-- Suspected CP Details Button -->
+  <button (click)="onSuspectedCPDetailsClick()">Suspected CP Details</button>
+
+  <!-- Removal Flag and Error Message -->
+  <input type="text" [(ngModel)]="removalFlag" (change)="onRemovalFlagChange()" />
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <!-- Exit Button for CONTROL block -->
+  <button (click)="handleExitButtonClick()">Exit</button>
+
+  <!-- Dropdown List for Matching Criteria -->
+  <label for="matchOnlyBy">Match Only By</label>
+  <select id="matchOnlyBy" [(ngModel)]="matchOnlyBy" style="position: absolute; left: 165px; top: 75px; width: 136px; height: 21px;">
+    <option *ngFor="let option of matchOnlyByOptions" [value]="option">{{ option }}</option>
+  </select>
+
+  <!-- Exit Button for Risk Score Details -->
+  <button (click)="handleExitButtonClick()">Exit</button>
+
+  <!-- Minor Life Details Button -->
+  <button (click)="handleMinorLifeDetailsClick()">Minor Life Details</button>
+
+  <!-- Cancel Button for Covers -->
+  <button (click)="onCancelClick()">Cancel</button>
+
+  <!-- Password Input Field -->
+  <input type="password" [(ngModel)]="password" (blur)="applyPasswordFieldStyle()" />
+
+  <!-- Supervisor ID Input Field -->
+  <input type="text" maxlength="10" [(ngModel)]="supervisorId" (input)="convertToUpperCase()" />
+
+  <!-- Doctor Mob App Info Button -->
+  <button (click)="onDoctorMobAppInfoClick()">Doctor Mob App Info</button>
+
+  <!-- Risk Score Details Button and Section -->
+  <button (click)="onRiskScoreDetailsButtonClick()">Risk Score details</button>
+  <div *ngIf="riskScoreDetails">
+    <!-- Display risk score details here -->
+  </div>
+
+  <!-- Login Credentials Input Fields and Messages -->
+  <input type="text" placeholder="Login ID" [(ngModel)]="loginId" />
+  <input type="password" placeholder="Password" [(ngModel)]="password" />
+  <button (click)="submitLogin()">Submit</button>
+  <div *ngIf="loginMessage">{{ loginMessage }}</div>
+
+  <!-- Supervisor Approval Button and Error Message Display -->
+  <button (click)="handleSupervisorApproval()">Supervisor Approval</button>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <!-- SPW Flag Checkbox and SPW Percentage Field -->
+  <input type="checkbox" [(ngModel)]="spwFlag" (change)="onSpwFlagChange()" />
+  <input type="text" [(ngModel)]="spwPercentage" [disabled]="!spwFlag" />
+
+  <!-- Calculate Button -->
+  <button (click)="onCalculateButtonClick()">Calculate</button>
+
+  <!-- SPW Freq Dropdown Field -->
+  <select [(ngModel)]="spwFreq">
+    <option *ngFor="let freq of spwFreqOptions" [value]="freq">{{ freq }}</option>
+  </select>
+
+  <!-- Exit Button for CONTROL block -->
+  <button (click)="handleExitButtonClick()">Exit</button>
+
+  <!-- Dropdown for selecting premium payer and financial details sections -->
+  <select [(ngModel)]="premiumPayer" (change)="onPremiumPayerChange()">
+    <option *ngFor="let payer of premiumPayers" [value]="payer">{{ payer }}</option>
+  </select>
+  <div *ngIf="financialDetails">
+    <!-- Display financial details here -->
+  </div>
+  <div *ngIf="spouseFinancialDetails">
+    <!-- Display spouse financial details here -->
+  </div>
+  <div *ngIf="liquidInvestmentDetails">
+    <!-- Display liquid investment details here -->
+  </div>
+  <div *ngIf="beneficialOwnershipDetails">
+    <!-- Display beneficial ownership details here -->
+  </div>
+
+  <!-- Refresh Button and Matched Records Display -->
+  <button (click)="onRefreshButtonClick()">Refresh</button>
+  <div *ngIf="matchedRecords">
+    <!-- Display matched records here -->
+  </div>
+
+  <!-- DRC Category Field with Double-click Event -->
+  <input type="text" [(ngModel)]="drcCategory" (dblclick)="onDrcCategoryDoubleClick($event)" />
+
+  <!-- RCU Reasons Button -->
+  <button (click)="onRcuReasonsClick()">RCU Reasons</button>
+
+  <!-- Input Field for Agent Code and Display Area for Agent Details -->
+  <input type="text" [(ngModel)]="agentCode" (change)="onAgentCodeChange()" />
+  <div *ngIf="agentDetails">
+    <!-- Display agent details here -->
+  </div>
+
+  <!-- CRIF Score List Element and Confirmation Message -->
+  <select [(ngModel)]="crifScore" (change)="onCrifListItemChange()">
+    <option *ngFor="let score of crifScores" [value]="score">{{ score }}</option>
+  </select>
+  <div *ngIf="confirmationMessage">{{ confirmationMessage }}</div>
+
+  <!-- Dropdown List for Relationship to Child and Modal Window for Nominee/Child Cover Details -->
+  <select [(ngModel)]="relationshipToChild">
+    <option *ngFor="let relationship of relationshipsToChild" [value]="relationship">{{ relationship }}</option>
+  </select>
+  <div *ngIf="showNomineeChildCoverDetails" class="modal">
+    <!-- Nominee/Child Cover Details content here -->
+  </div>
+
+  <!-- Refer To Supervisor Checkbox and Supervisor List -->
+  <input type="checkbox" [(ngModel)]="referToSupervisor" (change)="onReferToSupervisorChange()" />
+  <div *ngIf="referToSupervisor">
+    <!-- Supervisor list content here -->
+  </div>
+
+  <!-- Add Senior Underwriter Button and Form -->
+  <button (click)="addSUUser()">Add Senior Underwriter</button>
+  <div *ngIf="showAddSUUserForm">
+    <!-- Add SU User form content here -->
+  </div>
+
+  <!-- Remove Split Policy Checkbox and Remove Split Reason Field -->
+  <input type="checkbox" [(ngModel)]="removeSplitPolicy" (change)="onRemoveSplitPolicyChange()" />
+  <select [(ngModel)]="removeSplitReason" [disabled]="!removeSplitPolicy">
+    <option *ngFor="let reason of removeSplitReasons" [value]="reason">{{ reason }}</option>
+  </select>
+
+  <!-- CRIF List Item Change Event -->
+  <select [(ngModel)]="crifListItem" (change)="onCrifListItemChange()">
+    <option *ngFor="let item of crifListItems" [value]="item">{{ item }}</option>
+  </select>
+
+  <!-- Error Messages and Validation Checks -->
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  <input type="text" [(ngModel)]="uwDecision" placeholder="UW Decision" />
+  <input type="text" [(ngModel)]="uwComments" placeholder="UW Comments" />
+
+  <!-- Remove Split Reason Field in AML Tab -->
+  <select [(ngModel)]="removeSplitReason" [disabled]="!removeSplitPolicy" style="position: absolute; left: 711px; top: 394px; width: 153px; height: 20px; background-color: gray; color: black; font-family: 'MS Sans Serif'; font-size: 8px; font-weight: bold;">
+    <option *ngFor="let reason of removeSplitReasons" [value]="reason">{{ reason }}</option>
+  </select>
+
+  <!-- Retention Flag and Reason Field -->
+  <select [(ngModel)]="retentionFlag" (change)="onRetentionFlagChange()">
+    <option *ngFor="let flag of retentionFlags" [value]="flag">{{ flag }}</option>
+  </select>
+  <input type="text" [(ngModel)]="retentionReason" *ngIf="showRetentionReason" />
+  <div *ngIf="confirmationMessage">{{ confirmationMessage }}</div>
+
+  <!-- Reinsurance Flag Reason Field and Confirmation Alert -->
+  <select [(ngModel)]="reinsuranceFlag" (change)="onReinsuranceFlagChange()">
+    <option *ngFor="let flag of reinsuranceFlags" [value]="flag">{{ flag }}</option>
+  </select>
+  <input type="text" [(ngModel)]="reinsuranceFlagReason" *ngIf="showReinsuranceFlagReason" />
+  <div *ngIf="confirmationMessage">{{ confirmationMessage }}</div>
+
+  <!-- Previous Policy Button and View -->
+  <button (click)="onPreviousPolicyClick()">Previous Policy</button>
+  <div *ngIf="previousPolicyDetails">
+    <!-- Display previous policy details here -->
+  </div>
+
+  <!-- OK Button and Fields for Underwriting Review, Decision, and Comments -->
+  <button (click)="onOkClick()">OK</button>
+  <input type="checkbox" [(ngModel)]="underwritingReview" />
+  <input type="text" [(ngModel)]="underwritingDecision" placeholder="Underwriting Decision" />
+  <input type="text" [(ngModel)]="underwritingComments" placeholder="Underwriting Comments" />
+
+  <!-- DOB Match List Item -->
+  <select [(ngModel)]="dobMatch">
+    <option *ngFor="let match of dobMatches" [value]="match">{{ match }}</option>
+  </select>
+
+  <!-- OK Button for Video Calling -->
+  <button (click)="onOkButtonClick()">OK</button>
+
+  <!-- Video Calling Status Button -->
+  <button (click)="onVideoCallingStatusClick()">Video Calling Status</button>
+
+  <!-- Name Match Dropdown Field -->
+  <select [(ngModel)]="nameMatch">
+    <option *ngFor="let match of nameMatches" [value]="match">{{ match }}</option>
+  </select>
+</div>

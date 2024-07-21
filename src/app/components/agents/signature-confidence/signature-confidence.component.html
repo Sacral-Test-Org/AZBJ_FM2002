@@ -1,0 +1,19 @@
+<div class="signature-confidence-container">
+  <h2>Signature Confidence Details</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Document Name</th>
+        <th>Signature Confidence Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of signatureConfidenceDetails">
+        <td>{{ detail.signatureName }}</td>
+        <td>{{ detail.totalConf }}%</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="exit()">Exit</button>
+  <button (click)="masterSignature()">Master Signature</button>
+</div>

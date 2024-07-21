@@ -1,0 +1,14 @@
+<div>
+  <h2>KYC Response</h2>
+  <div *ngIf="kycResponse">
+    <p><strong>PAN Number:</strong> {{ kycResponse.panNumber || 'N/A' }}</p>
+    <p><strong>Date of Birth:</strong> {{ kycResponse.dateOfBirth || 'N/A' }}</p>
+    <p><strong>Sex:</strong> {{ kycResponse.sex || 'N/A' }}</p>
+    <p><strong>First Name:</strong> {{ kycResponse.firstName || 'N/A' }}</p>
+    <p><strong>Middle Name:</strong> {{ kycResponse.middleName || 'N/A' }}</p>
+    <p><strong>Surname:</strong> {{ kycResponse.surname || 'N/A' }}</p>
+  </div>
+  <div *ngIf="!kycResponse">
+    <p>No KYC response available.</p>
+  </div>
+</div>

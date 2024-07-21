@@ -1,0 +1,21 @@
+/* Styles for the lateral shift checkbox component */
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox-container input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.checkbox-label {
+  font-size: 16px;
+  color: #333;
+}
+
+.checkbox-container input[type='checkbox']:checked + .checkbox-label {
+  font-weight: bold;
+  color: #007bff;
+}

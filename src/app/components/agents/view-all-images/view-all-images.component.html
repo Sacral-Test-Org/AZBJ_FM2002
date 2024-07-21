@@ -1,0 +1,9 @@
+<div class="image-container">
+  <button (click)="onViewAllImagesClick()">View All Images</button>
+  <div *ngFor="let image of images">
+    <img *ngIf="!isPdf(image.path)" [src]="image.path" alt="Image" />
+    <object *ngIf="isPdf(image.path)" [data]="image.path" type="application/pdf" width="100%" height="500px">
+      <p>PDF cannot be displayed.</p>
+    </object>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.susac-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.susac-field {
+  margin-bottom: 15px;
+}
+
+.susac-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.susac-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e9e9e9;
+}
+
+.susac-total {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c9302c;
+}

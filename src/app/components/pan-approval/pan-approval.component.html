@@ -1,0 +1,26 @@
+<div class="pan-approval-form">
+  <form>
+    <div class="form-group">
+      <label for="ageProof">Age Proof</label>
+      <input type="text" id="ageProof" name="ageProof" [(ngModel)]="ageProof" required>
+    </div>
+    <div class="form-group">
+      <label for="ageProofId">Age Proof ID</label>
+      <input type="text" id="ageProofId" name="ageProofId" [(ngModel)]="ageProofId" required>
+    </div>
+    <div class="form-group">
+      <label for="panIssuanceDate">PAN Issuance Date</label>
+      <input type="date" id="panIssuanceDate" name="panIssuanceDate" [(ngModel)]="panIssuanceDate" required>
+    </div>
+    <div class="form-group">
+      <label for="underwritingReasons">Underwriting Reasons</label>
+      <textarea id="underwritingReasons" name="underwritingReasons" [(ngModel)]="underwritingReasons" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="supervisorComments">Supervisor Comments</label>
+      <textarea id="supervisorComments" name="supervisorComments" [(ngModel)]="supervisorComments" required></textarea>
+    </div>
+    <button type="button" (click)="onSupervisorApproval()">Supervisor Approval</button>
+    <button type="button" (click)="onExitButtonClick()">EXIT</button>
+  </form>
+</div>

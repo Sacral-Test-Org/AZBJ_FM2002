@@ -1,0 +1,49 @@
+<div class="rider-container">
+  <h2>Manage Rider Information</h2>
+  <form>
+    <div class="form-group">
+      <label for="riderCode">Rider Code</label>
+      <input type="text" id="riderCode" name="riderCode" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="riderDescription">Rider Description</label>
+      <input type="text" id="riderDescription" name="riderDescription" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="sumAssured">Sum Assured</label>
+      <input type="number" id="sumAssured" name="sumAssured" class="form-control" />
+    </div>
+  </form>
+  <div class="rider-list">
+    <div *ngFor="let rider of riders; let i = index" class="rider-item" [class.odd]="i % 2 === 1">
+      <div>{{ rider.riderCode }}</div>
+      <div>{{ rider.riderDescription }}</div>
+      <div>{{ rider.sumAssured }}</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .rider-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .rider-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .rider-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  .rider-item.odd {
+    background-color: #f9f9f9;
+  }
+</style>

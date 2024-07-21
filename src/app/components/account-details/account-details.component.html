@@ -1,0 +1,51 @@
+<div class="account-details-form">
+  <form>
+    <div>
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="accountDetails.accountNumber" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="accountHolderName">Account Holder Name:</label>
+      <input type="text" id="accountHolderName" name="accountHolderName" [(ngModel)]="accountDetails.accountHolderName" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="bankName">Bank Name:</label>
+      <input type="text" id="bankName" name="bankName" [(ngModel)]="accountDetails.bankName" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="branch">Branch:</label>
+      <input type="text" id="branch" name="branch" [(ngModel)]="accountDetails.branch" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="micr">MICR:</label>
+      <input type="text" id="micr" name="micr" [(ngModel)]="accountDetails.micr" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="ifscCode">IFSC Code:</label>
+      <input type="text" id="ifscCode" name="ifscCode" [(ngModel)]="accountDetails.ifscCode" (blur)="handleIfscInput()" [disabled]="bypassBankDetails">
+    </div>
+    <div>
+      <label for="typeOfAccount">Type of Account:</label>
+      <select id="typeOfAccount" name="typeOfAccount" [(ngModel)]="accountDetails.typeOfAccount" (change)="onAccountTypeChange($event)">
+        <option *ngFor="let type of accountTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="relationshipWithPremiumPayer">Relationship with Premium Payer:</label>
+      <select id="relationshipWithPremiumPayer" name="relationshipWithPremiumPayer" [(ngModel)]="accountDetails.relationshipWithPremiumPayer">
+        <option *ngFor="let relationship of relationships" [value]="relationship">{{ relationship }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="bypassBankDetails">Bypass Bank Details:</label>
+      <input type="checkbox" id="bypassBankDetails" name="bypassBankDetails" [(ngModel)]="bypassBankDetails" (change)="handleBypassCheckboxChange($event)">
+    </div>
+    <div>
+      <label for="pennyDropStatus">Penny Drop Transaction Status:</label>
+      <input type="text" id="pennyDropStatus" name="pennyDropStatus" [(ngModel)]="accountDetails.pennyDropStatus" readonly>
+    </div>
+    <div>
+      <button type="button" (click)="displaySameBankDetails()">Same Bank Dtls</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="rcu-comments-form">
+  <h2>RCU Comments</h2>
+  <form>
+    <div class="form-group">
+      <label for="policyNo">Policy Number:</label>
+      <input type="text" id="policyNo" name="policyNo" [(ngModel)]="policyNo" disabled />
+    </div>
+    <div class="form-group">
+      <label for="moduleName">Module Name:</label>
+      <input type="text" id="moduleName" name="moduleName" [(ngModel)]="moduleName" disabled />
+    </div>
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" [(ngModel)]="comments"></textarea>
+    </div>
+    <button type="submit" (click)="submitComments()">Submit</button>
+  </form>
+</div>

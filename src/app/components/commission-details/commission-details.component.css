@@ -1,0 +1,50 @@
+/* Styles for the commission details screen */
+
+.commission-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.commission-details-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.commission-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.commission-details-table th, .commission-details-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.commission-details-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.commission-details-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.commission-details-table tr:hover {
+  background-color: #ddd;
+}
+
+.commission-details-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.commission-details-button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,37 @@
+/* Styles for the List of Values (LOV) UI */
+
+.lov-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.lov-header {
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.lov-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.lov-item:hover {
+  background-color: #e0e0e0;
+}
+
+.lov-item.selected {
+  background-color: #d0d0d0;
+}
+
+.lov-no-data {
+  padding: 10px;
+  text-align: center;
+  color: #999;
+}

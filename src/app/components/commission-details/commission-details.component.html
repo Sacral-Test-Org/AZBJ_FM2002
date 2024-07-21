@@ -1,0 +1,21 @@
+<div class="commission-details-container">
+  <h2>Commission Details</h2>
+  <table class="commission-details-table">
+    <thead>
+      <tr>
+        <th>Commission ID</th>
+        <th>Agent Code</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let commission of commissions">
+        <td>{{ commission.id }}</td>
+        <td>{{ commission.agentCode }}</td>
+        <td>{{ commission.amount }}</td>
+        <td>{{ commission.date | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

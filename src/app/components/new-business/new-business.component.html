@@ -1,0 +1,49 @@
+<div class="new-business">
+  <div class="toolbar">
+    <span>User ID: {{ userId }}</span>
+    <span>Effective Date: {{ effectiveDate }}</span>
+    <span>Reason Code: {{ reasonCode }}</span>
+    <button (click)="abortMovement()">Abort Movement</button>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="Insured Person">
+      <app-insured-person></app-insured-person>
+    </mat-tab>
+    <mat-tab label="Policy Holder">
+      <app-policy-holder></app-policy-holder>
+    </mat-tab>
+    <mat-tab label="Premium Payer/Beneficiaries">
+      <app-premium-payer></app-premium-payer>
+    </mat-tab>
+    <mat-tab label="Covers">
+      <app-covers></app-covers>
+    </mat-tab>
+    <mat-tab label="Agent">
+      <app-agent></app-agent>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="details-section">
+    <label for="details">Details if Marked Yes</label>
+    <input id="details" type="text" maxlength="1000" [readonly]="true" style="background-color: white; color: black;" />
+  </div>
+  <div class="relationship-details">
+    <label for="relationship">Relationship Details</label>
+    <input id="relationship" type="text" maxlength="25" style="background-color: white; font-weight: bold;" />
+    <button (click)="addRelationship()">Add</button>
+    <button (click)="updateRelationship()">Update</button>
+    <ul>
+      <li *ngFor="let detail of relationshipDetails">{{ detail }}</li>
+    </ul>
+  </div>
+  <div class="lifestyle-radio-group" style="position: absolute; left: 513px; top: 77px; width: 90px; height: 18px; background-color: gray; color: black;">
+    <label>
+      <input type="radio" name="lifestyle" value="S" checked [readonly]="true" /> S
+    </label>
+  </div>
+  <div class="partner-selection">
+    <label for="partner">Partner Selection</label>
+    <select id="partner" [readonly]="true" style="background-color: white;">
+      <option *ngFor="let option of partnerOptions">{{ option }}</option>
+    </select>
+  </div>
+</div>

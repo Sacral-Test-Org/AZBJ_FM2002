@@ -1,0 +1,89 @@
+<div>
+  <!-- Error message display area for share percentage validation -->
+  <div *ngIf="sharePercentageError" class="error-message">
+    Share Percentage cannot be more than 100%.
+  </div>
+
+  <!-- 'Nomination not opted' checkbox -->
+  <label>
+    <input type="checkbox" (change)="onNominationNotOptedChange($event)" [(ngModel)]="nominationNotOpted" />
+    Nomination not opted
+  </label>
+
+  <!-- Beneficiary fields -->
+  <div *ngIf="!nominationNotOpted">
+    <label>
+      Beneficiary Name:
+      <input type="text" [(ngModel)]="beneficiaryName" />
+    </label>
+    <label>
+      Date of Birth:
+      <input type="date" [(ngModel)]="beneficiaryDOB" />
+    </label>
+    <label>
+      Place of Birth:
+      <input type="text" [(ngModel)]="beneficiaryPlaceOfBirth" />
+    </label>
+    <label>
+      Relation:
+      <input type="text" [(ngModel)]="beneficiaryRelation" />
+    </label>
+    <label>
+      Applicant Name:
+      <input type="text" [(ngModel)]="applicantName" />
+    </label>
+    <label>
+      Applicant Relation:
+      <input type="text" [(ngModel)]="applicantRelation" />
+    </label>
+    <label>
+      Applicant Date of Birth:
+      <input type="date" [(ngModel)]="applicantDOB" />
+    </label>
+    <label>
+      Multiple Nominees:
+      <input type="text" [(ngModel)]="multipleNominees" />
+    </label>
+    <button (click)="deleteNominee()">Delete Beneficiary</button>
+  </div>
+
+  <!-- Gender selection dropdown for appointee -->
+  <label>
+    Gender:
+    <select [(ngModel)]="appointeeGender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
+  <!-- Surname field -->
+  <label>
+    Surname:
+    <input type="text" (blur)="validateSurnameField()" [(ngModel)]="beneficiarySurname" />
+  </label>
+
+  <!-- Beneficiary Relationship Field -->
+  <label>
+    Beneficiary Relationship:
+    <input type="text" [(ngModel)]="beneficiaryRelationship" />
+  </label>
+
+  <!-- Add Multiple Nominee Button -->
+  <button (click)="addMultipleNomineeButtonHandler()">Add Multiple Nominee</button>
+
+  <!-- Appointee Name Field -->
+  <label>
+    Appointee Name:
+    <input type="text" (blur)="validateAppointeeName(appointeeName)" [(ngModel)]="appointeeName" />
+  </label>
+
+  <!-- Beneficiary Date of Birth Field -->
+  <label>
+    Beneficiary Date of Birth:
+    <input type="date" (blur)="validateBeneficiaryDOB(beneficiaryDOB)" [(ngModel)]="beneficiaryDOB" />
+  </label>
+
+  <!-- Add Trustee/Beneficiary Button -->
+  <button (click)="addTrusteeBeneficiary()">Add Trustee/Beneficiary</button>
+</div>

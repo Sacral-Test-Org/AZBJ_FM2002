@@ -1,0 +1,31 @@
+<div class="fund-list-container">
+  <ul class="fund-list">
+    <li *ngFor="let fund of funds" class="fund-item">
+      <span class="fund-name">{{ fund.name }}</span>
+      <span class="fund-percentage">{{ fund.percentage }}%</span>
+    </li>
+  </ul>
+</div>
+
+<style>
+.fund-list-container {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+.fund-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fund-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.fund-name, .fund-percentage {
+  font-size: 16px;
+}
+</style>

@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Underwriting Questions</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Question ID</th>
+        <th>Question Description</th>
+        <th>Select Question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let question of questions; let i = index" [hidden]="i >= 10">
+        <td><input type="text" [(ngModel)]="question.id" /></td>
+        <td><input type="text" [(ngModel)]="question.description" /></td>
+        <td><input type="checkbox" [(ngModel)]="question.selected" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="questions.length > 10" class="scroll-container">
+    <button (click)="scrollUp()">Up</button>
+    <button (click)="scrollDown()">Down</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="proposal-type-lov-container" style="position: absolute; top: 227px; left: 477px; width: 80px;">
+  <label for="proposalType" style="font-family: 'MS Sans Serif'; font-size: 8pt; font-weight: bold; color: black;">of IP Proposal Type</label>
+  <input id="proposalType" type="text" (dblclick)="showLOV()" style="width: 100%; background-color: white; color: black; font-family: 'MS Sans Serif'; font-size: 8pt; text-align: start;" />
+  <div *ngIf="lovVisible" class="lov-dropdown" style="position: absolute; z-index: 1000; background-color: white; border: 1px solid black;">
+    <table>
+      <thead>
+        <tr>
+          <th style="width: auto;">Display Name</th>
+          <th style="width: auto;">Internal Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of proposalTypes" (click)="selectProposalType(item)">
+          <td>{{ item.display_name }}</td>
+          <td>{{ item.internal_value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

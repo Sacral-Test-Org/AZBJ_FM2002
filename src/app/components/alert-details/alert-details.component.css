@@ -1,0 +1,75 @@
+/* General styles for the alert details component */
+
+.alert-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-details-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alert-details-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.alert-details-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.alert-details-field input,
+.alert-details-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.alert-details-field input[readonly],
+.alert-details-field textarea[readonly] {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.radio-group label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .alert-details-container {
+    padding: 10px;
+  }
+
+  .alert-details-field,
+  .radio-group {
+    max-width: 100%;
+  }
+}

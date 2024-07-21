@@ -1,0 +1,137 @@
+<div class="policy-member-container">
+  <h2>Manage Policy Members</h2>
+  <button (click)="addMember()">Add Member</button>
+  <button (click)="deleteMember()">Delete Member</button>
+  <label>
+    <input type="checkbox" (change)="onCalculateSACheckboxChange($event)" [disabled]="!isCalculateSAEnabled" /> Calculate SA
+  </label>
+  <button (click)="validateMember()">Validate</button>
+  <button (click)="declineMember()">Decline Member</button>
+  <button (click)="loadMemberDetails()">Member Loading</button>
+
+  <div class="validation-section">
+    <button (click)="validateMemberQuestions()">Validate Questions</button>
+    <button (click)="submitMemberForm()">Submit</button>
+  </div>
+
+  <div class="relation-selection">
+    <label for="relation">Relation:</label>
+    <select id="relation" (change)="onRelationSelect($event.target.value)">
+      <option *ngFor="let relation of relations" [value]="relation">{{ relation }}</option>
+    </select>
+  </div>
+
+  <div class="dropdown-section">
+    <label for="months">Months:</label>
+    <select id="months">
+      <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+    </select>
+  </div>
+
+  <div class="dropdown-section">
+    <label for="days">Days:</label>
+    <select id="days">
+      <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+    </select>
+  </div>
+
+  <div class="dropdown-section">
+    <label for="years">Yrs:</label>
+    <select id="years">
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+
+  <div class="form-status">
+    <button (click)="handleFormStatus()">Set Form Status</button>
+  </div>
+
+  <div class="navigation-section">
+    <button (click)="navigateToQuestions()">Navigate to Questions</button>
+  </div>
+
+  <div class="age-proof-section">
+    <label for="ageProof">Age Proof:</label>
+    <input id="ageProof" (dblclick)="onAgeProofDoubleClick()" />
+  </div>
+
+  <div class="delete-member-section">
+    <button (click)="deleteMemberButton()">Delete Member</button>
+  </div>
+
+  <div class="add-covers-section">
+    <label>
+      <input type="checkbox" (change)="addCoversCheckbox()" /> Add Covers
+    </label>
+    <div *ngIf="showWarningMessage" class="warning-message">
+      Please select the member relation...!
+    </div>
+  </div>
+
+  <div class="policy-member-details">
+    <table>
+      <thead>
+        <tr>
+          <th>Part ID</th>
+          <th>Policy Member Name</th>
+          <th>Date of Birth (DOB)</th>
+          <th>Serial Number (SR No)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of policyMembers">
+          <td>{{ member.partId }}</td>
+          <td>{{ member.name }}</td>
+          <td>{{ member.dob }}</td>
+          <td>{{ member.serialNumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="calculate-sa-section">
+    <label>
+      <input type="checkbox" (change)="onCalculateSACheckboxChange($event)" /> Calculate SA
+    </label>
+  </div>
+
+  <div class="policy-details-section">
+    <label for="relationship">Relationship:</label>
+    <input id="relationship" (input)="handleInputChange($event)" />
+
+    <label for="companyName">Company Name:</label>
+    <input id="companyName" (input)="handleInputChange($event)" />
+
+    <label for="sumAssured">Sum Assured:</label>
+    <input id="sumAssured" type="number" (input)="handleInputChange($event)" />
+
+    <label for="premiumAmount">Premium Amount:</label>
+    <input id="premiumAmount" type="number" (input)="handleInputChange($event)" />
+  </div>
+
+  <div class="decline-member-section">
+    <button (click)="declineMemberButtonClick()">Decline Member</button>
+  </div>
+
+  <div class="lateral-shift-section">
+    <label>
+      <input type="checkbox" (change)="onLateralShiftCheckboxChange()" /> Lateral Shift
+    </label>
+  </div>
+
+  <div class="member-loading-section">
+    <button (click)="onMemberLoadingButtonClick()">Member Loading</button>
+  </div>
+
+  <div class="weight-height-section">
+    <label for="weight">Weight:</label>
+    <input id="weight" type="number" (input)="validateWeight($event.target.value)" />
+
+    <label for="height">Height:</label>
+    <input id="height" type="number" (input)="heightValidation($event.target.value)" />
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="mobile-apps-doctor-details">
+  <h1>Mobile Apps Doctor Details</h1>
+  <form>
+    <div class="form-group">
+      <label for="doctorCode">Doctor Code</label>
+      <input type="text" id="doctorCode" name="doctorCode" [(ngModel)]="doctorCode" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="partnerName">Partner Name</label>
+      <input type="text" id="partnerName" name="partnerName" [(ngModel)]="partnerName" maxlength="200" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="ageOfClient">Age of Client</label>
+      <input type="text" id="ageOfClient" name="ageOfClient" [(ngModel)]="ageOfClient" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input type="text" id="gender" name="gender" [(ngModel)]="gender" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="testConducted">Test Conducted</label>
+      <input type="text" id="testConducted" name="testConducted" [(ngModel)]="testConducted" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="timeStamp">Time Stamp</label>
+      <input type="text" id="timeStamp" name="timeStamp" [(ngModel)]="timeStamp" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="longitude">Longitude</label>
+      <input type="text" id="longitude" name="longitude" [(ngModel)]="longitude" maxlength="100" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="latitude">Latitude</label>
+      <input type="text" id="latitude" name="latitude" [(ngModel)]="latitude" maxlength="100" class="form-control" />
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="exit()" class="btn btn-danger">Exit</button>
+      <button type="button" (click)="viewImages()" class="btn btn-primary">View Images</button>
+      <button type="button" (click)="viewLocation()" class="btn btn-secondary">View Location</button>
+    </div>
+  </form>
+</div>

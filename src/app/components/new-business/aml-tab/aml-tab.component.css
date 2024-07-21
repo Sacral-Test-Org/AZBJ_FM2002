@@ -1,0 +1,23 @@
+/* Styling for the AML tab */
+
+/* Gray background for the tabbed interface */
+.aml-tab {
+  background-color: gray;
+  padding: 20px;
+}
+
+/* White background for the partner selection dropdown */
+.partner-selection-dropdown {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Positioning the partner selection field at specified coordinates */
+.partner-selection-container {
+  position: absolute;
+  top: 50px; /* Example coordinate, adjust as needed */
+  left: 20px; /* Example coordinate, adjust as needed */
+}

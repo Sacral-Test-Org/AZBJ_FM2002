@@ -1,0 +1,30 @@
+/* Styles for VideoDisplayComponent */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.read-only {
+  background-color: #e9ecef;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #495057;
+}

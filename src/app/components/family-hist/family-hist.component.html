@@ -1,0 +1,28 @@
+<div class="family-hist">
+  <h2>Family History</h2>
+  <form>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" [(ngModel)]="ageInput" (ngModelChange)="displayValidationError()" />
+      <app-validation-error *ngIf="validationError" [message]="validationError"></app-validation-error>
+    </div>
+    <div>
+      <label for="ageDied">Age Died:</label>
+      <input type="number" id="ageDied" name="ageDied" [(ngModel)]="ageDiedInput" (ngModelChange)="displayValidationError()" />
+      <app-validation-error *ngIf="validationError" [message]="validationError"></app-validation-error>
+    </div>
+    <div>
+      <label for="causeOfDeath">Cause of Death:</label>
+      <select id="causeOfDeath" name="causeOfDeath" [(ngModel)]="causeOfDeath">
+        <option *ngFor="let option of causeOfDeathOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="familyMember">Family Member:</label>
+      <app-dropdown-menu [options]="familyMembers" (selectionChange)="onFamilyMemberChange($event)"></app-dropdown-menu>
+    </div>
+    <div>
+      <button type="button" (click)="deleteMember()">Delete Member</button>
+    </div>
+  </form>
+</div>

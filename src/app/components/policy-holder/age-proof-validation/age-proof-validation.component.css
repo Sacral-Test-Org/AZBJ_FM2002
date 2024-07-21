@@ -1,0 +1,56 @@
+/* Styles for Age Proof Validation Component */
+
+/* Container for the age proof validation form */
+.age-proof-validation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form fields */
+.age-proof-validation-form .form-field {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style for buttons */
+.age-proof-validation-form .form-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.age-proof-validation-form .form-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Style for enabled fields */
+.enabled-field {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Style for disabled fields */
+.disabled-field {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  border-radius: 4px;
+}

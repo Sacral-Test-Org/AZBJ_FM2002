@@ -1,0 +1,28 @@
+/* CSS styles for validation error messages in the bbprocess component */
+
+.validation-error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.validation-error::before {
+  content: 'Error: ';
+}
+
+.validation-error-container {
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.validation-error-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.validation-error-container li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,24 @@
+.owner-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.shares-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.total-shares-display {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}

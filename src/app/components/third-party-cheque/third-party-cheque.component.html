@@ -1,0 +1,22 @@
+<div class="third-party-cheque-form">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="paymentMode">Payment Mode:</label>
+      <input type="text" id="paymentMode" name="paymentMode" [(ngModel)]="paymentMode" required />
+    </div>
+
+    <div class="form-group">
+      <label for="questions">Questions:</label>
+      <textarea id="questions" name="questions" [(ngModel)]="questions" maxlength="1000" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="confidencePercentage">Confidence Percentage:</label>
+      <select id="confidencePercentage" name="confidencePercentage" [(ngModel)]="confidencePercentage" required>
+        <option *ngFor="let percentage of confidencePercentages" [value]="percentage">{{ percentage }}%</option>
+      </select>
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+/* Purpose: To style the validation error messages. */
+
+/* Dependencies: None */
+
+/* Interconnections: validation-error.component.html, validation-error.component.ts */
+
+/* Properties: Styles for error messages */
+
+/* Styling for validation error messages */
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.error-message-container {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.error-icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.error-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Additional styles for better user experience */
+
+.error-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.error-list-item {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,21 @@
+/* Style for validation error messages */
+
+.validation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Specific style for OCC Perc field error */
+.occ-perc-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Specific style for Medical Loading Percentage field error */
+.medical-loading-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

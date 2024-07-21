@@ -1,0 +1,19 @@
+<div *ngIf="selectedSurrogateIncomeProof">
+  <h2>Surrogate Income Proof Details</h2>
+  <div>
+    <label>Type:</label>
+    <span>{{ selectedSurrogateIncomeProof.type }}</span>
+  </div>
+  <div>
+    <label>Description:</label>
+    <span>{{ selectedSurrogateIncomeProof.description }}</span>
+  </div>
+  <div>
+    <label>Amount:</label>
+    <span>{{ selectedSurrogateIncomeProof.amount }}</span>
+  </div>
+</div>
+
+<div *ngIf="!selectedSurrogateIncomeProof">
+  <p>Please select a surrogate income proof from the list.</p>
+</div>

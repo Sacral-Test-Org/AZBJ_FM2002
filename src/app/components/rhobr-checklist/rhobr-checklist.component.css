@@ -1,0 +1,79 @@
+/* Styles for the RHOBR checklist component */
+
+/* General styles for the checklist container */
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the read-only fields */
+.read-only-field {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the checkbox */
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Styles for the date and user fields */
+.date-user-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.date-user-field input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Styles for the buttons */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Exit button styles */
+.button-container .exit-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Change Status to RHOBR button styles */
+.button-container .change-status-button {
+  background-color: #007bff;
+  color: white;
+  display: none; /* Initially hidden */
+}
+
+/* Show the Change Status to RHOBR button when a specific condition is met */
+.button-container .change-status-button.visible {
+  display: inline-block;
+}

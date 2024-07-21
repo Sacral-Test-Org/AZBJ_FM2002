@@ -1,0 +1,35 @@
+<div class="previous-policy-window">
+  <h2>Previous Policy Details</h2>
+  <div class="grid-container">
+    <table class="policy-grid">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>User ID</th>
+          <th>Previous Underwriting Decision</th>
+          <th>Activities</th>
+          <th>Underwriting Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let decision of previousDecisions; let i = index" [hidden]="i >= 5">
+          <td>{{ decision.serialNumber }}</td>
+          <td>{{ decision.userId }}</td>
+          <td>
+            <select disabled>
+              <option *ngFor="let option of decisionOptions" [value]="option" [selected]="option === decision.previousDecision">
+                {{ option }}
+              </option>
+            </select>
+          </td>
+          <td>{{ decision.activities }}</td>
+          <td>{{ decision.comments }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="scrollbar">
+      <button (click)="scrollUp()">&#9650;</button>
+      <button (click)="scrollDown()">&#9660;</button>
+    </div>
+  </div>
+</div>

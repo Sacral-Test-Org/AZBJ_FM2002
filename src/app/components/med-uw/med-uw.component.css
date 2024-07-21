@@ -1,0 +1,51 @@
+/* Styling for the Locked list item */
+.locked-list-item {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 50px; /* Example coordinate, adjust as needed */
+  left: 20px; /* Example coordinate, adjust as needed */
+  color: #000;
+  pointer-events: none; /* Disable interaction */
+  opacity: 0.5; /* Indicate that it is disabled */
+}
+
+/* Styling for the dropdown menu and its label */
+.dropdown-menu {
+  position: relative;
+  width: 100px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+}
+
+.dropdown-menu-label {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styling for the Fee Payable status list item */
+.fee-payable-list-item {
+  position: relative;
+  top: 100px; /* Example coordinate, adjust as needed */
+  left: 20px; /* Example coordinate, adjust as needed */
+  pointer-events: none; /* Disable interaction */
+  opacity: 0.5; /* Indicate that it is disabled */
+}
+
+.fee-payable-label {
+  font-weight: bold;
+}
+
+/* Styling for the Test No field and its prompt */
+.test-no-field {
+  position: relative;
+  top: 150px; /* Example coordinate, adjust as needed */
+  left: 20px; /* Example coordinate, adjust as needed */
+  pointer-events: none; /* Disable interaction */
+  opacity: 0.5; /* Indicate that it is disabled */
+}
+
+.test-no-prompt {
+  font-weight: bold;
+  text-align: left;
+}

@@ -1,0 +1,13 @@
+<div>
+  <!-- Button to generate BI report -->
+  <button (click)="onGenerateBiReport()">Generate BI Report</button>
+
+  <!-- GST Field to display the calculated GST amount -->
+  <div>
+    <label for="gstAmount">GST Amount:</label>
+    <input type="text" id="gstAmount" [value]="gstAmount" readonly />
+  </div>
+
+  <!-- Validation Error Component -->
+  <app-validation-error *ngIf="validationError" [errorMessage]="validationError"></app-validation-error>
+</div>

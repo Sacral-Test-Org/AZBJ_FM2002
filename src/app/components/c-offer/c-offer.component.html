@@ -1,0 +1,15 @@
+<div class="c-offer">
+  <button (click)="onCloseButtonClick()">Close</button>
+  <button (click)="backButtonHandler()">Back</button>
+  <div class="rider-info">
+    <label for="riderCode">Rider Code:</label>
+    <input id="riderCode" type="text" [(ngModel)]="riderCode">
+    <label for="riderDescription">Rider Description:</label>
+    <input id="riderDescription" type="text" [(ngModel)]="riderDescription">
+    <label for="sumAssured">Sum Assured:</label>
+    <input id="sumAssured" type="number" [(ngModel)]="sumAssured">
+  </div>
+  <div class="revised-offer-details">
+    <a [routerLink]="['/revised-offer-details']">View Revised Offer Details</a>
+  </div>
+</div>

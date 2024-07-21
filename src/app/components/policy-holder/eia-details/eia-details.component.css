@@ -1,0 +1,86 @@
+/* Styles for the EIA Details Component */
+
+/* Container for EIA Details */
+.eia-details-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+/* Header for EIA Details */
+.eia-details-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form fields styling */
+.eia-details-form .form-group {
+  margin-bottom: 15px;
+}
+
+.eia-details-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.eia-details-form .form-group input,
+.eia-details-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.eia-details-form .form-group button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.eia-details-form .form-group button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.eia-details-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Success message styling */
+.eia-details-success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .eia-details-container {
+    padding: 10px;
+  }
+
+  .eia-details-header {
+    font-size: 20px;
+  }
+
+  .eia-details-form .form-group input,
+  .eia-details-form .form-group select {
+    padding: 8px;
+  }
+
+  .eia-details-form .form-group button {
+    padding: 8px 16px;
+  }
+}

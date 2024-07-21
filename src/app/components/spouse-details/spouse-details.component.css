@@ -1,0 +1,46 @@
+/* Styles for the spouse details form */
+
+/* Style for input fields */
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for warning messages */
+.warning-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Style for buttons */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* Style for the calculated net profit field */
+.net-profit-field {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}

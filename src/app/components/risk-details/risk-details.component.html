@@ -1,0 +1,69 @@
+<div class="questionnaire-tab">
+  <h2>Risk Details</h2>
+  <div class="risk-details">
+    <div class="field">
+      <label>Policy Number:</label>
+      <span>{{ policy.policyNumber }}</span>
+    </div>
+    <div class="field">
+      <label>Contract ID:</label>
+      <span>{{ policy.contractId }}</span>
+    </div>
+    <div class="field">
+      <label>Sum Assured:</label>
+      <span>{{ policy.sumAssured }}</span>
+    </div>
+    <div class="field">
+      <label>Date of Risk:</label>
+      <span>{{ policy.dateOfRisk }}</span>
+    </div>
+    <div class="field">
+      <label>Product Name:</label>
+      <span>{{ policy.productName }}</span>
+    </div>
+    <div class="field">
+      <label>Annual Premium:</label>
+      <span>{{ policy.annualPremium }}</span>
+    </div>
+    <div class="field">
+      <label>Term of Acceptance:</label>
+      <span>{{ policy.termOfAcceptance }}</span>
+    </div>
+    <div class="field">
+      <label>Time Stamp:</label>
+      <span>{{ policy.timeStamp }}</span>
+    </div>
+    <div class="field">
+      <label>Paid By:</label>
+      <span>{{ policy.paidBy }}</span>
+    </div>
+    <div class="field">
+      <label>Main Cover Rated Up:</label>
+      <span>{{ policy.mainCoverRatedUp }}</span>
+    </div>
+    <div class="field">
+      <label>Reason for Rating:</label>
+      <span>{{ policy.reasonForRating }}</span>
+    </div>
+    <div class="field">
+      <label>Value:</label>
+      <span>{{ policy.value }}</span>
+    </div>
+    <div class="field">
+      <label>Rider Cover Rated Up:</label>
+      <span>{{ policy.riderCoverRatedUp }}</span>
+    </div>
+    <div class="field">
+      <label>BT:</label>
+      <span>{{ policy.bt }}</span>
+    </div>
+    <div class="field">
+      <label>PT:</label>
+      <span>{{ policy.pt }}</span>
+    </div>
+    <div class="buttons">
+      <button (click)="viewImages()">View Images</button>
+      <button (click)="viewAdverseFactors()">View Adverse Factors</button>
+    </div>
+  </div>
+</div>

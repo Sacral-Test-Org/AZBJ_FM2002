@@ -1,0 +1,25 @@
+<div class="family-history-section">
+  <label for="familyMemberDropdown" class="dropdown-label">Family Member</label>
+  <select id="familyMemberDropdown" class="dropdown-menu" [(ngModel)]="selectedFamilyMember" (change)="onFamilyMemberChange()" size="3">
+    <option *ngFor="let member of familyMembers" [value]="member.id">
+      {{ member.name }}
+    </option>
+  </select>
+</div>
+
+<style>
+  .family-history-section {
+    position: relative;
+    margin: 20px;
+  }
+  .dropdown-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .dropdown-menu {
+    width: 100%;
+    max-height: 100px;
+    overflow: hidden;
+  }
+</style>

@@ -1,0 +1,42 @@
+<div class="reasons-list-container">
+  <ul class="reasons-list">
+    <li *ngFor="let reason of reasons" class="reason-item">
+      <span class="reason-text">{{ reason.text | slice:0:200 }}</span>
+    </li>
+  </ul>
+  <div class="scrollbar" *ngIf="reasons.length > 6">
+    <div class="scrollbar-thumb"></div>
+  </div>
+</div>
+
+<style>
+.reasons-list-container {
+  max-height: 300px; /* Adjust based on your design */
+  overflow-y: auto;
+}
+.reasons-list {
+  list-style-type: none;
+  padding: 0;
+}
+.reason-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.reason-text {
+  display: block;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.scrollbar {
+  position: relative;
+  height: 100%;
+  width: 10px;
+  background: #f1f1f1;
+}
+.scrollbar-thumb {
+  background: #888;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+}
+</style>

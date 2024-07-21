@@ -1,0 +1,49 @@
+<div class="risk-score-container">
+  <h2>Risk Score Details</h2>
+  <table class="risk-score-table">
+    <thead>
+      <tr>
+        <th>Parameters</th>
+        <th>Value in Proposal</th>
+        <th>Branch Risk Score</th>
+        <th>DE-QC Risk Score</th>
+        <th>Total Risk Score</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let riskScore of riskScores">
+        <td>{{ riskScore.parameters }}</td>
+        <td>{{ riskScore.valueInProposal }}</td>
+        <td>{{ riskScore.branchRiskScore }}</td>
+        <td>{{ riskScore.deQcRiskScore }}</td>
+        <td>{{ riskScore.totalRiskScore }}</td>
+        <td>
+          <button (click)="editRiskScore(riskScore)">Edit</button>
+          <button (click)="deleteRiskScore(riskScore.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="risk-score-form">
+    <h3>{{ isEditMode ? 'Edit Risk Score' : 'Add New Risk Score' }}</h3>
+    <form (ngSubmit)="onSubmit()">
+      <label for="parameters">Parameters:</label>
+      <input type="text" id="parameters" [(ngModel)]="riskScoreForm.parameters" name="parameters" required>
+
+      <label for="valueInProposal">Value in Proposal:</label>
+      <input type="text" id="valueInProposal" [(ngModel)]="riskScoreForm.valueInProposal" name="valueInProposal" required>
+
+      <label for="branchRiskScore">Branch Risk Score:</label>
+      <input type="number" id="branchRiskScore" [(ngModel)]="riskScoreForm.branchRiskScore" name="branchRiskScore" required>
+
+      <label for="deQcRiskScore">DE-QC Risk Score:</label>
+      <input type="number" id="deQcRiskScore" [(ngModel)]="riskScoreForm.deQcRiskScore" name="deQcRiskScore" required>
+
+      <label for="totalRiskScore">Total Risk Score:</label>
+      <input type="number" id="totalRiskScore" [(ngModel)]="riskScoreForm.totalRiskScore" name="totalRiskScore" required>
+
+      <button type="submit">{{ isEditMode ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+</div>

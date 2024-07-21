@@ -1,0 +1,93 @@
+/* General styles for the insurance cover details component */
+.cover-details {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Specific styles for the CV_FREQ_NRI_AMT field */
+.cv-freq-nri-amt {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  max-length: 15;
+}
+
+/* Specific styles for the CV_FREQ_SR_AMT field */
+.cv-freq-sr-amt {
+  text-align: right;
+  max-length: 15;
+  width: 47px;
+  height: 18px;
+}
+
+/* Styles for input fields and display elements */
+.input-field {
+  margin-bottom: 10px;
+}
+
+/* Styles for dropdown lists */
+.dropdown-list {
+  margin: 10px 0;
+}
+
+/* Styles for the SPW Freq dropdown list */
+.spw-freq-dropdown {
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* Styles for the Money Back Option list */
+.money-back-option {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Styles for the Annuity Option dropdown list and label */
+.annuity-option {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styles for the Income Payout Frequency list and prompt */
+.income-payout-frequency {
+  background-color: white;
+  color: black;
+}
+.income-payout-frequency-prompt {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Custom styles for the Loan Disbursed Date field */
+.loan-disbursed-date {
+  background-color: #f0f0f0;
+}
+
+/* Styles for the Home Loan Type dropdown list */
+.home-loan-type {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+/* Styles for the Salaried Rebate Flag checkbox */
+.salaried-rebate-flag {
+  font-family: 'MS Sans Serif';
+  font-size: 8px;
+  font-weight: bold;
+  background-color: gray;
+  color: black;
+  width: 175px;
+  height: 21px;
+}
+
+/* Styles for the Insurance for All checkbox */
+.insurance-for-all {
+  display: none;
+}
+
+/* Styles for consistent alignment and formatting of fields */
+.right-justified {
+  text-align: right;
+}

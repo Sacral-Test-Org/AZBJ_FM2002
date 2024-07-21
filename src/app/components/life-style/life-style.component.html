@@ -1,0 +1,29 @@
+<div class="lifestyle-form">
+  <form>
+    <div class="form-group">
+      <label for="questionId">Question ID</label>
+      <input type="number" id="questionId" name="questionId" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="questionDescription">Question Description</label>
+      <textarea id="questionDescription" name="questionDescription" class="form-control" maxlength="2000" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="value">Value</label>
+      <input type="text" id="value" name="value" class="form-control" maxlength="2000" (input)="onValueChange($event)" style="text-transform:uppercase;" required>
+    </div>
+    <div class="form-group">
+      <label for="result">Result</label>
+      <select id="result" name="result" class="form-control" required>
+        <option value="Y">Y</option>
+        <option value="N">N</option>
+      </select>
+    </div>
+  </form>
+
+  <div class="radio-group" style="position: absolute; top: 75px; left: 81px; width: 90px; height: 18px; background-color: gray; color: black;">
+    <label>
+      <input type="radio" name="lifestyleRadio" value="S" checked readonly> S
+    </label>
+  </div>
+</div>

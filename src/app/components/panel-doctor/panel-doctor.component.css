@@ -1,0 +1,86 @@
+/* Styles for the panel doctor component */
+
+/* General styles for the panel doctor component */
+.panel-doctor-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles for the input fields */
+.input-field {
+  margin-bottom: 15px;
+}
+
+/* Styles for the buttons */
+.button {
+  margin-right: 10px;
+}
+
+/* Styles for the error message */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styles for the doctor details section */
+.doctor-details {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles for the doctor image */
+.doctor-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Styles for the populate button */
+.populate-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.populate-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the delete button */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Styles for the view images button */
+.view-images-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-images-button:hover {
+  background-color: #218838;
+}

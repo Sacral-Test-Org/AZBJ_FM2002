@@ -1,0 +1,18 @@
+<div class="driving-license-details">
+  <h2>Driving License Details</h2>
+  <div *ngIf="insuredPersonDrivingLicenseNumber || policyHolderDrivingLicenseNumber; else noDetails">
+    <div *ngIf="insuredPersonDrivingLicenseNumber">
+      <h3>Insured Person</h3>
+      <p><strong>Driving License Number:</strong> {{ insuredPersonDrivingLicenseNumber }}</p>
+      <p><strong>Date of Birth:</strong> {{ insuredPersonDOB }}</p>
+    </div>
+    <div *ngIf="policyHolderDrivingLicenseNumber">
+      <h3>Policy Holder</h3>
+      <p><strong>Driving License Number:</strong> {{ policyHolderDrivingLicenseNumber }}</p>
+      <p><strong>Date of Birth:</strong> {{ policyHolderDOB }}</p>
+    </div>
+  </div>
+  <ng-template #noDetails>
+    <p class="warning">Driving license details are not selected for the insured person or policyholder.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,16 @@
+<div class="lov-container" *ngIf="lovVisible">
+  <table>
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Policy Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of lovList" (dblclick)="selectItem(item)">
+        <td>{{ item.companyName }}</td>
+        <td>{{ item.policyName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

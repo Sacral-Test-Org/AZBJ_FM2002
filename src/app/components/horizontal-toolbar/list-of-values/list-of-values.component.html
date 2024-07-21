@@ -1,0 +1,9 @@
+<div>
+  <button (click)="onButtonClick()">Show List of Values</button>
+  <div *ngIf="showList">
+    <h3>Select a Value</h3>
+    <ul>
+      <li *ngFor="let value of values" (click)="selectValue(value)">{{ value }}</li>
+    </ul>
+  </div>
+</div>

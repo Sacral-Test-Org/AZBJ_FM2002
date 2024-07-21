@@ -1,0 +1,23 @@
+<div class="image-container">
+  <div class="image-wrapper" *ngFor="let image of images; let i = index">
+    <img [src]="image.src" [style.transform]="image.transform" alt="Image {{i + 1}}">
+    <div class="controls">
+      <button (click)="moveImage(i, 'left')">Left</button>
+      <button (click)="moveImage(i, 'right')">Right</button>
+      <button (click)="moveImage(i, 'up')">Up</button>
+      <button (click)="moveImage(i, 'down')">Down</button>
+      <button (click)="zoomImage(i, 'in')">Zoom In</button>
+      <button (click)="zoomImage(i, 'out')">Zoom Out</button>
+      <button (click)="resetZoom(i)">Reset Zoom</button>
+      <button (click)="printImage(i)">Print</button>
+    </div>
+    <div class="additional-info" *ngIf="image.showInfo">
+      <p>{{image.info}}</p>
+    </div>
+    <button (click)="toggleInfo(i)">{{image.showInfo ? 'Hide Info' : 'Show Info'}}</button>
+  </div>
+</div>
+<div class="navigation">
+  <button (click)="previousSet()">Previous</button>
+  <button (click)="nextSet()">Next</button>
+</div>

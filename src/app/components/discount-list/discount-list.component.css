@@ -1,0 +1,41 @@
+/* Center the discount list */
+.discount-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Specific width and height for the discount list */
+.discount-list {
+  width: 300px;
+  height: 400px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Bold prompt labeled 'Discount' */
+.discount-list h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* List items styling */
+.discount-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.discount-list ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.discount-list ul li:last-child {
+  border-bottom: none;
+}

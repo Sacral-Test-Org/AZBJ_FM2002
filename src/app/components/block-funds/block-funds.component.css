@@ -1,0 +1,43 @@
+/* Styles for the list element to display fund names and percentages */
+.fund-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fund-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.fund-list-item:last-child {
+  border-bottom: none;
+}
+
+.fund-name {
+  font-weight: bold;
+}
+
+.fund-percentage {
+  color: #666;
+}
+
+/* Styles for the scrollbar */
+.fund-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fund-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.fund-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -1,0 +1,22 @@
+/* Styles for validation error messages */
+
+.validation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.validation-error::before {
+  content: '⚠ '; /* Warning symbol */
+}
+
+.validation-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.validation-error-container .validation-error {
+  margin-left: 10px;
+}

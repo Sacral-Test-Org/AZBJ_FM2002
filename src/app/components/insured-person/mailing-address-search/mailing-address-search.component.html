@@ -1,0 +1,24 @@
+<div class="mailing-address-search">
+  <h2>Search Mailing Address for Insured Person</h2>
+  <form (ngSubmit)="onSearch()" #searchForm="ngForm">
+    <div class="form-group">
+      <label for="partner">Partner</label>
+      <select id="partner" name="partner" [(ngModel)]="selectedPartner" required>
+        <option *ngFor="let partner of partners" [value]="partner.id">{{ partner.name }}</option>
+      </select>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    <button type="submit" [disabled]="!selectedPartner">Search</button>
+  </form>
+
+  <div *ngIf="mailingAddress">
+    <h3>Mailing Address Details</h3>
+    <p>{{ mailingAddress }}</p>
+  </div>
+
+  <div *ngIf="!mailingAddress && searchAttempted">
+    <p>Please select a mailing address.</p>
+  </div>
+</div>

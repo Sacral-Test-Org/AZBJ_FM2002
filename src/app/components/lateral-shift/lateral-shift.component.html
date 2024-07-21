@@ -1,0 +1,69 @@
+<div class="lateral-shift-form">
+  <form>
+    <div>
+      <label for="ipNumber">IP Number:</label>
+      <input type="text" id="ipNumber" name="ipNumber" required>
+    </div>
+    <div>
+      <label for="partnerId">Partner ID:</label>
+      <input type="text" id="partnerId" name="partnerId" readonly>
+    </div>
+    <div>
+      <label for="partnerName">Partner Name:</label>
+      <input type="text" id="partnerName" name="partnerName" readonly>
+    </div>
+    <div>
+      <label for="oldPolicyReference">Old Policy Reference:</label>
+      <input type="text" id="oldPolicyReference" name="oldPolicyReference" required>
+    </div>
+    <div>
+      <label for="oldProduct">Old Product:</label>
+      <input type="text" id="oldProduct" name="oldProduct" (dblclick)="handleOldProductDoubleClick()" required>
+    </div>
+    <div>
+      <label for="oldSumAssured">Old Sum Assured:</label>
+      <input type="number" id="oldSumAssured" name="oldSumAssured" required>
+    </div>
+    <div>
+      <label for="oldDocumentDate">Old Document Date:</label>
+      <input type="date" id="oldDocumentDate" name="oldDocumentDate" required>
+    </div>
+    <div>
+      <label for="lastRenewalDate">Last Renewal Date:</label>
+      <input type="date" id="lastRenewalDate" name="lastRenewalDate" required>
+    </div>
+    <div>
+      <label for="continuousYears">Continuous Years:</label>
+      <select id="continuousYears" name="continuousYears" required>
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="continuousMonths">Continuous Months:</label>
+      <select id="continuousMonths" name="continuousMonths" required>
+        <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="continuousDays">Continuous Days:</label>
+      <select id="continuousDays" name="continuousDays" required>
+        <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="claimFreeFlag">Claim-Free Flag:</label>
+      <input type="checkbox" id="claimFreeFlag" name="claimFreeFlag">
+    </div>
+    <div>
+      <label for="waitingPeriod">Waiting Period:</label>
+      <input type="text" id="waitingPeriod" name="waitingPeriod" required>
+    </div>
+    <div>
+      <label for="oldCompany">Old Company:</label>
+      <input type="text" id="oldCompany" name="oldCompany" readonly>
+    </div>
+    <div>
+      <button type="button" (click)="saveButtonHandler()">Save</button>
+    </div>
+  </form>
+</div>

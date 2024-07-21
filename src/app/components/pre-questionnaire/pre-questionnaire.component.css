@@ -1,0 +1,39 @@
+/* Styles for the pre-questionnaire section */
+
+.pre-questionnaire-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pre-questionnaire-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.pre-questionnaire-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.pre-questionnaire-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #e9e9e9;
+  text-transform: uppercase;
+  pointer-events: none; /* Make the input read-only */
+}
+
+/* Additional spacing for clarity */
+.pre-questionnaire-field + .pre-questionnaire-field {
+  margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+<div class="age-proof-validation">
+  <h2>Age Proof Validation</h2>
+  <form [formGroup]="ageProofForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="ageProofType">Age Proof Type</label>
+      <select id="ageProofType" formControlName="ageProofType" class="form-control">
+        <option value="">Select Age Proof Type</option>
+        <option value="AC">Aadhaar Card</option>
+        <option value="ACS">Aadhaar Card (Special)</option>
+        <option value="Pan Card">Pan Card</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="ageProofId">Age Proof ID</label>
+      <input type="text" id="ageProofId" formControlName="ageProofId" class="form-control" />
+    </div>
+
+    <div *ngIf="validationMessage" class="alert alert-danger">
+      {{ validationMessage }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Validate</button>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Previous Fake Document Records</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Application Number</th>
+        <th>Document Description</th>
+        <th>Document Type</th>
+        <th>Document Category</th>
+        <th>Policy Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of records; let i = index" [hidden]="i >= 5">
+        <td>{{ record.serialNumber }}</td>
+        <td>{{ record.applicationNumber }}</td>
+        <td>{{ record.documentDescription }}</td>
+        <td>{{ record.documentType }}</td>
+        <td>{{ record.documentCategory }}</td>
+        <td>{{ record.policyNumber }}</td>
+        <td>
+          <button (click)="onView(record)">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="onExit()">Exit</button>
+</div>

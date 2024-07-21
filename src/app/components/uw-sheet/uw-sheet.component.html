@@ -1,0 +1,52 @@
+<div class="new-business">
+  <h1>New Business</h1>
+  <div class="nbtabs">
+    <div class="uw-sheet">
+      <div class="form-group">
+        <label for="rectNo">Rect. No.</label>
+        <input type="text" id="rectNo" name="rectNo" readonly>
+      </div>
+      <div class="form-group">
+        <label for="agentCode">Agent Code</label>
+        <input type="text" id="agentCode" name="agentCode" readonly>
+      </div>
+      <div class="form-group">
+        <label for="policyHolder">Policy Holder</label>
+        <input type="text" id="policyHolder" name="policyHolder" readonly>
+      </div>
+      <div class="form-group">
+        <label for="insuredBmi">BMI (Insured Person)</label>
+        <input type="text" id="insuredBmi" name="insuredBmi" readonly>
+      </div>
+      <div class="form-group">
+        <label for="policyHolderBmi">BMI (Policy Holder)</label>
+        <input type="text" id="policyHolderBmi" name="policyHolderBmi" readonly>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .new-business {
+    overflow-y: auto;
+  }
+  .nbtabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .uw-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[readonly] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+</style>

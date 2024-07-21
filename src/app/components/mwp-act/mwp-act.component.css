@@ -1,0 +1,78 @@
+/* Style for SIGN_DATE field */
+#sign-date {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for WITNESS_NAME field */
+#witness-name {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for Save button */
+#save-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for validation messages */
+.validation-message {
+  color: red;
+  font-size: 12px;
+}
+
+/* Style for dropdown list */
+.dropdown-list {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style for form layout */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+  margin: auto;
+}
+
+/* Style for form fields */
+.form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style for labels */
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}

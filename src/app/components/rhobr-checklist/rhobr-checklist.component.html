@@ -1,0 +1,31 @@
+<div class="checklist-container">
+  <h2>RHOBR Checklist</h2>
+  <div class="checklist-item">
+    <label for="requirementCode">Requirement Code:</label>
+    <input type="text" id="requirementCode" [value]="requirement.code" readonly />
+  </div>
+  <div class="checklist-item">
+    <label for="requirementDescription">Requirement Description:</label>
+    <input type="text" id="requirementDescription" [value]="requirement.description" readonly />
+  </div>
+  <div class="checklist-item">
+    <label for="requirementReceived">Requirement Completely Received:</label>
+    <input type="checkbox" id="requirementReceived" [(ngModel)]="requirement.received" (change)="onRequirementReceivedChange()" />
+  </div>
+  <div class="checklist-item">
+    <label for="requirementDate">Date Ticked:</label>
+    <input type="date" id="requirementDate" [value]="requirement.date" readonly />
+  </div>
+  <div class="checklist-item">
+    <label for="requirementUser">User:</label>
+    <input type="text" id="requirementUser" [value]="requirement.user" readonly />
+  </div>
+  <div class="checklist-item">
+    <label for="rhobrUserId">Rhobr User ID:</label>
+    <input type="text" id="rhobrUserId" [value]="requirement.rhobrUserId" readonly />
+  </div>
+  <div class="checklist-buttons">
+    <button (click)="onExit()">Exit</button>
+    <button id="changeStatusButton" (click)="onChangeStatusToRhobr()" [hidden]="!showChangeStatusButton">Change Status to RHOBR</button>
+  </div>
+</div>

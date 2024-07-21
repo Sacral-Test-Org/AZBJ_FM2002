@@ -1,0 +1,64 @@
+/* Styles for the UwCommentsComponent */
+
+/* Style for the container of the comments */
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Style for each comment item */
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style for the user ID and date & time fields */
+.comment-item .user-id,
+.comment-item .date-time {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Style for the comment text */
+.comment-item .comment-text {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Style for the buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container .add-comment-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button-container .refresh-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.button-container button:hover {
+  opacity: 0.8;
+}

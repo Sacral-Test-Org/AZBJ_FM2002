@@ -1,0 +1,28 @@
+/* Styles for validation error messages */
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-message.hidden {
+  display: none;
+}
+
+.error-container {
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.error-container .error-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.error-container .error-details {
+  margin-left: 10px;
+}

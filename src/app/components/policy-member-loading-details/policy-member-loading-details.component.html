@@ -1,0 +1,42 @@
+<div class="policy-member-loading-details">
+  <h2>Policy Member Loading Details</h2>
+  <form>
+    <div class="form-group">
+      <label for="ipNumber">IP Number:</label>
+      <input type="text" id="ipNumber" name="ipNumber" [(ngModel)]="policyMember.ipNumber" readonly />
+    </div>
+    <div class="form-group">
+      <label for="policyMemberName">Policy Member Name:</label>
+      <input type="text" id="policyMemberName" name="policyMemberName" [(ngModel)]="policyMember.policyMemberName" readonly />
+    </div>
+    <div class="form-group">
+      <label for="partId">Part ID:</label>
+      <input type="text" id="partId" name="partId" [(ngModel)]="policyMember.partId" readonly />
+    </div>
+    <div class="form-group">
+      <label for="relation">Relation:</label>
+      <input type="text" id="relation" name="relation" [(ngModel)]="policyMember.relation" />
+    </div>
+    <div class="form-group">
+      <label for="coverCode">Cover Code:</label>
+      <input type="text" id="coverCode" name="coverCode" [(ngModel)]="policyMember.coverCode" readonly />
+    </div>
+    <div class="form-group">
+      <label for="coverDescription">Cover Description:</label>
+      <input type="text" id="coverDescription" name="coverDescription" [(ngModel)]="policyMember.coverDescription" readonly />
+    </div>
+    <div class="form-group">
+      <label for="mlPercentage">ML Percentage:</label>
+      <input type="text" id="mlPercentage" name="mlPercentage" [(ngModel)]="policyMember.mlPercentage" readonly />
+    </div>
+    <div class="form-group">
+      <label for="mlAmount">ML Amount:</label>
+      <input type="text" id="mlAmount" name="mlAmount" [(ngModel)]="policyMember.mlAmount" readonly />
+    </div>
+    <div class="form-group">
+      <label for="annualMlAmount">Annual ML Amount:</label>
+      <input type="text" id="annualMlAmount" name="annualMlAmount" [(ngModel)]="policyMember.annualMlAmount" readonly />
+    </div>
+    <button type="button" (click)="goBack()">Back</button>
+  </form>
+</div>

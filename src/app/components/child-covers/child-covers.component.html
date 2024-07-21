@@ -1,0 +1,10 @@
+<div class="child-covers-section">
+  <h2>Child Covers</h2>
+  <button (click)="deleteButtonHandler()">Delete</button>
+  <div *ngFor="let cover of childCovers">
+    <!-- Display child cover details here -->
+  </div>
+</div>
+
+<!-- Nominee/Child Cover Details Section -->
+<app-child-cover-details *ngIf="showChildCoverDetails" (exit)="onExit()"></app-child-cover-details>

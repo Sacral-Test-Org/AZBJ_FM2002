@@ -1,0 +1,94 @@
+/* Styles for Proposal Actions Component */
+
+/* Clear any existing issue button disable messages */
+.clear-issue-button {
+  display: none;
+}
+
+/* Save the current status of the proposal */
+.save-status {
+  font-weight: bold;
+}
+
+/* Validate the proposal for HNI values */
+.validate-hni {
+  color: green;
+}
+
+/* Enable or disable specific actions based on the combo flag, RCU validation, and tele-verification status */
+.combo-flag-enabled {
+  background-color: #dff0d8;
+}
+.combo-flag-disabled {
+  background-color: #f2dede;
+}
+
+/* Display appropriate messages for combo products, RCU cases, and pending branch verifications */
+.combo-product-message {
+  color: blue;
+}
+.rcu-case-message {
+  color: red;
+}
+.pending-branch-verification-message {
+  color: orange;
+}
+
+/* Enable or disable specific actions based on the presence of validation errors */
+.validation-error-enabled {
+  border: 1px solid #d9534f;
+}
+.validation-error-disabled {
+  border: 1px solid #5cb85c;
+}
+
+/* Check for incomplete inwarded applications and ensure all requirements are received before issuance */
+.incomplete-application {
+  background-color: #fcf8e3;
+}
+
+/* Validate individual and family shareholdings for key-man proposals */
+.key-man-validation {
+  font-style: italic;
+}
+
+/* Ensure the proposal's product type selected in cashiering matches the BBU type */
+.bbu-type-match {
+  text-decoration: underline;
+}
+
+/* Handle high-risk CP partners by restricting issuance to HOD IDs only */
+.high-risk-cp {
+  font-size: 1.2em;
+  color: #d9534f;
+}
+
+/* Validate the proposal against various conditions such as thumb impression cases, non-standard age proofs, and specific product requirements */
+.thumb-impression-case {
+  border: 2px dashed #5bc0de;
+}
+.non-standard-age-proof {
+  border: 2px dashed #f0ad4e;
+}
+.specific-product-requirement {
+  border: 2px dashed #5cb85c;
+}
+
+/* Calculate and display the appropriate service tax, education cess, and higher education cess based on the proposal's details */
+.service-tax {
+  color: #5bc0de;
+}
+.education-cess {
+  color: #f0ad4e;
+}
+.higher-education-cess {
+  color: #5cb85c;
+}
+
+/* Ensure the proposal's premium is sufficient to cover all charges, including COI, admin fees, and service taxes */
+.premium-sufficient {
+  background-color: #dff0d8;
+}
+.premium-insufficient {
+  background-color: #f2dede;
+}

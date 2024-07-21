@@ -1,0 +1,21 @@
+/* Styles for the validation error component */
+
+.validation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.validation-error .error-message {
+  font-weight: bold;
+}
+
+.validation-error .error-details {
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.validation-error .error-icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}

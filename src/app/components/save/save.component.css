@@ -1,0 +1,17 @@
+/* Styles for the status selection radio button group */
+
+.status-radio-group {
+  background-color: gray;
+  color: black;
+  width: 60px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.status-radio-group input[type="radio"] {
+  margin: 0 5px;
+}

@@ -1,0 +1,10 @@
+<div id="docs">
+  <button (click)="closeButtonHandler()">Close</button>
+  <button (click)="onReasonButtonClick()">Reason</button>
+  <div id="reason-section">
+    <h3>REASON</h3>
+    <ul>
+      <li *ngFor="let reason of reasons">{{ reason }}</li>
+    </ul>
+  </div>
+</div>

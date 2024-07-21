@@ -1,0 +1,41 @@
+/* Styles for COfferRiderComponent */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.field {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.scrollable {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.scrollable .record {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.scrollable .record:last-child {
+  border-bottom: none;
+}

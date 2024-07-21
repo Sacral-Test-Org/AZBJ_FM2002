@@ -1,0 +1,35 @@
+<div>
+  <h2>BB Process</h2>
+  <div>
+    <label for="partnerSelect">Select Partner:</label>
+    <select id="partnerSelect" (change)="onPartnerSelect($event.target.value)">
+      <option *ngFor="let partner of partners" [value]="partner.id">{{ partner.name }}</option>
+    </select>
+  </div>
+  <div>
+    <button (click)="onClickViewBBUResults()">View BBU Results</button>
+  </div>
+  <div>
+    <button (click)="handleEnterAnswersButtonClick()">Enter Answers</button>
+  </div>
+  <div>
+    <button (click)="populateQuestions()">Populate Questions</button>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div>
+    <label for="qBbu">Q_BBU:</label>
+    <input id="qBbu" [(ngModel)]="qBbu" (blur)="validateQBBU()" />
+    <div *ngIf="qBbuErrorMessage" class="error-message">
+      {{ qBbuErrorMessage }}
+    </div>
+  </div>
+  <div>
+    <h3>Questions and Answers</h3>
+    <div *ngFor="let qa of questionsAndAnswers">
+      <p><strong>{{ qa.question }}</strong></p>
+      <p>{{ qa.answer }}</p>
+    </div>
+  </div>
+</div>

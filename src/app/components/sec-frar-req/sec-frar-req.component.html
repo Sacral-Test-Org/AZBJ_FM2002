@@ -1,0 +1,51 @@
+<div class="frar-req-container">
+  <table>
+    <thead>
+      <tr>
+        <th>S#</th>
+        <th>Req No.</th>
+        <th>Description</th>
+        <th>Life (IP Type)</th>
+        <th>U/W Reason</th>
+        <th>U/W Reason Display</th>
+        <th>Supervisor ID</th>
+        <th>Password</th>
+        <th>Supervisor Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of frarRequirements; let i = index" [attr.data-index]="i">
+        <td>{{ req.serialNumber }}</td>
+        <td>{{ req.requestNumber }}</td>
+        <td>{{ req.description }}</td>
+        <td>
+          <select [(ngModel)]="req.life" (change)="onLifeChange(req.life)">
+            <option *ngFor="let lifeType of lifeTypes" [value]="lifeType">{{ lifeType }}</option>
+          </select>
+        </td>
+        <td>
+          <select [(ngModel)]="req.uwReason" (change)="onReasonChange(req.uwReason)">
+            <option *ngFor="let reason of uwReasons" [value]="reason.value">{{ reason.label }}</option>
+          </select>
+        </td>
+        <td (dblclick)="handleUwReasonDisplayClick(req.testNumber)">{{ req.uwReasonDisplay }}</td>
+        <td>
+          <input type="text" [(ngModel)]="req.supervisorId" maxlength="10" (blur)="onSupervisorIdBlur(req.supervisorId)" />
+        </td>
+        <td>
+          <input type="password" [(ngModel)]="req.password" placeholder="Password" (blur)="onPasswordBlur()" />
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="req.supervisorComments" maxlength="500" (dblclick)="onDoubleClickSupervisorComments(req.testNumber)" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="actions">
+    <button (click)="saveData()">Save</button>
+    <button (click)="exitForm()">Exit</button>
+  </div>
+</div>
+<div *ngIf="validationMessage" class="validation-message">
+  {{ validationMessage }}
+</div>

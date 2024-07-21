@@ -1,0 +1,78 @@
+/* Styles for Duplicate Contact No. Component */
+
+/* Container for the duplicate contact list */
+.duplicate-contact-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header for the duplicate contact list */
+.duplicate-contact-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table styles */
+.duplicate-contact-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.duplicate-contact-table th, .duplicate-contact-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.duplicate-contact-table th {
+  background-color: #f2f2f2;
+}
+
+/* Checkbox column */
+.duplicate-contact-table .checkbox-column {
+  width: 50px;
+  text-align: center;
+}
+
+/* Read-only fields */
+.read-only {
+  background-color: #e9e9e9;
+  pointer-events: none;
+}
+
+/* Scrollable table body */
+.scrollable-table-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Message for no duplicates found */
+.no-duplicates-message {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Button styles */
+.duplicate-contact-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.duplicate-contact-button:hover {
+  background-color: #0056b3;
+}

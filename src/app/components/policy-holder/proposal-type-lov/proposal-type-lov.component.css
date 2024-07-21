@@ -1,0 +1,33 @@
+/* Styling for the proposal type LOV component */
+
+.proposal-type-field {
+  position: absolute;
+  top: 227px;
+  left: 477px;
+  width: 80px;
+  background-color: white;
+  color: black;
+  font-family: 'MS Sans Serif';
+  font-size: 8pt;
+  text-align: start;
+}
+
+.proposal-type-prompt {
+  font-weight: bold;
+}
+
+.lov-container {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.lov-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.lov-item:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,38 @@
+/* Styles for KYC Response Display */
+
+.kyc-response-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.kyc-response-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.kyc-response-details {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.kyc-response-message {
+  font-size: 1em;
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  font-size: 1em;
+  color: red;
+  margin-top: 10px;
+}

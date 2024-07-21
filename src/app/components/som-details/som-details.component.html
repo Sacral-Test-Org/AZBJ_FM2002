@@ -1,0 +1,28 @@
+<div class="som-details-container">
+  <form>
+    <div class="form-group">
+      <label for="somId">SOM ID</label>
+      <input type="text" id="somId" name="somId" class="form-control" [value]="somDetails.somId" readonly>
+    </div>
+    <div class="form-group">
+      <label for="hubId">HUB ID</label>
+      <input type="text" id="hubId" name="hubId" class="form-control" [value]="somDetails.hubId" readonly>
+    </div>
+    <div class="form-group">
+      <label for="hubInchargeName">HUB Incharge Name</label>
+      <input type="text" id="hubInchargeName" name="hubInchargeName" class="form-control" [value]="somDetails.hubInchargeName" readonly>
+    </div>
+    <div class="form-group">
+      <label for="somName">SOM Name</label>
+      <input type="text" id="somName" name="somName" class="form-control" [value]="somDetails.somName" readonly>
+    </div>
+    <div class="form-group">
+      <input type="checkbox" id="sendToHubHead" name="sendToHubHead" (change)="onCheckboxChange($event)">
+      <label for="sendToHubHead">Send to Hub Head for Approval (only in case SOM does not exist)</label>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-secondary" (click)="onCancelButtonClick()">Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="okButtonClickHandler()">OK</button>
+    </div>
+  </form>
+</div>

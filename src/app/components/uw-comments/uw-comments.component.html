@@ -1,0 +1,15 @@
+<div class="comments-section">
+  <h2>Underwriting Comments</h2>
+  <button (click)="refreshComments()">Refresh</button>
+  <button (click)="addComment()">Medical Underwriting</button>
+  <div *ngFor="let comment of comments">
+    <div class="comment">
+      <label>User ID:</label>
+      <input type="text" [value]="comment.userId" readonly />
+      <label>Date & Time:</label>
+      <input type="text" [value]="comment.dateTime" readonly />
+      <label>Comment:</label>
+      <textarea [value]="comment.text" readonly></textarea>
+    </div>
+  </div>
+</div>

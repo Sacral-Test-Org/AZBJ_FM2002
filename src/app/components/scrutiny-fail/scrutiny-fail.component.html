@@ -1,0 +1,21 @@
+<div>
+  <label for="documentDescription">Document Description:</label>
+  <select id="documentDescription" (change)="onDocumentDescriptionChange($event)">
+    <option *ngFor="let description of documentDescriptions" [value]="description">{{description}}</option>
+  </select>
+</div>
+
+<div>
+  <label for="comments">Comments:</label>
+  <textarea id="comments" [readonly]="!isCommentsEditable"></textarea>
+</div>
+
+<div>
+  <app-document-receipt-status></app-document-receipt-status>
+</div>
+
+<div>
+  <button (click)="updateScrutinyFailDetails()">Update</button>
+</div>
+
+<app-confirmation-dialog></app-confirmation-dialog>

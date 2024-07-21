@@ -1,0 +1,24 @@
+<div class="clauses-container">
+  <h2>Manage Clauses</h2>
+  <div *ngFor="let clause of clauses | slice:0:3" class="clause-item">
+    <p class="clause-description">{{ clause.description }}</p>
+    <button (click)="deleteRecord(clause.id)" class="delete-button">Delete Record</button>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>
+
+<!-- Pop-up window for selecting clauses -->
+<div *ngIf="showClausePopup" class="clause-popup">
+  <h3>Clauses</h3>
+  <div class="clause-list">
+    <div *ngFor="let clause of availableClauses" class="clause-item">
+      <p>{{ clause.sys_desc }}</p>
+      <button (click)="selectClause(clause.sys_code)">Select</button>
+    </div>
+  </div>
+  <div *ngIf="popupErrorMessage" class="error-message">
+    {{ popupErrorMessage }}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="proposal-actions">
+  <h2>Manage Proposal Actions and Statuses</h2>
+  <div *ngIf="proposal">
+    <p>Status: {{ proposal.status }}</p>
+    <p>HNI Validation: {{ proposal.hniValidation ? 'Valid' : 'Invalid' }}</p>
+    <p>Combo Flag: {{ proposal.comboFlag ? 'Enabled' : 'Disabled' }}</p>
+    <p>RCU Validation: {{ proposal.rcuValidation ? 'Passed' : 'Failed' }}</p>
+    <p>Tele-Verification Status: {{ proposal.teleVerificationStatus }}</p>
+    <p>Messages:</p>
+    <ul>
+      <li *ngFor="let message of proposal.messages">{{ message }}</li>
+    </ul>
+    <button (click)="saveProposal()" [disabled]="!canSaveProposal">Save Proposal</button>
+  </div>
+  <div *ngIf="!proposal">
+    <p>No proposal selected.</p>
+  </div>
+</div>

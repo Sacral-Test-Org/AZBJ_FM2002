@@ -1,0 +1,98 @@
+/* General styling for the financial eligibility and premium payment capacity form */
+
+/* Styling for input fields */
+input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Adjust width to account for padding and border */
+}
+
+/* Styling for error messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styling for the form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Styling for form labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling for the female category information */
+.female-category {
+  color: #007bff;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Styling for navigation between fields */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Specific styling for each field */
+.financial-eligibility-primary,
+.financial-eligibility-secondary,
+.premium-payment-capacity-primary,
+.premium-payment-capacity-secondary,
+.annual-premium,
+.total-premium-liability-annual,
+.income-covers,
+.declined-lives,
+.rated-up {
+  margin-bottom: 15px;
+}
+
+/* Color coding for different fields */
+.financial-eligibility-primary {
+  background-color: #e6f7ff;
+}
+
+.financial-eligibility-secondary {
+  background-color: #fff7e6;
+}
+
+.premium-payment-capacity-primary {
+  background-color: #e6ffe6;
+}
+
+.premium-payment-capacity-secondary {
+  background-color: #ffe6f7;
+}
+
+.annual-premium {
+  background-color: #f0f0f0;
+}
+
+.total-premium-liability-annual {
+  background-color: #f9e6ff;
+}
+
+.income-covers {
+  background-color: #e6f9ff;
+}
+
+.declined-lives {
+  background-color: #ffe6e6;
+}
+
+.rated-up {
+  background-color: #e6ffe6;
+}

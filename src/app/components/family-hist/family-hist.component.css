@@ -1,0 +1,59 @@
+/* Styles for the Family History component */
+
+/* Dropdown menu container */
+.family-history-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+/* Dropdown button */
+.family-history-dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Dropdown button focus state */
+.family-history-dropdown select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+/* Dropdown menu items */
+.family-history-dropdown select option {
+  padding: 10px;
+}
+
+/* Limit the number of items displayed */
+.family-history-dropdown select {
+  height: auto;
+  overflow-y: hidden;
+}
+
+/* Label for the dropdown */
+.family-history-dropdown label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hide scrollbars */
+.family-history-dropdown select::-webkit-scrollbar {
+  display: none;
+}
+
+.family-history-dropdown select {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

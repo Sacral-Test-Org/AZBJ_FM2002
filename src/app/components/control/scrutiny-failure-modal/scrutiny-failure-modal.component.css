@@ -1,0 +1,68 @@
+/* Styling for the modal window titled 'Scrutiny Failure Process' */
+
+.modal-container {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.modal-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.dropdown-field {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.save {
+  background-color: green;
+  color: white;
+}
+
+button.update {
+  background-color: blue;
+  color: white;
+}
+
+button.exit {
+  background-color: red;
+  color: white;
+}

@@ -1,0 +1,10 @@
+<div>
+  <form>
+    <!-- Other form fields -->
+    <div>
+      <label for="fundName">Fund Name</label>
+      <input id="fundName" name="fundName" (dblclick)="onDoubleClickFundName()" />
+    </div>
+    <validation-error *ngIf="errorMessage" [message]="errorMessage"></validation-error>
+  </form>
+</div>

@@ -1,0 +1,91 @@
+/* General Styles for New Business Component */
+.new-business-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Ensure no scrollbars */
+}
+
+/* Toolbar Styles */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+}
+
+/* User Information and Date */
+.user-info {
+  font-size: 16px;
+}
+
+/* Tabbed Interface Styles */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Input Field Styles */
+.input-field {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Relationship Details Styles */
+.relationship-details {
+  background-color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Lifestyle Radio Group Styles */
+.lifestyle-radio-group {
+  position: absolute;
+  top: 77px;
+  left: 513px;
+  width: 90px;
+  height: 18px;
+  background-color: gray;
+  color: black;
+}
+
+/* Partner Selection Field Styles */
+.partner-selection {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* AML Tab Styles */
+.aml-tab {
+  background-color: gray;
+  padding: 20px;
+}

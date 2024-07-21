@@ -1,0 +1,82 @@
+/* CSS styles for Image Display Area */
+.image-display-area {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* CSS styles for Progress Message */
+.progress-message {
+  font-size: 16px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* CSS styles for the "View" button */
+.view-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* CSS styles for Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* CSS classes for navigation buttons */
+.nav-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* CSS classes for checkbox */
+.checkbox {
+  margin: 10px;
+}
+
+/* CSS styles for the zoom button */
+.zoom-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* CSS styles for the image element */
+.zoom-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+/* CSS styles for the progress indicator */
+.progress-indicator {
+  font-size: 16px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 10px;
+}

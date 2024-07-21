@@ -1,0 +1,44 @@
+<div class="financial-uw-container">
+  <h2>Financial Underwriting Details</h2>
+  <form (ngSubmit)="saveFinancialDetails(financialDetailsForm.value)" #financialDetailsForm="ngForm">
+    <div class="form-group">
+      <label for="financialYear">Financial Year</label>
+      <input type="text" id="financialYear" name="financialYear" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="proofType">Proof</label>
+      <select id="proofType" name="proofType" ngModel>
+        <option *ngFor="let proof of proofTypes" [value]="proof">{{ proof }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="grossIncome">Gross Income</label>
+      <input type="number" id="grossIncome" name="grossIncome" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="exemptedIncome">Exempted Income</label>
+      <input type="number" id="exemptedIncome" name="exemptedIncome" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="oneTimeIncome">One-Time Income</label>
+      <input type="number" id="oneTimeIncome" name="oneTimeIncome" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="deductions">Deductions</label>
+      <input type="number" id="deductions" name="deductions" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="tax">Tax</label>
+      <input type="number" id="tax" name="tax" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="totalIncome">Total Income</label>
+      <input type="number" id="totalIncome" name="totalIncome" [value]="calculateTotalIncome(grossIncome, exemptedIncome, oneTimeIncome)" readonly>
+    </div>
+    <div class="form-group">
+      <label for="netProfit">Net Profit</label>
+      <input type="number" id="netProfit" name="netProfit" [value]="calculateNetProfit(totalIncome, deductions, tax)" readonly>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+</div>

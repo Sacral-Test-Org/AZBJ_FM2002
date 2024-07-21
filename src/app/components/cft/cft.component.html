@@ -1,0 +1,82 @@
+<div id="canAmlCft">
+  <h2>CFT Section</h2>
+  <form>
+    <div>
+      <label for="beneficialOwner">Beneficial Owner:</label>
+      <input type="text" id="beneficialOwner" name="beneficialOwner">
+    </div>
+    <div>
+      <label for="ownerShare">Owner Share:</label>
+      <input type="text" id="ownerShare" name="ownerShare">
+    </div>
+    <div>
+      <label for="colorPhoto">Color Photo:</label>
+      <input type="file" id="colorPhoto" name="colorPhoto">
+    </div>
+    <div>
+      <label for="identityProofDesc">Identity Proof Description:</label>
+      <input type="text" id="identityProofDesc" name="identityProofDesc">
+    </div>
+    <div>
+      <label for="identityDocId">Identity Document ID:</label>
+      <input type="text" id="identityDocId" name="identityDocId">
+    </div>
+    <div>
+      <label for="identityDocDate">Identity Document Date:</label>
+      <input type="date" id="identityDocDate" name="identityDocDate">
+    </div>
+    <div>
+      <label for="addressProofDesc">Address Proof Description:</label>
+      <input type="text" id="addressProofDesc" name="addressProofDesc">
+    </div>
+    <div>
+      <label for="addressDocId">Address Document ID:</label>
+      <input type="text" id="addressDocId" name="addressDocId">
+    </div>
+    <div>
+      <label for="addressDocDate">Address Document Date:</label>
+      <input type="date" id="addressDocDate" name="addressDocDate">
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+    </div>
+    <div>
+      <label for="individualShareholding">Individual Shareholding:</label>
+      <input type="text" id="individualShareholding" name="individualShareholding">
+    </div>
+    <div>
+      <label for="familyShareholdings">Family Shareholdings:</label>
+      <input type="text" id="familyShareholdings" name="familyShareholdings">
+    </div>
+    <div>
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" name="dateOfBirth">
+    </div>
+    <button type="button" (click)="resetFields()">Clear</button>
+  </form>
+</div>
+
+<script>
+  class CFTComponent {
+    resetFields() {
+      document.getElementById('beneficialOwner').value = '';
+      document.getElementById('ownerShare').value = '';
+      document.getElementById('colorPhoto').value = '';
+      document.getElementById('identityProofDesc').value = '';
+      document.getElementById('identityDocId').value = '';
+      document.getElementById('identityDocDate').value = '';
+      document.getElementById('addressProofDesc').value = '';
+      document.getElementById('addressDocId').value = '';
+      document.getElementById('addressDocDate').value = '';
+      document.getElementById('address').value = '';
+      document.getElementById('individualShareholding').value = '';
+      document.getElementById('familyShareholdings').value = '';
+      document.getElementById('dateOfBirth').value = '';
+    }
+
+    displayFirstRecord() {
+      // Logic to display the first record in the CFT block
+    }
+  }
+</script>

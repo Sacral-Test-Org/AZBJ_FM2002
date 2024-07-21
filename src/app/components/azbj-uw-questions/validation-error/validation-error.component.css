@@ -1,0 +1,30 @@
+/* Styles for validation errors */
+
+.validation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.validation-error::before {
+  content: '⚠ '; /* Unicode warning symbol */
+}
+
+.validation-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.validation-error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.validation-error-message p {
+  margin: 0;
+}

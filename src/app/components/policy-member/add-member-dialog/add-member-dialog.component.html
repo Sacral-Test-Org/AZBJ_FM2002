@@ -1,0 +1,33 @@
+<div class="add-member-dialog">
+  <h2>Add New Member</h2>
+  <form [formGroup]="addMemberForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="relationship">Relationship</label>
+      <select id="relationship" formControlName="relationship" class="form-control">
+        <option value="spouse">Spouse</option>
+        <option value="child">Child</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input id="dob" formControlName="dob" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="identificationNumber">Identification Number</label>
+      <input id="identificationNumber" formControlName="identificationNumber" type="text" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="coverCode">Cover Code</label>
+      <input id="coverCode" formControlName="coverCode" type="text" class="form-control" readonly />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Member</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

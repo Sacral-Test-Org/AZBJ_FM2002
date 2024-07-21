@@ -1,0 +1,55 @@
+/* Styling for the Simultaneous Proposals Component */
+
+/* General container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Styling for the proposals table */
+.proposals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.proposals-table th, .proposals-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.proposals-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+/* Styling for the scrollbar */
+.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Styling for the Exit button */
+.exit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #c9302c;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

@@ -1,0 +1,58 @@
+/* Styles for the Reinsurance Cover Details component */
+
+/* Container for the reinsurance cover details */
+.reinsurance-cover-details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Style for each field row */
+.field-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Style for field labels */
+.field-label {
+  width: 150px;
+  font-weight: bold;
+}
+
+/* Style for read-only fields */
+.read-only-field {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Style for editable fields */
+.editable-field {
+  border: 1px solid #ced4da;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Style for the delete button */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Style for validation error messages */
+.validation-error {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

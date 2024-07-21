@@ -1,0 +1,70 @@
+/* Styles for Previous Policy Window */
+
+.previous-policy-window {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.previous-policy-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.grid-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.grid-item:last-child {
+  border-bottom: none;
+}
+
+.grid-header {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.read-only {
+  color: #666;
+}
+
+.scrollbar {
+  overflow-y: scroll;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

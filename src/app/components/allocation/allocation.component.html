@@ -1,0 +1,20 @@
+<div>
+  <button (click)="onPopulateAllocationClick()">Populate Allocation</button>
+  <button (click)="onDeleteFundClick()">Delete Fund</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <app-discount-validation></app-discount-validation>
+  <div>
+    <label for="fundList">Fund List</label>
+    <select id="fundList" [disabled]="!isFundListEnabled">
+      <!-- Options will be populated dynamically -->
+    </select>
+  </div>
+  <div>
+    <label for="fundAllocationPercentage">Fund Allocation Percentage</label>
+    <input id="fundAllocationPercentage" type="number" [disabled]="!isFundAllocationPercentageEnabled" />
+  </div>
+  <div>
+    <label for="portfolioDeletionFund">Portfolio Deletion Fund</label>
+    <input id="portfolioDeletionFund" type="text" [disabled]="!isPortfolioDeletionFundEnabled" />
+  </div>
+</div>

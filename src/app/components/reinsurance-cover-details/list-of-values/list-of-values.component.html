@@ -1,0 +1,17 @@
+<div class="lov-container">
+  <h2>List of Cover Codes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Cover Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cover of coverCodes">
+        <td>{{ cover.coverCode }}</td>
+        <td>{{ cover.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

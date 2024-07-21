@@ -1,0 +1,32 @@
+<div class="policy-details">
+  <h2>Policy Details</h2>
+  <div *ngIf="policy">
+    <p><strong>Partner ID:</strong> {{ policy.partnerId }}</p>
+    <p><strong>Policy Reference:</strong> {{ policy.policyReference }}</p>
+    <p><strong>Partner Name:</strong> {{ policy.partnerName }}</p>
+    <p><strong>Annual Premium:</strong> {{ policy.annualPremium }}</p>
+    <p><strong>Policy Status:</strong> {{ policy.policyStatus }}</p>
+    <p><strong>Cover Code:</strong> {{ policy.coverCode }}</p>
+    <p><strong>Sum Insured for Whole Cover:</strong> {{ policy.sumInsuredForWholeCover }}</p>
+    <p><strong>Entry Age:</strong> {{ policy.entryAge }}</p>
+    <p><strong>Premium Term:</strong> {{ policy.premiumTerm }}</p>
+    <p><strong>Benefit Term:</strong> {{ policy.benefitTerm }}</p>
+    <p><strong>Interest Rate:</strong> {{ policy.interestRate }}</p>
+    <p><strong>Frequency Standard Premium:</strong> {{ policy.frequencyStandardPremium }}</p>
+    <p><strong>Extra Amount:</strong> {{ policy.extraAmount }}</p>
+    <p><strong>ML Percentage:</strong> {{ policy.mlPercentage }}</p>
+    <p><strong>OC Percentage:</strong> {{ policy.ocPercentage }}</p>
+    <p><strong>NRI Percentage:</strong> {{ policy.nriPercentage }}</p>
+    <p><strong>SR Percentage:</strong> {{ policy.srPercentage }}</p>
+    <p><strong>Premium Discount Amount:</strong> {{ policy.premiumDiscountAmount }}</p>
+  </div>
+  <div *ngIf="!policy">
+    <p>No policy details available.</p>
+  </div>
+</div>
+
+<!-- Previous Policy Details Section -->
+<div class="previous-policy-details">
+  <h3>Previous Policy Details</h3>
+  <app-previous-policy-window></app-previous-policy-window>
+</div>

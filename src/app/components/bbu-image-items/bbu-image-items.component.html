@@ -1,0 +1,10 @@
+<div class="bbu-image-items">
+  <h2>BBU Image Items</h2>
+  <div *ngFor="let item of items">
+    <label>
+      <input type="checkbox" [checked]="item.value === 'Y'" (change)="handleCheckboxChange($event, item)" />
+      {{ item.name }}
+    </label>
+  </div>
+  <button (click)="onChangeButtonClick()">Change</button>
+</div>

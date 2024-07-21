@@ -1,0 +1,22 @@
+<div *ngIf="passportDetails">
+  <h2>Passport Details</h2>
+  <div>
+    <label>Passport Number:</label>
+    <span>{{ passportDetails.passportNumber }}</span>
+  </div>
+  <div>
+    <label>Date of Birth:</label>
+    <span>{{ passportDetails.dateOfBirth | date }}</span>
+  </div>
+  <div>
+    <label>Age:</label>
+    <span>{{ passportDetails.age }}</span>
+  </div>
+  <div>
+    <label>Gender:</label>
+    <span>{{ passportDetails.gender }}</span>
+  </div>
+</div>
+<div *ngIf="!passportDetails">
+  <p>No passport details available.</p>
+</div>

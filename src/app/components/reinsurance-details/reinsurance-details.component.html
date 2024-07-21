@@ -1,0 +1,175 @@
+<div class="reinsurance-details">
+  <h2>Reinsurance Details</h2>
+  <div class="details">
+    <div class="detail-item">
+      <label>Policy Reference:</label>
+      <span>{{ policyReference }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Cover Description:</label>
+      <span>{{ coverDescription }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Reinsurance Code:</label>
+      <span>{{ reinsuranceCode }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Reinsurance Percentage:</label>
+      <span>{{ reinsurancePercentage }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Cover Code:</label>
+      <span>{{ coverCode }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Cover SAR:</label>
+      <span>{{ coverSAR }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Reinsurance Type:</label>
+      <span>{{ reinsuranceType }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Reference Number:</label>
+      <span>{{ referenceNumber }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Reinsurance SA:</label>
+      <span>{{ reinsuranceSA }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Retain Amount:</label>
+      <span>{{ retainAmount }}</span>
+    </div>
+  </div>
+  <button (click)="exit()">Exit</button>
+</div>
+
+<div class="policy-details">
+  <h2>Policy Details</h2>
+  <div class="detail-item">
+    <label>Sum Assured:</label>
+    <span>{{ sumAssured }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Policy Reference Number:</label>
+    <span>{{ policyReferenceNumber }}</span>
+  </div>
+</div>
+
+<div class="reinsurer-details">
+  <h2>Reinsurer Details</h2>
+  <div class="detail-item">
+    <label>Reinsurer Code:</label>
+    <span>{{ reinsurerCode }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Reinsurer Reason:</label>
+    <span>{{ reinsurerReason }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Reinsurer's Recommendations:</label>
+    <span>{{ reinsurerRecommendations }}</span>
+  </div>
+  <div class="detail-item">
+    <label>CI Rider TASA (Current):</label>
+    <span>{{ ciRiderTasaCurrent }}</span>
+  </div>
+  <div class="detail-item">
+    <label>CI Rider TASA (Previous):</label>
+    <span>{{ ciRiderTasaPrevious }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Main TASA (Current):</label>
+    <span>{{ mainTasaCurrent }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Main TASA (Previous):</label>
+    <span>{{ mainTasaPrevious }}</span>
+  </div>
+  <div class="detail-item">
+    <label>SAR (Current):</label>
+    <span>{{ sarCurrent }}</span>
+  </div>
+  <div class="detail-item">
+    <label>SAR (Previous):</label>
+    <span>{{ sarPrevious }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Underwriter's Recommendations:</label>
+    <span>{{ underwritersRecommendations }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Medical Comments:</label>
+    <span>{{ medicalComments }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Financial Comments:</label>
+    <span>{{ financialComments }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Final Comments:</label>
+    <span>{{ finalComments }}</span>
+  </div>
+  <div class="detail-item">
+    <label>Refer to Reinsurer:</label>
+    <input type="checkbox" [(ngModel)]="referToReinsurer" />
+  </div>
+  <div class="detail-item">
+    <label>RI TASA:</label>
+    <span>{{ riTasa }}</span>
+  </div>
+  <div class="detail-item">
+    <label>PH TASA:</label>
+    <span>{{ phTasa }}</span>
+  </div>
+  <div class="detail-item">
+    <label>IP TASA:</label>
+    <span>{{ ipTasa }}</span>
+  </div>
+  <button (click)="navigateBack()">Back</button>
+</div>
+
+<div class="reinsurance-management">
+  <h2>Manage Reinsurance Details</h2>
+  <div class="detail-item">
+    <label>Cover Number:</label>
+    <input type="text" [(ngModel)]="coverNumber" />
+  </div>
+  <div class="detail-item">
+    <label>Cover Code:</label>
+    <input type="text" [(ngModel)]="coverCode" />
+  </div>
+  <div class="detail-item">
+    <label>Cover Description:</label>
+    <input type="text" [(ngModel)]="coverDescription" />
+  </div>
+  <div class="detail-item">
+    <label>Reinsurance Type:</label>
+    <input type="text" [(ngModel)]="reinsuranceType" />
+  </div>
+  <div class="detail-item">
+    <label>Reinsurance Code:</label>
+    <input type="text" [(ngModel)]="reinsuranceCode" (dblclick)="onReinsCodeDoubleClick()" />
+  </div>
+  <div class="detail-item">
+    <label>Reinsurance Percentage:</label>
+    <input type="text" [(ngModel)]="reinsurancePercentage" />
+  </div>
+  <div class="detail-item">
+    <label>Reference Number:</label>
+    <input type="text" [(ngModel)]="referenceNumber" />
+  </div>
+  <div class="detail-item">
+    <label>Reinsurance Sum Assured:</label>
+    <span>{{ reinsuranceSumAssured }}</span>
+  </div>
+  <button (click)="deleteRecord()">Delete</button>
+</div>
+
+<div class="back-button">
+  <button (click)="backButtonHandler()">Back</button>
+  <div *ngIf="validationMessage" class="validation-message">
+    {{ validationMessage }}
+  </div>
+</div>

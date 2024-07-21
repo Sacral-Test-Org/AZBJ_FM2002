@@ -1,0 +1,54 @@
+/* Center the dialog on the screen */
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Modal background */
+  z-index: 1000; /* Ensure it is on top */
+}
+
+.dialog {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Specific dimensions */
+  max-width: 100%;
+}
+
+/* Make the dialog non-resizable, non-maximizable, and non-minimizable */
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dialog-buttons button {
+  margin-left: 10px;
+}
+
+/* Radio group styling */
+.radio-group {
+  margin-top: 20px;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 10px;
+}

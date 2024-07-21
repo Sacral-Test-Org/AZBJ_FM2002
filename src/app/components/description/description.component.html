@@ -1,0 +1,62 @@
+<div class="description-container">
+  <label class="description-label" for="descriptionField">Details if Marked Yes</label>
+  <textarea id="descriptionField" class="description-field" maxlength="1000" 
+            (keydown.arrowdown)="stayInField($event)" 
+            (dblclick)="$event.preventDefault()" 
+            [(ngModel)]="descriptionText">
+  </textarea>
+</div>
+
+<!-- Hidden fields -->
+<input type="hidden" id="questionIdField" [(ngModel)]="questionId">
+<input type="hidden" id="subQuestionField" [(ngModel)]="subQuestion">
+
+<!-- Editable fields -->
+<input type="text" id="formQuestionNumber1Field" [(ngModel)]="formQuestionNumber1">
+<textarea id="descriptionFieldEditable" [(ngModel)]="descriptionTextEditable"></textarea>
+
+<script>
+  // Method to check if the Question Number field is empty and navigate to the previous record
+  function checkAndNavigateToPreviousRecord() {
+    if (!formQuestionNumber1) {
+      // Logic to navigate to the previous record
+      navigateToPreviousRecord();
+    }
+  }
+
+  // Method to stay in the description field when the down arrow key is pressed
+  function stayInField(event) {
+    event.preventDefault();
+  }
+
+  // Method to populate the description block based on questionnaire answers
+  function populateDescriptionBlock() {
+    // Logic to get and populate the description block
+    getPopulatedDescription();
+  }
+</script>
+
+<style>
+  .description-container {
+    position: absolute;
+    top: 50px; /* Specified coordinates */
+    left: 50px; /* Specified coordinates */
+    width: 400px; /* Specified dimensions */
+    height: 200px; /* Specified dimensions */
+  }
+
+  .description-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .description-field {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'MS Sans Serif';
+    font-size: 8pt;
+  }
+</style>

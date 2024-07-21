@@ -1,0 +1,65 @@
+<div class="decline-form">
+  <form>
+    <!-- Father's Details -->
+    <label for="fatherTitle">Father's Title</label>
+    <select id="fatherTitle" name="fatherTitle">
+      <option *ngFor="let title of fatherTitles" [value]="title">{{ title }}</option>
+    </select>
+
+    <label for="fatherFirstName">Father's First Name</label>
+    <input type="text" id="fatherFirstName" name="fatherFirstName" required>
+
+    <label for="fatherMiddleName">Father's Middle Name</label>
+    <input type="text" id="fatherMiddleName" name="fatherMiddleName">
+
+    <label for="fatherSurname">Father's Surname</label>
+    <input type="text" id="fatherSurname" name="fatherSurname" maxlength="50" required>
+
+    <!-- Nominee's Details -->
+    <label for="nomineeTitle">Nominee's Title</label>
+    <select id="nomineeTitle" name="nomineeTitle">
+      <option *ngFor="let title of nomineeTitles" [value]="title">{{ title }}</option>
+    </select>
+
+    <label for="nomineeFirstName">Nominee's First Name</label>
+    <input type="text" id="nomineeFirstName" name="nomineeFirstName" required>
+
+    <label for="nomineeMiddleName">Nominee's Middle Name</label>
+    <input type="text" id="nomineeMiddleName" name="nomineeMiddleName">
+
+    <label for="nomineeSurname">Nominee's Surname</label>
+    <input type="text" id="nomineeSurname" name="nomineeSurname" maxlength="50" required>
+
+    <!-- Subclass Business -->
+    <label for="subclassBusiness">Sub Class Business</label>
+    <select id="subclassBusiness" name="subclassBusiness">
+      <option *ngFor="let business of subclassBusinesses" [value]="business">{{ business }}</option>
+    </select>
+
+    <!-- Coffer Amount -->
+    <label for="cofferAmount">Coffer Amount</label>
+    <input type="number" id="cofferAmount" name="cofferAmount" required>
+
+    <!-- Remarks -->
+    <label for="remarks">Remarks</label>
+    <input type="text" id="remarks" name="remarks" maxlength="100">
+
+    <!-- City -->
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" maxlength="40" (dblclick)="onCityFieldDoubleClick()">
+
+    <!-- Declined Reason -->
+    <label for="declinedReason">Declined Reason</label>
+    <select id="declinedReason" name="declinedReason" (dblclick)="onReasonFieldDoubleClick()">
+      <option *ngFor="let reason of declineReasons" [value]="reason.code">{{ reason.description }}</option>
+    </select>
+
+    <!-- Comments -->
+    <label for="comments">Comments</label>
+    <input type="text" id="comments" name="comments" maxlength="255">
+
+    <!-- Buttons -->
+    <button type="button" (click)="addRequirement()">Add Requirement <u>Alt+4</u></button>
+    <button type="button" (click)="exitButtonHandler()">Exit</button>
+  </form>
+</div>

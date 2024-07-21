@@ -1,0 +1,99 @@
+/* General Styles for the Questionnaire Component */
+
+/* Style for the read-only fields */
+.read-only-field {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 4px 0;
+}
+
+/* Style for the editable fields */
+.editable-field {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 4px 0;
+}
+
+/* Style for the form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Style for the form header */
+.form-header {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Style for the form fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Style for the field labels */
+.field-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Style for the navigation buttons */
+.nav-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 8px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for validation messages */
+.validation-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* Style for the gray background fields */
+.gray-background {
+  background-color: #e0e0e0;
+  color: #000;
+  padding: 8px;
+  margin: 4px 0;
+}
+
+/* Style for the distinct description field */
+.description-field {
+  background-color: #d3d3d3;
+  color: #000;
+  padding: 8px;
+  margin: 4px 0;
+  max-width: 300px;
+}
+
+/* Style for the business unit code field */
+.business-unit-code-field {
+  background-color: #d3d3d3;
+  color: #000;
+  padding: 8px;
+  margin: 4px 0;
+  text-transform: uppercase;
+}

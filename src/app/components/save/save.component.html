@@ -1,0 +1,48 @@
+<div>
+  <!-- Radio Buttons for Action Selection -->
+  <label>
+    <input type="radio" name="action" value="RW" [(ngModel)]="selectedAction" (change)="onActionChange('RW')" checked> RW
+  </label>
+  <label>
+    <input type="radio" name="action" value="ISSUED" [(ngModel)]="selectedAction" (change)="onActionChange('ISSUED')"> ISSUED
+  </label>
+  <label>
+    <input type="radio" name="action" value="REJECTED" [(ngModel)]="selectedAction" (change)="onActionChange('REJECTED')"> REJECTED
+  </label>
+  <label>
+    <input type="radio" name="action" value="DECLINED" [(ngModel)]="selectedAction" (change)="onActionChange('DECLINED')"> DECLINED
+  </label>
+  <label>
+    <input type="radio" name="action" value="OTHER" [(ngModel)]="selectedAction" (change)="onActionChange('OTHER')"> OTHER
+  </label>
+
+  <!-- Status Selection Radio Button Group -->
+  <div style="background-color: gray; color: black; width: 60px; height: 18px;">
+    <label>
+      <input type="radio" name="status" value="IM" [(ngModel)]="selectedStatus" checked> IM
+    </label>
+    <label>
+      <input type="radio" name="status" value="RM" [(ngModel)]="selectedStatus"> RM
+    </label>
+  </div>
+
+  <!-- Senior Underwriter List -->
+  <div>
+    <button (click)="onSeniorUnderwriterClick()">Select Senior Underwriter</button>
+    <ul>
+      <li *ngFor="let underwriter of seniorUnderwriters">{{ underwriter.description }}</li>
+    </ul>
+  </div>
+
+  <!-- Cancel Button -->
+  <button (click)="onCancel()">Cancel</button>
+
+  <!-- Exit Button -->
+  <button (click)="exitButtonHandler()">Exit</button>
+
+  <!-- Reason for Save & Exit -->
+  <div>
+    <input type="text" [(ngModel)]="exitReason" placeholder="Enter reason for Save & Exit">
+    <button (click)="onSaveButtonClick()">Save</button>
+  </div>
+</div>

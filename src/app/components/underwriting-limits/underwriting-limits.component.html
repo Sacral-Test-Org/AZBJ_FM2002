@@ -1,0 +1,36 @@
+<div class="underwriting-limits-container">
+  <h2>Underwriting Limits</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Underwriting Code</th>
+        <th>Underwriting Description</th>
+        <th>Minimum Success Rate</th>
+        <th>Maximum Success Rate</th>
+        <th>Minimum Age</th>
+        <th>Maximum Age</th>
+        <th>Minimum Code Value</th>
+        <th>Maximum Code Value</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let limit of underwritingLimits">
+        <td>{{ limit.userId }}</td>
+        <td>{{ limit.uwCode }}</td>
+        <td>{{ limit.uwDesc }}</td>
+        <td>{{ limit.minSuc }}</td>
+        <td>{{ limit.maxSuc }}</td>
+        <td>{{ limit.minAge }}</td>
+        <td>{{ limit.maxAge }}</td>
+        <td>{{ limit.minCodeVal }}</td>
+        <td>{{ limit.maxCodeVal }}</td>
+        <td>{{ limit.startDate | date }}</td>
+        <td>{{ limit.endDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="exit()">Exit</button>
+</div>

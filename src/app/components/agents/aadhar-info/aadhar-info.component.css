@@ -1,0 +1,50 @@
+/* Styles for the Aadhar Information Tab within the New Business module */
+
+:host {
+  display: block;
+  width: 1076px;
+  height: 980px;
+  background-color: gray;
+  color: black;
+}
+
+/* Styles for the window displaying the Aadhar Information */
+.new-business-window {
+  width: 1023px;
+  height: 550px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Styles for the radio group interface */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.radio-group label {
+  margin-bottom: 10px;
+}
+
+/* Additional styles for user-friendly interface */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

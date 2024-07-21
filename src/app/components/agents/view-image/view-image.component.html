@@ -1,0 +1,16 @@
+<div class="view-image-container">
+  <button (click)="onViewImageClick()">View Image</button>
+  <button (click)="onImagesButtonClick()">Images</button>
+  <button (click)="onViewAllImagesClick()">View All Image</button>
+  <div *ngIf="progressMessage" class="progress-message">{{ progressMessage }}</div>
+  <div *ngIf="imagePath">
+    <img *ngIf="!isPdf" [src]="imagePath" alt="Image" />
+    <object *ngIf="isPdf" [data]="imagePath" type="application/pdf" width="100%" height="100%">
+      <p>PDF cannot be displayed.</p>
+    </object>
+  </div>
+  <div class="image-controls">
+    <button (click)="zoomImage()">Zoom</button>
+    <button (click)="navigateNext()">&gt;</button>
+  </div>
+</div>

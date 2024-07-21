@@ -1,0 +1,15 @@
+/* Styles for validation error messages */
+
+.validation-error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.validation-error.hidden {
+  display: none;
+}
+
+.validation-error.visible {
+  display: block;
+}

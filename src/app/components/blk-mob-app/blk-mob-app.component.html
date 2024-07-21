@@ -1,0 +1,51 @@
+<div class="mobile-app-info">
+  <!-- Other UI elements for Mobile App Information -->
+
+  <!-- Exit Button -->
+  <button id="exitButton" (click)="navigateToMobileAppInfo()" style="background-color: #007bff; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    Exit
+  </button>
+
+  <!-- Doctor Code Input Field -->
+  <div>
+    <label for="doctorCode">Doctor Code:</label>
+    <input type="text" id="doctorCode" [(ngModel)]="doctorCode" (change)="onDoctorCodeChange()" />
+  </div>
+
+  <!-- Partner Names List -->
+  <div>
+    <label for="partnerNames">Partner Names:</label>
+    <select id="partnerNames" [(ngModel)]="selectedPartnerName" (change)="onPartnerNameChange()">
+      <option *ngFor="let name of partnerNames" [value]="name">{{ name }}</option>
+    </select>
+  </div>
+
+  <!-- Gender Field -->
+  <div>
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" [(ngModel)]="gender" readonly />
+  </div>
+
+  <!-- Age of Client Field -->
+  <div>
+    <label for="ageOfClient">Age of Client:</label>
+    <input type="text" id="ageOfClient" [(ngModel)]="ageOfClient" readonly />
+  </div>
+
+  <!-- Test Field -->
+  <div>
+    <label for="test">Test:</label>
+    <input type="text" id="test" [(ngModel)]="test" readonly />
+  </div>
+
+  <!-- Timestamp Field -->
+  <div>
+    <label for="timestamp">Timestamp:</label>
+    <input type="text" id="timestamp" [(ngModel)]="timestamp" readonly />
+  </div>
+
+  <!-- Warning Message Display -->
+  <div *ngIf="warningMessage" class="warning-message">
+    {{ warningMessage }}
+  </div>
+</div>

@@ -1,0 +1,45 @@
+/* Styles for the video calling control item */
+
+.video-call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.video-call-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.video-call-frame {
+  width: 80%;
+  height: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ok-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ok-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.ok-button:enabled:hover {
+  background-color: #0056b3;
+}

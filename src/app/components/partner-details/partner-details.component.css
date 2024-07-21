@@ -1,0 +1,47 @@
+/* Styles for the partner details component to ensure fields are aligned and displayed in a user-friendly manner */
+
+.partner-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.partner-details-container h2 {
+  margin-bottom: 20px;
+}
+
+.partner-details-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.partner-details-form label {
+  font-weight: bold;
+}
+
+.partner-details-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-details-form .form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.partner-details-form .form-group input[readonly] {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 600px) {
+  .partner-details-form {
+    grid-template-columns: 1fr;
+  }
+}

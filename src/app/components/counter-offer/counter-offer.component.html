@@ -1,0 +1,35 @@
+<div class="counter-offer-form">
+  <form>
+    <div class="form-group">
+      <label for="packageName">Package Name</label>
+      <input type="text" id="packageName" name="packageName" class="form-control" [(ngModel)]="counterOffer.packageName" required>
+    </div>
+    <div class="form-group">
+      <label for="benefitTerm">Benefit Term</label>
+      <input type="number" id="benefitTerm" name="benefitTerm" class="form-control" [(ngModel)]="counterOffer.benefitTerm" required>
+    </div>
+    <div class="form-group">
+      <label for="premiumTerm">Premium Term</label>
+      <input type="number" id="premiumTerm" name="premiumTerm" class="form-control" [(ngModel)]="counterOffer.premiumTerm" required>
+    </div>
+    <div class="form-group">
+      <label for="sumAssured">Sum Assured</label>
+      <input type="number" id="sumAssured" name="sumAssured" class="form-control" [(ngModel)]="counterOffer.sumAssured" required>
+    </div>
+    <div class="form-group">
+      <label for="premium">Premium</label>
+      <input type="number" id="premium" name="premium" class="form-control" [(ngModel)]="counterOffer.premium" required>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="validateCounterOffer()">VALIDATE</button>
+      <button type="button" class="btn btn-secondary" (click)="generateLetter()" [disabled]="!isValidated">GENERATE LETTER</button>
+      <button type="button" class="btn btn-secondary" (click)="generateBI()">GENERATE BI</button>
+      <button type="button" class="btn btn-success" (click)="onSubmit()" [disabled]="!isGenerated">SUBMIT</button>
+      <button type="button" class="btn btn-danger" (click)="closeForm()">CLOSE</button>
+    </div>
+    <div class="form-group" *ngIf="showTestItem" hidden>
+      <label for="testItem">Test Item</label>
+      <input type="text" id="testItem" name="testItem" class="form-control">
+    </div>
+  </form>
+</div>

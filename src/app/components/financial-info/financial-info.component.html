@@ -1,0 +1,17 @@
+<div class="financial-info-form">
+  <h2>Manage Financial Information</h2>
+  <form>
+    <div class="form-group">
+      <label for="owner">Owner:</label>
+      <input type="text" id="owner" name="owner" [(ngModel)]="owner" class="form-control" placeholder="Enter owner name">
+    </div>
+    <div class="form-group">
+      <label for="shares">Number of Shares:</label>
+      <input type="number" id="shares" name="shares" [(ngModel)]="shares" class="form-control" placeholder="Enter number of shares" (input)="calculateTotalShares()">
+    </div>
+    <div class="form-group">
+      <label for="totalShares">Total Shares:</label>
+      <input type="text" id="totalShares" name="totalShares" [value]="totalShares" class="form-control" readonly>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="validationErrors && validationErrors.length > 0">
+  <ul>
+    <li *ngFor="let error of validationErrors">{{ error }}</li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched + .error-message {
+  display: block;
+}
+
+input.ng-valid + .error-message {
+  display: none;
+}

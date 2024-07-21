@@ -1,0 +1,56 @@
+/* Styling for the financial underwriting details component */
+
+.financial-uw-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.financial-uw-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.financial-uw-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.financial-uw-form .form-group {
+  margin-bottom: 15px;
+}
+
+.financial-uw-form label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.financial-uw-form input,
+.financial-uw-form select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.financial-uw-form .proof-type-dropdown {
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+.financial-uw-form .proof-type-dropdown label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.financial-uw-form .proof-type-dropdown select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

@@ -1,0 +1,69 @@
+/* Doctor Signature Component Styles */
+
+/* Style for the Signature button */
+button.signature-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for the Back button */
+button.back-button {
+  background-color: gray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for the Reset button */
+button.reset-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for the signature image area */
+.signature-image-area {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+}
+
+/* Style for the form and messages */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}

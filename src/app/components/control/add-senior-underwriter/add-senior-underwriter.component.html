@@ -1,0 +1,13 @@
+<div class="add-senior-underwriter-container">
+  <h2>Add Senior Underwriter</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="userId">Senior Underwriter User ID:</label>
+      <input type="text" id="userId" name="userId" [(ngModel)]="userId" #userIdInput="ngModel" required autofocus>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

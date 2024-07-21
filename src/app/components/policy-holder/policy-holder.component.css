@@ -1,0 +1,179 @@
+/* Styles for input fields for spouse details */
+#spouse-name, #spouse-surname, #spouse-dob {
+  text-transform: uppercase;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for gender dropdown and its label */
+#gender-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+#gender-dropdown {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Styles for mandatory field indicators */
+.mandatory::after {
+  content: '*';
+  color: red;
+  margin-left: 5px;
+}
+
+/* Styles for read-only fields */
+.read-only {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+/* Styles for annual income input field */
+#annual-income {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for email input field */
+#email {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for weight input field */
+#weight {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for amount of insurance input field */
+#insurance-amount {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for height input field */
+#height {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for occupation status dropdown */
+#occupation-status {
+  background-color: gray;
+  font-weight: bold;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for Telephone2 field */
+#telephone2 {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for expiry date field */
+#expiry-date {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for card type field */
+#card-type {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for credit card holder's name input field */
+#credit-card-holder {
+  text-transform: uppercase;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for relationship dropdown and canvas */
+#relationship-dropdown {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#relationship-canvas {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for hiding and showing fields */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Styles for spouse's name field */
+#spouse-name {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for father's name field */
+#father-name {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for consent information field */
+#consent-information {
+  background-color: white;
+  color: black;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for income proof field */
+#income-proof {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for title dropdown for policy holder's mother */
+#mother-title {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for mother's first name field */
+#mother-first-name {
+  font-size: 8px;
+  font-family: Tahoma;
+  font-weight: bold;
+  position: absolute;
+  top: 51px;
+  left: 82px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for mother's last name field */
+#mother-last-name {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for mother's middle name field */
+#mother-middle-name {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for E-KYC Aadhaar button */
+#ekyc-aadhaar {
+  background-color: yellow;
+  color: black;
+  max-width: 100%;
+  margin-bottom: 10px;
+  cursor: not-allowed;
+}

@@ -1,0 +1,43 @@
+<div>
+  <label for="backdating">Backdating:</label>
+  <input type="radio" id="backdating" name="backdating" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="backdating" name="backdating" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="dispatch">Dispatch:</label>
+  <input type="radio" id="dispatch" name="dispatch" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="dispatch" name="dispatch" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="receipt">Receipt:</label>
+  <input type="radio" id="receipt" name="receipt" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="receipt" name="receipt" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="premium">Premium:</label>
+  <input type="radio" id="premium" name="premium" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="premium" name="premium" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="rider">Rider:</label>
+  <input type="radio" id="rider" name="rider" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="rider" name="rider" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="mobile">Mobile:</label>
+  <input type="radio" id="mobile" name="mobile" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="mobile" name="mobile" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="excessPremium">Excess Premium:</label>
+  <input type="radio" id="excessPremium" name="excessPremium" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="excessPremium" name="excessPremium" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <label for="funds">Funds:</label>
+  <input type="radio" id="funds" name="funds" value="N" (change)="handleRadioButtonChange($event)">N
+  <input type="radio" id="funds" name="funds" value="Y" (change)="handleRadioButtonChange($event)">Y
+</div>
+<div>
+  <button id="proceedButton" [disabled]="!proceedButtonState()" (click)="onProceedClick()">Proceed</button>
+</div>

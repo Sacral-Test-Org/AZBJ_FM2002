@@ -1,0 +1,33 @@
+<div>
+  <label for="testNumber">Test Number:</label>
+  <input id="testNumber" (dblclick)="handleTestNumberInteraction()" (keydown.control.enter)="handleTestNumberInteraction()" />
+</div>
+
+<ul *ngIf="testNumbers.length > 0">
+  <li *ngFor="let testNumber of testNumbers">{{ testNumber.description }}</li>
+</ul>
+
+<script>
+import { Component, OnInit } from '@angular/core';
+import { DeclineReqService } from 'src/app/services/decline-req.service';
+import { TestNumberDTO } from 'src/app/models/test-number-dto.model';
+
+@Component({
+  selector: 'app-decline-req',
+  templateUrl: './decline-req.component.html',
+  styleUrls: ['./decline-req.component.css']
+})
+export class DeclineReqComponent implements OnInit {
+  testNumbers: TestNumberDTO[] = [];
+
+  constructor(private declineReqService: DeclineReqService) {}
+
+  ngOnInit(): void {}
+
+  handleTestNumberInteraction(): void {
+    this.declineReqService.fetchValidTestNumbers().subscribe((data: TestNumberDTO[]) => {
+      this.testNumbers = data;
+    });
+  }
+}
+</script>

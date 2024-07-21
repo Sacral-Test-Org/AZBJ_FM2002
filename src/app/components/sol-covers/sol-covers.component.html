@@ -1,0 +1,36 @@
+<div class="sol-covers">
+  <h2>Solution Covers</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Cover Code</th>
+        <th>Sum Insured Whole Cover</th>
+        <th>Benefit Term</th>
+        <th>Premium Term</th>
+        <th>Total Rider Invest</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cover of covers">
+        <td>{{ cover.coverCode }}</td>
+        <td>{{ cover.sumInsuredWholeCover }}</td>
+        <td>{{ cover.benefitTerm }}</td>
+        <td>{{ cover.premiumTerm }}</td>
+        <td>
+          <input 
+            type="text" 
+            [value]="cover.totalRiderInvest" 
+            [readonly]="cover.coverCode.startsWith('L')" 
+          />
+        </td>
+        <td>
+          <button (click)="deleteCover(cover)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

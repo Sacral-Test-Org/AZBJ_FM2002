@@ -1,0 +1,10 @@
+<div>
+  <h2>Forward Case to Underwriter</h2>
+  <form (ngSubmit)="handleUnderwriterSelection()">
+    <label for="underwriterId">Underwriter ID:</label>
+    <input type="text" id="underwriterId" name="underwriterId" [(ngModel)]="underwriterId" required minlength="8" maxlength="8">
+    <div *ngIf="validationMessage" class="validation-message">{{ validationMessage }}</div>
+    <button type="submit">Submit</button>
+    <button type="button" (click)="onCancel()">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+/* Styles for validation error messages */
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-message::before {
+  content: 'Error: ';
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

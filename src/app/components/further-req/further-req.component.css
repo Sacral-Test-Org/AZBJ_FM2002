@@ -1,0 +1,27 @@
+/* Style for the prompt labeled 'Life' */
+.prompt {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for the dropdown field */
+.dropdown {
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Ensure no horizontal or vertical scrollbars */
+.dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

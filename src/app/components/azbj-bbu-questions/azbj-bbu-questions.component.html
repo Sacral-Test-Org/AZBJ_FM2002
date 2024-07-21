@@ -1,0 +1,48 @@
+<div class="questionnaire-container">
+  <table class="questionnaire-table">
+    <thead>
+      <tr>
+        <th>Partner ID</th>
+        <th>Partner Name</th>
+        <th>Question Description</th>
+        <th>Answer</th>
+        <th>Details if Marked Yes</th>
+        <th>Version</th>
+        <th>Version Date</th>
+        <th>End Date</th>
+        <th>Answer Type</th>
+        <th>Validation</th>
+        <th>Process</th>
+        <th>Sub Question</th>
+        <th>Question ID</th>
+        <th>Form Question Number</th>
+        <th>Displayed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let question of questions; let i = index" [attr.data-index]="i">
+        <td>{{ question.partnerId }}</td>
+        <td>{{ question.partnerName }}</td>
+        <td>{{ question.questionDescription }}</td>
+        <td><input type="text" [(ngModel)]="question.answer" (change)="validateDescriptionInput(question.answer, question.questionId, question.subQuestionId, question.description)" /></td>
+        <td><input type="text" [(ngModel)]="question.detailsIfYes" /></td>
+        <td>{{ question.version }}</td>
+        <td><input type="date" [(ngModel)]="question.versionDate" /></td>
+        <td><input type="date" [(ngModel)]="question.endDate" /></td>
+        <td><input type="text" [(ngModel)]="question.answerType" /></td>
+        <td><input type="text" [(ngModel)]="question.validation" /></td>
+        <td><input type="text" [(ngModel)]="question.process" /></td>
+        <td>{{ question.subQuestion }}</td>
+        <td>{{ question.questionId }}</td>
+        <td>{{ question.formQuestionNumber }}</td>
+        <td>{{ question.displayed }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="navigation-buttons">
+    <button (click)="navigateToPrevious()">Previous</button>
+    <button (click)="navigateToNext()">Next</button>
+  </div>
+  <app-validation-error *ngIf="errorMessage" [message]="errorMessage"></app-validation-error>
+  <button (click)="close()">Close</button>
+</div>

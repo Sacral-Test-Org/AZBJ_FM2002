@@ -1,0 +1,64 @@
+/* Dropdown Menu Styles */
+
+/* Ensure the dropdown menu is styled appropriately */
+.family-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+/* Style the dropdown button */
+.family-dropdown button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Style the dropdown content (hidden by default) */
+.family-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the dropdown items */
+.family-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown items on hover */
+.family-dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on button click */
+.family-dropdown:hover .family-dropdown-content {
+  display: block;
+}
+
+/* Ensure the dropdown shows up to 3 items at a time without scrollbars */
+.family-dropdown-content {
+  max-height: 150px; /* Assuming each item is around 50px tall */
+  overflow: hidden;
+}
+
+/* Ensure no horizontal scrollbars */
+.family-dropdown-content {
+  overflow-x: hidden;
+}
+
+/* Label styling */
+.family-dropdown-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}

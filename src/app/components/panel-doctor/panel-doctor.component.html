@@ -1,0 +1,46 @@
+<div class="panel-doctor-container">
+  <h2>Manage Panel Doctor Details</h2>
+  <form>
+    <div>
+      <label for="doctorCode">Doctor Code:</label>
+      <input type="text" id="doctorCode" name="doctorCode" [(ngModel)]="doctorCode" (blur)="validateDoctorCode()" />
+    </div>
+    <div>
+      <label for="testCode">Test Code:</label>
+      <input type="text" id="testCode" name="testCode" [(ngModel)]="testCode" (blur)="validateTestCode()" />
+    </div>
+    <div>
+      <label for="merNo">MER No.:</label>
+      <input type="text" id="merNo" name="merNo" [(ngModel)]="merNo" (blur)="validateMerNo()" />
+      <app-validation-error *ngIf="merNoError" [errorMessage]="merNoErrorMessage"></app-validation-error>
+    </div>
+    <div>
+      <label for="dateReceived">Date Received:</label>
+      <input type="text" id="dateReceived" name="dateReceived" [(ngModel)]="dateReceived" [disabled]="true" />
+      <app-validation-error *ngIf="dateReceivedError" [errorMessage]="dateReceivedErrorMessage"></app-validation-error>
+    </div>
+    <div>
+      <label for="doctorName">Doctor Name:</label>
+      <input type="text" id="doctorName" name="doctorName" [(ngModel)]="doctorName" (dblclick)="onDoctorNameDoubleClick()" [readonly]="true" />
+    </div>
+    <div>
+      <label for="lifeType">Life Type:</label>
+      <select id="lifeType" name="lifeType" [(ngModel)]="lifeType" (change)="onLifeTypeChange()">
+        <option *ngFor="let type of lifeTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+    <div>
+      <button type="button" (click)="onDeleteDoctor()">Delete Doctor</button>
+      <app-validation-error *ngIf="deleteError" [errorMessage]="deleteErrorMessage"></app-validation-error>
+    </div>
+    <div>
+      <button type="button" (click)="onPopulateDoctorPanelClick()">Populate Doctor Panel</button>
+    </div>
+    <div>
+      <button type="button" (click)="onViewImages()">View Images</button>
+    </div>
+    <div>
+      <button type="button" (click)="onNavigateToDoctorSignature()">Doctor Signature</button>
+    </div>
+  </form>
+</div>

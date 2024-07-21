@@ -1,0 +1,34 @@
+<div class="iib-details-container">
+  <h2>IIB Matched Details</h2>
+  <div *ngFor="let record of iibDetails; let i = index" class="iib-record">
+    <div>
+      <label for="inputProposalPolicyNo">Input Proposal Policy No:</label>
+      <input id="inputProposalPolicyNo" type="text" [(ngModel)]="record.INPUT_PROPOSAL_POLICY_NO" />
+    </div>
+    <div>
+      <label for="transactionId">Transaction ID:</label>
+      <input id="transactionId" type="text" [(ngModel)]="record.TRANSACTION_ID" />
+    </div>
+    <div>
+      <label for="questdbno">Quest DB No:</label>
+      <input id="questdbno" type="text" [(ngModel)]="record.QUESTDBNO" />
+    </div>
+    <div>
+      <label for="inputMatchingParameter">Input Matching Parameter:</label>
+      <input id="inputMatchingParameter" type="text" [(ngModel)]="record.INPUT_MATCHING_PARAMETER" />
+    </div>
+    <div>
+      <label for="policyStatusDesc">Policy Status:</label>
+      <input id="policyStatusDesc" type="text" [(ngModel)]="record.POLICY_STATUS_DESC" />
+    </div>
+    <div>
+      <label for="companyNumberDesc">Company Number:</label>
+      <input id="companyNumberDesc" type="text" [(ngModel)]="record.COMPANY_NUMBER_DESC" />
+    </div>
+    <div>
+      <label for="causeOfDeathDesc">Cause of Death:</label>
+      <input id="causeOfDeathDesc" type="text" [(ngModel)]="record.CAUSE_OF_DEATH_DESC" />
+    </div>
+  </div>
+  <button (click)="navigateBack()">Back</button>
+</div>

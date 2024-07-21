@@ -1,0 +1,71 @@
+<div class="alert-list-modal" tabindex="-1" role="dialog" aria-labelledby="alertListModalLabel" aria-hidden="true">
+  <div class="alert-list-dialog" role="document">
+    <div class="alert-list-content">
+      <div class="alert-list-header">
+        <h5 class="alert-list-title" id="alertListModalLabel">Alert List</h5>
+      </div>
+      <div class="alert-list-body">
+        <form>
+          <div class="form-group">
+            <label for="radioGroup">Select an option:</label>
+            <div id="radioGroup" class="radio-group">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="alertOptions" id="optionX" value="X" checked>
+                <label class="form-check-label" for="optionX">
+                  Option X
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="alertOptions" id="optionY" value="Y">
+                <label class="form-check-label" for="optionY">
+                  Option Y
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="alert-list-footer">
+        <button type="button" class="btn btn-primary" (click)="proceed()">Proceed</button>
+        <button type="button" class="btn btn-secondary" (click)="hideAlertListWindow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.alert-list-modal {
+  display: block;
+  position: fixed;
+  z-index: 1050;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  margin-top: -150px; /* Half of the height */
+  margin-left: -200px; /* Half of the width */
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+}
+.alert-list-dialog {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.alert-list-content {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+.alert-list-header,
+.alert-list-footer {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+.alert-list-footer {
+  border-top: 1px solid #e9ecef;
+  text-align: right;
+}
+</style>

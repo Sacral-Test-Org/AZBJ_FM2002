@@ -1,0 +1,62 @@
+/* Styling for validation error messages */
+.validation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Styling for the buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Styling for the canvas */
+canvas {
+  border: 1px solid #000000;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Specific styling for the zoom button */
+.zoom-button {
+  background-color: #28a745;
+}
+
+/* Specific styling for the scroll button */
+.scroll-button {
+  background-color: #ffc107;
+}
+
+/* Styling for the BBU Image Details section */
+.bbu-image-details {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bbu-image-details h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.bbu-image-details p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

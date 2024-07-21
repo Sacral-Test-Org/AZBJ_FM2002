@@ -1,0 +1,163 @@
+/* Auto-Pay Rebate Checkbox Styles */
+.auto-pay-rebate-checkbox {
+  display: none; /* Hidden by default */
+}
+
+/* Date of Risk Field Styles */
+.date-of-risk-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.date-of-risk-error {
+  color: red;
+  font-size: 12px;
+}
+
+/* % Increasing in SA Field Styles */
+.increase-sa-label {
+  text-align: right;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.increase-sa-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+/* Annuity Type Dropdown Styles */
+.annuity-type-dropdown {
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.annuity-type-label {
+  text-align: right;
+  font-weight: bold;
+  font-family: 'MS Sans Serif';
+}
+
+/* Fully Vaccinated Checkbox Styles */
+.fully-vaccinated-checkbox {
+  display: none; /* Hidden by default */
+}
+
+/* Cash Bonus Field Styles */
+.cash-bonus-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+/* Submit Button and Counter Offer Reasons Styles */
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.counter-offer-reasons {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.counter-offer-error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Retention Flag and Reason Field Styles */
+.retention-flag-dropdown {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.reason-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.confirmation-dialog {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sum Assured on Death Field Styles */
+.sum-assured-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+/* Salaried Rebate Flag Checkbox Styles */
+.salaried-rebate-checkbox {
+  display: none; /* Hidden by default */
+}
+
+/* Multiplier Field Styles */
+.multiplier-field {
+  display: none; /* Hidden from view */
+}
+
+/* Joint Life Checkbox and Related Fields Styles */
+.joint-life-checkbox {
+  margin: 10px 0;
+}
+
+.age-proof-field,
+.age-proof-id-field,
+.height-field,
+.weight-field,
+.weight-change-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.ph-equal-ins-field {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+.questionnaire-ph-tab {
+  display: none; /* Hidden by default */
+}
+
+/* Premium Calculation and Validation Styles */
+.premium-calculation-result {
+  font-size: 14px;
+  color: green;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}

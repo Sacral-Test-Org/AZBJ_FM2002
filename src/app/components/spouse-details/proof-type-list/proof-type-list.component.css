@@ -1,0 +1,25 @@
+/* Styles for the proof type list component */
+
+.proof-type-list {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.proof-type-item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proof-type-item:hover {
+  background-color: #f0f0f0;
+}
+
+.proof-type-item.selected {
+  background-color: #d0e0fc;
+  border-color: #a0c0f0;
+}

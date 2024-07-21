@@ -1,0 +1,60 @@
+<div class="reinsurer-selection">
+  <h1>Reinsurer Selection Screen</h1>
+  <form>
+    <div class="form-group">
+      <label for="sysCode">Test Code (SYS_CODE)</label>
+      <input type="text" id="sysCode" name="sysCode" readonly>
+    </div>
+    <div class="form-group">
+      <label for="sysDesc">Test Description (SYS_DESC)</label>
+      <input type="text" id="sysDesc" name="sysDesc" readonly>
+    </div>
+    <div class="form-group">
+      <label for="ipType">Life Insurance Type (IP_TYPE)</label>
+      <select id="ipType" name="ipType" disabled>
+        <option value="type1">Type 1</option>
+        <option value="type2">Type 2</option>
+        <option value="type3">Type 3</option>
+        <option value="type4">Type 4</option>
+        <option value="type5">Type 5</option>
+        <option value="type6">Type 6</option>
+        <option value="type7">Type 7</option>
+        <option value="type8">Type 8</option>
+        <option value="type9">Type 9</option>
+        <option value="type10">Type 10</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="calledDate">Called Date (CALLED_DATE)</label>
+      <input type="text" id="calledDate" name="calledDate" readonly>
+    </div>
+    <div class="form-group">
+      <label for="underwriterRecommendation">Underwriter's Recommendation</label>
+      <select id="underwriterRecommendation" name="underwriterRecommendation" disabled>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="retainAmt">Retain Amt</label>
+      <input type="text" id="retainAmt" name="retainAmt" maxlength="150" style="background-color: white; font-family: 'Microsoft Sans Serif'; height: 18px; width: 124px;">
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="deleteRecord()">Delete</button>
+    </div>
+    <div class="form-group">
+      <label for="reinsurerCodes">Reinsurer Codes</label>
+      <ul id="reinsurerCodes">
+        <!-- Reinsurer codes will be dynamically populated here -->
+      </ul>
+    </div>
+    <div class="form-group">
+      <div id="errorMessage" class="error-message">
+        <!-- Error messages will be displayed here -->
+      </div>
+    </div>
+  </form>
+</div>

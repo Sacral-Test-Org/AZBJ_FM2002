@@ -1,0 +1,6 @@
+<div>
+  <label for="proofType">Select Proof Type:</label>
+  <select id="proofType" (change)="onProofTypeSelect($event)">
+    <option *ngFor="let proofType of proofTypeList" [value]="proofType">{{ proofType }}</option>
+  </select>
+</div>

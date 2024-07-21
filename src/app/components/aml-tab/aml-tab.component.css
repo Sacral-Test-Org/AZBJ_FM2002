@@ -1,0 +1,47 @@
+/* CSS for AML Tab Component */
+
+.aml-tab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.aml-tab-container .form-field {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.aml-tab-container .form-field input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.aml-tab-container .form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.aml-tab-container .form-field .error {
+  color: red;
+  font-size: 12px;
+}
+
+.aml-tab-container .scrollbar {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* Tabbed canvas styling */
+.aml-tabbed-canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,29 @@
+<div>
+  <!-- Comments Field with Tooltip -->
+  <label for="comments">Comments:</label>
+  <input 
+    type="text" 
+    id="comments" 
+    name="comments" 
+    (input)="validateComments($event)" 
+    (mouseenter)="showTooltip($event)" 
+    (mousemove)="showTooltip($event)" 
+    (dblclick)="showTooltip($event)" 
+    #commentsField
+  />
+  <div *ngIf="commentsError" class="error-message">{{ commentsError }}</div>
+  <div *ngIf="tooltipVisible" class="tooltip">Enter at least 10 characters.</div>
+
+  <!-- FR_RES_RECD Field -->
+  <label for="fr_res_recd">FR_RES_RECD:</label>
+  <input 
+    type="text" 
+    id="fr_res_recd" 
+    name="fr_res_recd" 
+    (change)="handleFRResRecdChange($event)" 
+    (keydown.arrowdown)="handleArrowDown($event)" 
+    (keydown.arrowup)="handleArrowUp($event)" 
+    #frResRecdField
+  />
+  <div *ngIf="frResRecdError" class="error-message">{{ frResRecdError }}</div>
+</div>

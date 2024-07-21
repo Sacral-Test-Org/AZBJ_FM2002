@@ -1,0 +1,18 @@
+/* CSS classes for validation error messages */
+
+.validation-error {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Additional styles for form actions when disabled */
+.form-action-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

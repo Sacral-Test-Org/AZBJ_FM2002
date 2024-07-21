@@ -1,0 +1,9 @@
+<div class="prev-det-container">
+  <label for="underwriting-decisions">Previous Underwriting Decisions:</label>
+  <select id="underwriting-decisions" [(ngModel)]="selectedDecision" (change)="onDecisionChange($event)">
+    <option *ngFor="let decision of underwritingDecisions" [value]="decision">{{ decision }}</option>
+  </select>
+  <div class="selected-decision">
+    <p>Selected Decision: {{ selectedDecision }}</p>
+  </div>
+</div>

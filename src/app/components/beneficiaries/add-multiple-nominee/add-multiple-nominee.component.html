@@ -1,0 +1,29 @@
+<div class="add-multiple-nominee">
+  <h2>Add Multiple Nominees</h2>
+  <form [formGroup]="nomineeForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="nominees" *ngFor="let nominee of nomineeForm.controls.nominees.controls; let i = index">
+      <div [formGroupName]="i">
+        <label for="name">Nominee Name:</label>
+        <input id="name" formControlName="name" type="text" />
+
+        <label for="birthplace">Birthplace:</label>
+        <input id="birthplace" formControlName="birthplace" type="text" />
+
+        <label for="relation">Relation:</label>
+        <input id="relation" formControlName="relation" type="text" />
+
+        <label for="dob">Date of Birth:</label>
+        <input id="dob" formControlName="dob" type="date" />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" formControlName="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" (click)="addNominee()">Add Nominee</button>
+    <button type="submit">Submit</button>
+  </form>
+</div>

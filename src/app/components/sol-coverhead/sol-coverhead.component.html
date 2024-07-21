@@ -1,0 +1,36 @@
+<div class="sol-coverhead">
+  <!-- Money Back Option List Item -->
+  <div class="form-group">
+    <label for="moneyBackOption" class="control-label" style="font-weight: bold; text-align: center;">Money Back Option</label>
+    <select id="moneyBackOption" class="form-control" [(ngModel)]="moneyBackOption">
+      <option *ngFor="let option of moneyBackOptions" [value]="option.value">{{ option.label }}</option>
+    </select>
+  </div>
+
+  <!-- Discount List -->
+  <div class="form-group">
+    <label for="discountList" class="control-label" style="font-weight: bold; text-align: center;">Discount</label>
+    <app-discount-list></app-discount-list>
+  </div>
+
+  <!-- Amount Invested and Solution Name Validation -->
+  <div class="form-group">
+    <label for="amountInvested" class="control-label">Amount Invested</label>
+    <input id="amountInvested" type="number" class="form-control" [(ngModel)]="amountInvested" (blur)="validateAmountInvested()" />
+  </div>
+  <div class="form-group">
+    <label for="solutionName" class="control-label">Solution Name</label>
+    <input id="solutionName" type="text" class="form-control" [(ngModel)]="solutionName" />
+  </div>
+
+  <!-- Ok Button -->
+  <div class="form-group">
+    <button class="btn btn-primary" (click)="onOkClick()">Ok</button>
+  </div>
+
+  <!-- ONLY BOP case, Auto-Issuance Allowed Checkbox -->
+  <div class="form-group">
+    <label for="autoIssuanceAllowed" class="control-label">ONLY BOP case, Auto-Issuance Allowed</label>
+    <input id="autoIssuanceAllowed" type="checkbox" [(ngModel)]="autoIssuanceAllowed" (change)="onCheckboxChange($event)" />
+  </div>
+</div>

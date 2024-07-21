@@ -1,0 +1,115 @@
+/* Dropdown List Styles */
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* Positioning the Dropdown List */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Label for Dropdown */
+.dropdown-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Warning Message Styles */
+.warning-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Checkbox Styles */
+.checkbox {
+  margin-top: 10px;
+}
+
+/* Table Styles */
+.policy-member-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.policy-member-table th, .policy-member-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.policy-member-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Scrollbar Styles */
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Input Field Styles */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Form Action Disabled Styles */
+.form-action-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* BMI Input Field Styles */
+.bmi-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* Height Input Field Styles */
+.height-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* Validation Message Styles */
+.validation-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

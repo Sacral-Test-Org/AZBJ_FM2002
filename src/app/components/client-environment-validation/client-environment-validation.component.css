@@ -1,0 +1,36 @@
+/* Styling for validation status display */
+.validation-status {
+  font-size: 1.2em;
+  color: green;
+  margin: 10px 0;
+}
+
+/* Styling for error messages display */
+.error-message {
+  font-size: 1em;
+  color: red;
+  margin: 10px 0;
+}
+
+/* General container styling */
+.validation-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Button styling */
+.button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

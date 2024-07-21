@@ -1,0 +1,86 @@
+<div class="covers-health-form">
+  <form>
+    <!-- Cover Code Input Field -->
+    <div class="form-group">
+      <label for="coverCode">Cover Code</label>
+      <input type="text" id="coverCode" name="coverCode" maxlength="10" (input)="coverCode = $event.target.value.toUpperCase()" />
+    </div>
+
+    <!-- Cover Description Input Field -->
+    <div class="form-group">
+      <label for="coverDescription">Cover Description</label>
+      <input type="text" id="coverDescription" name="coverDescription" />
+    </div>
+
+    <!-- Sum Insured for the Whole Cover Input Field -->
+    <div class="form-group">
+      <label for="sumInsured">Sum Insured for the Whole Cover</label>
+      <input type="number" id="sumInsured" name="sumInsured" />
+    </div>
+
+    <!-- Benefit Term Input Field -->
+    <div class="form-group">
+      <label for="benefitTerm">Benefit Term</label>
+      <input type="number" id="benefitTerm" name="benefitTerm" />
+    </div>
+
+    <!-- Premium Term Input Field -->
+    <div class="form-group">
+      <label for="premiumTerm">Premium Term</label>
+      <input type="number" id="premiumTerm" name="premiumTerm" (focus)="autoPopulatePremiumTerm()" />
+    </div>
+
+    <!-- Entry Age Input Field -->
+    <div class="form-group">
+      <label for="entryAge">Entry Age</label>
+      <input type="number" id="entryAge" name="entryAge" (input)="handleEntryAgeInput($event.target.value)" />
+    </div>
+
+    <!-- Annual and Frequency-based Monetary Amounts Input Field -->
+    <div class="form-group">
+      <label for="annualAmount">Annual Amount</label>
+      <input type="number" id="annualAmount" name="annualAmount" />
+    </div>
+    <div class="form-group">
+      <label for="frequencyAmount">Frequency-based Amount</label>
+      <input type="number" id="frequencyAmount" name="frequencyAmount" />
+    </div>
+
+    <!-- Standard Premiums Input Field -->
+    <div class="form-group">
+      <label for="standardPremium">Standard Premium</label>
+      <input type="number" id="standardPremium" name="standardPremium" />
+    </div>
+
+    <!-- Discount Percentages and Amounts Input Field -->
+    <div class="form-group">
+      <label for="discountPercentage">Discount Percentage</label>
+      <input type="number" id="discountPercentage" name="discountPercentage" />
+    </div>
+    <div class="form-group">
+      <label for="discountAmount">Discount Amount</label>
+      <input type="number" id="discountAmount" name="discountAmount" />
+    </div>
+
+    <!-- Rounding Offsets Input Field -->
+    <div class="form-group">
+      <label for="roundingOffset">Rounding Offset</label>
+      <input type="number" id="roundingOffset" name="roundingOffset" />
+    </div>
+
+    <!-- Deletion Checkbox -->
+    <div class="form-group">
+      <label for="deletionCheckbox">Delete</label>
+      <input type="checkbox" id="deletionCheckbox" name="deletionCheckbox" />
+    </div>
+
+    <!-- Validation Error Display -->
+    <app-validation-error></app-validation-error>
+
+    <!-- Navigation Buttons -->
+    <div class="form-group">
+      <button type="button" (click)="navigateToNextItem()">Next</button>
+      <button type="button" (click)="validateSumInsured()">Validate Sum Insured</button>
+    </div>
+  </form>
+</div>

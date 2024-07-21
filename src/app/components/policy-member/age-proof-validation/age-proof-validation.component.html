@@ -1,0 +1,14 @@
+<div>
+  <label for="ageProof">Age Proof:</label>
+  <input id="ageProof" (dblclick)="showAgeProofList()" [(ngModel)]="selectedAgeProof" />
+</div>
+
+<div *ngIf="ageProofs.length > 0">
+  <ul>
+    <li *ngFor="let proof of ageProofs" (click)="selectAgeProof(proof)">{{ proof.PROOF_DESC }}</li>
+  </ul>
+</div>
+
+<div *ngIf="ageProofs.length === 0 && showNA">
+  <p>NA</p>
+</div>

@@ -1,0 +1,62 @@
+<div class="risk-declaration-container">
+  <h2>Risk Declaration Details</h2>
+  <table class="risk-declaration-table">
+    <thead>
+      <tr>
+        <th>Policy Number</th>
+        <th>Premium</th>
+        <th>Life Coverage Sum</th>
+        <th>Year of Issue</th>
+        <th>Insurance Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of riskDeclarations">
+        <td>{{ record.policyNumber }}</td>
+        <td>{{ record.premium }}</td>
+        <td>{{ record.lifeCoverageSum }}</td>
+        <td>{{ record.yearOfIssue }}</td>
+        <td>{{ record.insuranceType }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="scrollbar-container">
+    <div class="scrollbar" *ngIf="riskDeclarations.length > displayLimit">
+      <!-- Scrollbar logic here -->
+    </div>
+  </div>
+  <div class="dropdown-container">
+    <label for="insuranceType">Life</label>
+    <select id="insuranceType" [(ngModel)]="selectedInsuranceType">
+      <option *ngFor="let type of insuranceTypes" [value]="type.value">{{ type.label }}</option>
+    </select>
+  </div>
+</div>
+
+<style>
+  .risk-declaration-container {
+    font-family: 'MS Sans Serif';
+  }
+  .risk-declaration-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .risk-declaration-table th, .risk-declaration-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  .scrollbar-container {
+    overflow-y: auto;
+    max-height: 400px;
+  }
+  .dropdown-container {
+    margin-top: 20px;
+  }
+  #insuranceType {
+    background-color: white;
+    color: black;
+    font-family: 'MS Sans Serif';
+    max-width: 2ch;
+  }
+</style>

@@ -1,0 +1,41 @@
+<div class="susac-section">
+  <div class="field">
+    <label for="sa_rcptno">Receipt Number:</label>
+    <input id="sa_rcptno" type="text" [value]="susacData.sa_rcptno" readonly />
+  </div>
+  <div class="field">
+    <label for="sa_amt">Amount:</label>
+    <input id="sa_amt" type="text" [value]="susacData.sa_amt" readonly />
+  </div>
+  <div class="field">
+    <label for="sa_daterecd">Date Received:</label>
+    <input id="sa_daterecd" type="text" [value]="susacData.sa_daterecd" readonly />
+  </div>
+  <div class="field">
+    <label for="cheque_status">Cheque Status:</label>
+    <input id="cheque_status" type="text" [value]="susacData.cheque_status" readonly />
+  </div>
+  <div class="field">
+    <label for="premium_payer">Premium Payer:</label>
+    <input id="premium_payer" type="text" [value]="susacData.premium_payer" readonly />
+  </div>
+  <div class="field">
+    <label for="rcpt_branch_code">Receipting Branch Code:</label>
+    <input id="rcpt_branch_code" type="text" [value]="susacData.rcpt_branch_code" readonly />
+  </div>
+  <div class="field">
+    <label for="rcpt_branch_name">Receipting Branch Name:</label>
+    <input id="rcpt_branch_name" type="text" [value]="susacData.rcpt_branch_name" readonly />
+  </div>
+  <div class="field">
+    <label for="rcpt_branch_state">State of the Branch:</label>
+    <input id="rcpt_branch_state" type="text" [value]="susacData.rcpt_branch_state" readonly />
+  </div>
+  <div class="field">
+    <label for="total_susac">Total Amount:</label>
+    <input id="total_susac" type="text" [value]="totalSusac" readonly />
+  </div>
+  <div class="actions">
+    <button (click)="closeButtonHandler()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+/* Styles for the Signature Confidence Details screen */
+
+/* Style for the read-only fields */
+.read-only-field {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Style for the buttons */
+.button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the Signature Confidence section */
+.signature-confidence-section {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the header of the Signature Confidence section */
+.signature-confidence-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for each record in the Signature Confidence section */
+.signature-confidence-record {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.signature-confidence-record:last-child {
+  border-bottom: none;
+}
+
+.signature-confidence-record .document-name {
+  font-weight: bold;
+  color: #555;
+}
+
+.signature-confidence-record .confidence-level {
+  color: #007bff;
+}

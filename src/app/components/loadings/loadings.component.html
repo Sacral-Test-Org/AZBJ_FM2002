@@ -1,0 +1,55 @@
+<div class="loading-details">
+  <form>
+    <div class="form-group">
+      <label for="coverCode">Cover Code</label>
+      <input type="text" id="coverCode" name="coverCode" [(ngModel)]="coverCode" (keydown.arrowdown)="onDownArrow()" (keydown.arrowup)="onUpArrow()" />
+    </div>
+    <div class="form-group">
+      <label for="coverDescription">Cover Description</label>
+      <input type="text" id="coverDescription" name="coverDescription" [(ngModel)]="coverDescription" />
+    </div>
+    <div class="form-group">
+      <label for="fromDate">From Date</label>
+      <input type="date" id="fromDate" name="fromDate" [(ngModel)]="fromDate" (blur)="validateFromDate()" />
+      <div *ngIf="fromDateError" class="error-message">{{ fromDateError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="extraAmount">Extra Amount</label>
+      <input type="number" id="extraAmount" name="extraAmount" [(ngModel)]="extraAmount" (blur)="validateExtraAmount()" />
+      <div *ngIf="extraAmountError" class="error-message">{{ extraAmountError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="srlPercentage">SRL Percentage</label>
+      <input type="number" id="srlPercentage" name="srlPercentage" [(ngModel)]="srlPercentage" (blur)="validateSRLPercentage()" />
+      <app-validation-error *ngIf="srlPercentageError" [errorMessage]="srlPercentageError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="toDate">To Date</label>
+      <input type="date" id="toDate" name="toDate" [(ngModel)]="toDate" (blur)="validateToDate()" />
+      <app-validation-error *ngIf="toDateError" [errorMessage]="toDateError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="loadingType">Loading Type</label>
+      <input type="text" id="loadingType" name="loadingType" [(ngModel)]="loadingType" (blur)="validateLoadingType()" />
+      <app-validation-error *ngIf="loadingTypeError" [errorMessage]="loadingTypeError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="loadingPercentage">Loading Percentage</label>
+      <input type="number" id="loadingPercentage" name="loadingPercentage" [(ngModel)]="loadingPercentage" (blur)="validateLoadingPercentage()" />
+      <app-validation-error *ngIf="loadingPercentageError" [errorMessage]="loadingPercentageError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="occupationLoading">Occupation Loading</label>
+      <input type="number" id="occupationLoading" name="occupationLoading" [(ngModel)]="occupationLoading" (blur)="validateOccupationLoading()" />
+      <app-validation-error *ngIf="occupationLoadingError" [errorMessage]="occupationLoadingError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="medicalLoading">Medical Loading</label>
+      <input type="number" id="medicalLoading" name="medicalLoading" [(ngModel)]="medicalLoading" (blur)="validateMedicalLoading()" />
+      <app-validation-error *ngIf="medicalLoadingError" [errorMessage]="medicalLoadingError"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="closeLoadingWindow()">Close</button>
+    </div>
+  </form>
+</div>

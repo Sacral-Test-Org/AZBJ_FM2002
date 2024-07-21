@@ -1,0 +1,145 @@
+/* General toolbar styling */
+.horizontal-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Button styling */
+.horizontal-toolbar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.horizontal-toolbar button:hover {
+  background-color: #0056b3;
+}
+
+.horizontal-toolbar button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Specific button styles */
+.new-session-button {
+  background-color: #28a745;
+}
+
+.criteria-query-form-button {
+  background-color: #17a2b8;
+}
+
+.rollback-button {
+  background-color: #ffc107;
+}
+
+.exit-button {
+  background-color: #dc3545;
+}
+
+.select-and-exit-button {
+  background-color: #6f42c1;
+}
+
+.invoke-list-of-values-button {
+  background-color: #20c997;
+}
+
+.cancel-query-button {
+  background-color: #fd7e14;
+}
+
+.execute-query-button {
+  background-color: #007bff;
+}
+
+.enter-query-mode-button {
+  background-color: #6610f2;
+}
+
+.save-button {
+  background-color: #28a745;
+}
+
+.clear-record-button {
+  background-color: #17a2b8;
+}
+
+.invoke-text-editor-button {
+  background-color: #ffc107;
+}
+
+.insert-record-button {
+  background-color: #20c997;
+}
+
+.delete-record-button {
+  background-color: #dc3545;
+}
+
+.move-to-next-record-button {
+  background-color: #007bff;
+}
+
+.move-to-previous-record-button {
+  background-color: #6f42c1;
+}
+
+.previous-page-button {
+  background-color: #fd7e14;
+}
+
+.next-page-button {
+  background-color: #007bff;
+}
+
+.help-button {
+  background-color: #17a2b8;
+}
+
+.user-diaries-button {
+  background-color: #28a745;
+}
+
+.incomplete-limit-diaries-button {
+  background-color: #ffc107;
+}
+
+.unprogressed-limit-diaries-button {
+  background-color: #20c997;
+}
+
+.unopened-non-limit-diaries-button {
+  background-color: #dc3545;
+}
+
+.user-defined-button {
+  background-color: #6c757d;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Query mode hint/message styling */
+.query-mode-hint {
+  font-size: 12px;
+  color: #6c757d;
+  margin-left: 10px;
+}
+
+/* Ensure no unnecessary scrollbars */
+.horizontal-toolbar {
+  overflow: hidden;
+}

@@ -1,0 +1,37 @@
+<div class="liquid-investments-container">
+  <h2>Manage Liquid Investments</h2>
+  <form>
+    <div class="form-group">
+      <label for="fixedTermDeposits">Fixed-term deposits:</label>
+      <input type="number" id="fixedTermDeposits" name="fixedTermDeposits" [(ngModel)]="fixedTermDeposits" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="mutualFunds">Mutual funds:</label>
+      <input type="number" id="mutualFunds" name="mutualFunds" [(ngModel)]="mutualFunds" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="equityShares">Equity shares:</label>
+      <input type="number" id="equityShares" name="equityShares" [(ngModel)]="equityShares" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="ulPolicies">Fund values of UL policies:</label>
+      <input type="number" id="ulPolicies" name="ulPolicies" [(ngModel)]="ulPolicies" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="bankBalances">Bank balances:</label>
+      <input type="number" id="bankBalances" name="bankBalances" [(ngModel)]="bankBalances" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="oneTimeIncomes">One-time incomes:</label>
+      <input type="number" id="oneTimeIncomes" name="oneTimeIncomes" [(ngModel)]="oneTimeIncomes" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="otherInvestments">Other liquid investments:</label>
+      <input type="number" id="otherInvestments" name="otherInvestments" [(ngModel)]="otherInvestments" (input)="calculateTotal()" />
+    </div>
+    <div class="form-group">
+      <label for="totalInvestment">Total Investment:</label>
+      <input type="text" id="totalInvestment" name="totalInvestment" [value]="totalInvestment | number:'2.0-0'" readonly />
+    </div>
+  </form>
+</div>

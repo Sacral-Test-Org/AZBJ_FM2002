@@ -1,0 +1,66 @@
+/* Styles for the underwriter component */
+
+/* Style for the div displaying underwriter's user ID and name */
+.underwriter-info {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the input field for case input */
+.case-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for the button elements for "OK" and "Cancel" */
+.button {
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Specific style for the Cancel button */
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Specific style for the OK button */
+.ok-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Additional styles to ensure visual consistency */
+.button:hover {
+  opacity: 0.8;
+}
+
+/* Style for the underwriter selection component */
+.underwriter-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.underwriter-selection label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.underwriter-selection select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

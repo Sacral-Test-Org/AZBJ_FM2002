@@ -1,0 +1,35 @@
+/* Styles for Confirmation Message */
+.confirmation-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styles for Confirm Button */
+.confirm-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for Cancel Button */
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+}

@@ -1,0 +1,8 @@
+<div class="text-editor-container">
+  <textarea id="editableTextItem" rows="10" cols="50" 
+            (keydown)="onKeyDown($event)" 
+            (input)="onInput($event)" 
+            placeholder="Enter text here...">
+  </textarea>
+  <button (click)="invokeTextEditor()">Edit Text</button>
+</div>

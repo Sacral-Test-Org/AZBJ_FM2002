@@ -1,0 +1,62 @@
+/* Styles for the Search CP Component */
+
+/* Container for the search form */
+.search-cp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the search button */
+.search-cp-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-cp-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the input fields */
+.search-cp-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the results section */
+.search-cp-results {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Style for individual result items */
+.search-cp-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style for warning messages */
+.search-cp-warning {
+  color: #ff0000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Style for disabled fields */
+.search-cp-disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}

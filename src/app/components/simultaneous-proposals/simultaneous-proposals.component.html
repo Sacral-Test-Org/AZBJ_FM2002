@@ -1,0 +1,42 @@
+<div class="simultaneous-proposals">
+  <h2>Simultaneous Proposals</h2>
+  <div class="ip-dropdown">
+    <label for="ipNumbers">IP Numbers:</label>
+    <select id="ipNumbers" name="ipNumbers" readonly>
+      <option *ngFor="let ip of ipNumbers" [value]="ip">{{ ip }}</option>
+    </select>
+  </div>
+  <div class="proposals-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Policy Reference</th>
+          <th>Partner ID</th>
+          <th>Contract ID</th>
+          <th>Request Code</th>
+          <th>Request Description</th>
+          <th>Request Status</th>
+          <th>Called Date</th>
+          <th>Received Date</th>
+          <th>IP Number</th>
+          <th>Request Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proposal of proposals">
+          <td>{{ proposal.policyReference }}</td>
+          <td>{{ proposal.partnerId }}</td>
+          <td>{{ proposal.contractId }}</td>
+          <td>{{ proposal.requestCode }}</td>
+          <td>{{ proposal.requestDescription }}</td>
+          <td>{{ proposal.requestStatus }}</td>
+          <td>{{ proposal.calledDate }}</td>
+          <td>{{ proposal.receivedDate }}</td>
+          <td>{{ proposal.ipNumber }}</td>
+          <td>{{ proposal.requestType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="exitForm()">Exit</button>
+</div>

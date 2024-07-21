@@ -1,0 +1,33 @@
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styles for validation error messages for relationship input field */
+#pm-relation-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styles for validation error messages for company name input field */
+#company-name-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styles for validation error messages for sum assured input field */
+#sum-assured-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Styles for validation error messages for premium amount input field */
+#premium-amount-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

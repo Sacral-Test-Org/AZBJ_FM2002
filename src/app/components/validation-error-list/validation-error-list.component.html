@@ -1,0 +1,25 @@
+<div class="error-list-modal">
+  <h2>Validation Error List</h2>
+  <div class="error-list-header">
+    <span>Block Name</span>
+    <span>Item Name</span>
+    <span>Error Code</span>
+    <span>Error Message</span>
+    <span>Error Type</span>
+    <span>Error Section</span>
+  </div>
+  <div class="error-list-content" *ngIf="errorList.length > 0">
+    <div class="error-list-item" *ngFor="let error of errorList" (dblclick)="onDoubleClickErrorSection(error)">
+      <span>{{ error.blockName }}</span>
+      <span>{{ error.itemName }}</span>
+      <span (dblclick)="onErrorCodeDoubleClick(error.errorCode)">{{ error.errorCode }}</span>
+      <span>{{ error.errorMessage }}</span>
+      <span (dblclick)="onErrorTypeFieldDoubleClick(error.errorType)">{{ error.errorType }}</span>
+      <span>{{ error.errorSection }}</span>
+    </div>
+  </div>
+  <div *ngIf="errorList.length === 0">
+    <p>No validation errors found.</p>
+  </div>
+  <button (click)="closeErrorList()">Ok</button>
+</div>

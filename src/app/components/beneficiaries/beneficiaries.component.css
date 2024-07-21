@@ -1,0 +1,37 @@
+/* CSS for hiding and disabling fields when 'Nomination not opted' is checked */
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* CSS for the gender selection dropdown */
+.gender-dropdown {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* CSS for validation messages */
+.validation-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* CSS for beneficiary date of birth, appointee fields, and warning messages */
+.beneficiary-dob,
+.appointee-fields {
+  margin-top: 10px;
+}
+
+.warning-message {
+  color: orange;
+  font-size: 14px;
+  margin-top: 10px;
+}

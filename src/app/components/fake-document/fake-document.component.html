@@ -1,0 +1,51 @@
+<div class="fake-document-container">
+  <h2>Fake Document Management</h2>
+  <form>
+    <div class="form-group">
+      <label for="documentDescription">Document Description</label>
+      <input type="text" id="documentDescription" name="documentDescription" [(ngModel)]="fakeDocument.documentDescription" />
+    </div>
+    <div class="form-group">
+      <label for="documentType">Document Type</label>
+      <input type="text" id="documentType" name="documentType" [(ngModel)]="fakeDocument.documentType" />
+    </div>
+    <div class="form-group">
+      <label for="documentCode">Document Code</label>
+      <input type="text" id="documentCode" name="documentCode" [(ngModel)]="fakeDocument.documentCode" />
+    </div>
+    <div class="form-group">
+      <label for="isFakeDocument">Is Fake Document</label>
+      <input type="checkbox" id="isFakeDocument" name="isFakeDocument" [(ngModel)]="fakeDocument.isFakeDocument" (change)="handleFakeDocumentChange($event)" />
+    </div>
+    <div class="form-group">
+      <label for="documentProofType">Document Proof Type</label>
+      <input type="text" id="documentProofType" name="documentProofType" [(ngModel)]="fakeDocument.documentProofType" (dblclick)="handleDocumentProofTypeDblClick($event)" />
+    </div>
+    <div class="form-group">
+      <label for="comments">Comments</label>
+      <input type="text" id="comments" name="comments" [(ngModel)]="fakeDocument.comments" [readonly]="!isCommentsEditable" (dblclick)="onCommentsDoubleClick($event)" />
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input type="text" id="category" name="category" [(ngModel)]="fakeDocument.category" (dblclick)="onCategoryDoubleClick($event)" />
+    </div>
+    <div class="form-group">
+      <label for="documentChecked">Document Checked</label>
+      <input type="checkbox" id="documentChecked" name="documentChecked" [(ngModel)]="fakeDocument.documentChecked" />
+    </div>
+    <div class="form-group">
+      <label for="issuanceNotAllowed">Issuance Not Allowed</label>
+      <input type="checkbox" id="issuanceNotAllowed" name="issuanceNotAllowed" [(ngModel)]="fakeDocument.issuanceNotAllowed" />
+      <app-validation-error *ngIf="showIssuanceError" [errorMessage]="issuanceErrorMessage"></app-validation-error>
+    </div>
+    <div class="form-group">
+      <label for="fakeMark">Fake Mark</label>
+      <input type="text" id="fakeMark" name="fakeMark" [(ngModel)]="fakeDocument.fakeMark" />
+    </div>
+    <div class="button-group">
+      <button type="button" (click)="handleSave()">Save</button>
+      <button type="button" (click)="updateFakeDocument()">Update Fake Document</button>
+      <button type="button" (click)="navigateToMainScreen()">Exit</button>
+    </div>
+  </form>
+</div>

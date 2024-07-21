@@ -1,0 +1,79 @@
+<div class="financial-eligibility-form">
+  <h2>Financial Eligibility and Premium Payment Capacity</h2>
+  <form>
+    <!-- Financial Eligibility Primary -->
+    <div class="form-group">
+      <label for="financialEligibilityPrimary">Financial Eligibility (Primary)</label>
+      <input type="text" id="financialEligibilityPrimary" name="financialEligibilityPrimary" (blur)="validateFinancialEligibility($event)" />
+      <span class="error-message" *ngIf="financialEligibilityError">{{ financialEligibilityError }}</span>
+    </div>
+
+    <!-- Financial Eligibility Secondary -->
+    <div class="form-group">
+      <label for="financialEligibilitySecondary">Financial Eligibility (Secondary)</label>
+      <input type="text" id="financialEligibilitySecondary" name="financialEligibilitySecondary" (blur)="validateFinancialEligibility($event)" />
+      <span class="error-message" *ngIf="financialEligibilityError">{{ financialEligibilityError }}</span>
+    </div>
+
+    <!-- Premium Payment Capacity Primary -->
+    <div class="form-group">
+      <label for="premiumPaymentCapacityPrimary">Premium Payment Capacity (Primary)</label>
+      <input type="text" id="premiumPaymentCapacityPrimary" name="premiumPaymentCapacityPrimary" (blur)="validatePpcEligibility($event)" />
+      <span class="error-message" *ngIf="ppcEligibilityError">{{ ppcEligibilityError }}</span>
+    </div>
+
+    <!-- Premium Payment Capacity Secondary -->
+    <div class="form-group">
+      <label for="premiumPaymentCapacitySecondary">Premium Payment Capacity (Secondary)</label>
+      <input type="text" id="premiumPaymentCapacitySecondary" name="premiumPaymentCapacitySecondary" (blur)="validatePpcEligibility($event)" />
+      <span class="error-message" *ngIf="ppcEligibilityError">{{ ppcEligibilityError }}</span>
+    </div>
+
+    <!-- Annual Premium -->
+    <div class="form-group">
+      <label for="annualPremium">Annual Premium</label>
+      <input type="text" id="annualPremium" name="annualPremium" (blur)="validateAnnualPremium($event)" />
+      <span class="error-message" *ngIf="annualPremiumError">{{ annualPremiumError }}</span>
+    </div>
+
+    <!-- Total Premium Liability Annual -->
+    <div class="form-group">
+      <label for="totalPremiumLiabilityAnnual">Total Premium Liability (Annual)</label>
+      <input type="text" id="totalPremiumLiabilityAnnual" name="totalPremiumLiabilityAnnual" (blur)="validateTotalPremiumLiability($event)" />
+      <span class="error-message" *ngIf="totalPremiumLiabilityError">{{ totalPremiumLiabilityError }}</span>
+    </div>
+
+    <!-- Income Covers -->
+    <div class="form-group">
+      <label for="incomeCovers">Income Covers</label>
+      <input type="text" id="incomeCovers" name="incomeCovers" (blur)="validateIncomeCovers($event)" />
+      <span class="error-message" *ngIf="incomeCoversError">{{ incomeCoversError }}</span>
+    </div>
+
+    <!-- Declined Lives -->
+    <div class="form-group">
+      <label for="declinedLives">Declined Lives</label>
+      <input type="text" id="declinedLives" name="declinedLives" (blur)="validateDeclinedLives($event)" />
+      <span class="error-message" *ngIf="declinedLivesError">{{ declinedLivesError }}</span>
+    </div>
+
+    <!-- Rated Up -->
+    <div class="form-group">
+      <label for="ratedUp">Rated Up</label>
+      <input type="text" id="ratedUp" name="ratedUp" (blur)="validateRatedUpField($event)" />
+      <span class="error-message" *ngIf="ratedUpError">{{ ratedUpError }}</span>
+    </div>
+
+    <!-- Female Category Primary -->
+    <div class="form-group">
+      <label for="femaleCategoryPrimary">Female Category (Primary)</label>
+      <input type="text" id="femaleCategoryPrimary" name="femaleCategoryPrimary" />
+    </div>
+
+    <!-- Female Category Secondary -->
+    <div class="form-group">
+      <label for="femaleCategorySecondary">Female Category (Secondary)</label>
+      <input type="text" id="femaleCategorySecondary" name="femaleCategorySecondary" />
+    </div>
+  </form>
+</div>

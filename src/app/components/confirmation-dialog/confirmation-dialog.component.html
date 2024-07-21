@@ -1,0 +1,12 @@
+<div class="confirmation-dialog" mat-dialog-title="Confirmation">
+  <h1>Confirmation</h1>
+  <mat-radio-group [(ngModel)]="selectedOption">
+    <mat-radio-button *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div class="dialog-buttons">
+    <button mat-button (click)="onConfirm()">Ok</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+  </div>
+</div>

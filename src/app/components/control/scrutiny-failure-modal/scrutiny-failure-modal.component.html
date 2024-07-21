@@ -1,0 +1,63 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="scrutinyFailureModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scrutinyFailureModalLabel">Scrutiny Failure Process</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: gray;">
+        <form>
+          <div class="form-group">
+            <label for="reasonDropdown">Reason for Scrutiny Failure</label>
+            <select class="form-control" id="reasonDropdown" style="background-color: white; color: black;">
+              <option>Reason 1</option>
+              <option>Reason 2</option>
+              <option>Reason 3</option>
+              <option>Reason 4</option>
+              <option>Reason 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="documentDescription">Document Description</label>
+            <input type="text" class="form-control" id="documentDescription" maxlength="200">
+          </div>
+          <div class="form-group">
+            <label for="requiredDocuments">Required Documents Received</label>
+            <input type="text" class="form-control" id="requiredDocuments" value="Y">
+          </div>
+          <div class="form-group">
+            <label for="additionalComments">Additional Comments</label>
+            <textarea class="form-control" id="additionalComments" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="onExitButtonClick()">Exit</button>
+        <button type="button" class="btn btn-primary" [disabled]="!isSaveEnabled">Save</button>
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Error Message Modal -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="errorMessageModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorMessageModalLabel">Error</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{ errorMessage }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

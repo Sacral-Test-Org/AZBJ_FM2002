@@ -1,0 +1,64 @@
+/* Styles for Age Proof Validation Form */
+
+.age-proof-validation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.age-proof-validation-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.age-proof-validation-form .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.age-proof-validation-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.age-proof-validation-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.age-proof-validation-form .form-group .error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.age-proof-validation-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.age-proof-validation-form .form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.age-proof-validation-form .form-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.age-proof-validation-form .form-actions .cancel-button {
+  background-color: #dc3545;
+}

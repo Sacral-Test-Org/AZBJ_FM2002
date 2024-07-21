@@ -1,0 +1,9 @@
+<div *ngIf="validationFlag === 'Y' && !partnerType">
+  <p class="warning-message">Please enter a partner type.</p>
+</div>
+<div *ngIf="aadhaarNumber && aadhaarNumber.length !== 12">
+  <p class="error-message">Kindly Enter Valid Aadhar Card No!</p>
+</div>
+<div *ngIf="panCardRequired && !panCard">
+  <p class="error-message">Please select an appropriate option from the list of values (LOV) for PAN card.</p>
+</div>

@@ -1,0 +1,84 @@
+/* Purpose: CSS file for styling the "Nominee/Child Cover Details" window. */
+
+/* General styles for the form */
+.child-cover-details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles for form fields */
+.child-cover-details input[type="text"],
+.child-cover-details input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styles for the Child Age field */
+.child-cover-details .child-age {
+  background-color: gray;
+  color: black;
+  font-family: Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styles for buttons */
+.child-cover-details button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.child-cover-details button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the Exit button */
+.child-cover-details .exit-button {
+  background-color: #f44336;
+}
+
+.child-cover-details .exit-button:hover {
+  background-color: #e53935;
+}
+
+/* Styles for the layout */
+.child-cover-details .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.child-cover-details .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.child-cover-details .form-group input[type="checkbox"] {
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Positioning for specific fields */
+.child-cover-details .child-age {
+  position: absolute;
+  top: 56px;
+  left: 220px;
+}

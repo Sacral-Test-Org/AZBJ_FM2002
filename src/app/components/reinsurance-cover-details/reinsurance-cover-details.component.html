@@ -1,0 +1,54 @@
+<div class="reinsurance-cover-details">
+  <h2>Reinsurance Cover Details</h2>
+  <form>
+    <div class="form-group">
+      <label for="coverCode">Cover Code</label>
+      <input type="text" id="coverCode" name="coverCode" [(ngModel)]="coverDetails.coverCode" readonly />
+    </div>
+    <div class="form-group">
+      <label for="coverDescription">Cover Description</label>
+      <input type="text" id="coverDescription" name="coverDescription" [(ngModel)]="coverDetails.coverDescription" readonly />
+    </div>
+    <div class="form-group">
+      <label for="ocPercentage">OC Percentage</label>
+      <input type="number" id="ocPercentage" name="ocPercentage" [(ngModel)]="coverDetails.ocPercentage" />
+    </div>
+    <div class="form-group">
+      <label for="mlPercentage">ML Percentage</label>
+      <input type="number" id="mlPercentage" name="mlPercentage" [(ngModel)]="coverDetails.mlPercentage" />
+    </div>
+    <div class="form-group">
+      <label for="spPercentage">SP Percentage</label>
+      <input type="number" id="spPercentage" name="spPercentage" [(ngModel)]="coverDetails.spPercentage" />
+    </div>
+    <div class="form-group">
+      <label for="nriPercentage">NRI Percentage</label>
+      <input type="number" id="nriPercentage" name="nriPercentage" [(ngModel)]="coverDetails.nriPercentage" />
+    </div>
+    <div class="form-group">
+      <label for="sa">SA</label>
+      <input type="number" id="sa" name="sa" [(ngModel)]="coverDetails.sa" />
+    </div>
+    <button type="button" (click)="deleteCoverDetails()">Delete</button>
+  </form>
+</div>
+
+<!-- Validation Error Messages -->
+<app-validation-error *ngIf="validationError" [errorMessage]="validationError"></app-validation-error>
+
+<!-- Reinsurance Amount Calculation -->
+<div class="reinsurance-calculation">
+  <label for="reinsurancePercentage">Reinsurance Percentage</label>
+  <input type="number" id="reinsurancePercentage" name="reinsurancePercentage" [(ngModel)]="reinsurancePercentage" (input)="calculateReinsuranceAmount()" />
+  <label for="coverAmount">Cover Amount</label>
+  <input type="number" id="coverAmount" name="coverAmount" [(ngModel)]="coverAmount" (input)="calculateReinsuranceAmount()" />
+  <div>
+    <label>Reinsurance Amount</label>
+    <span>{{ reinsuranceAmount }}</span>
+  </div>
+</div>
+
+<!-- Double-click Event for Cover Code -->
+<div class="cover-code-lov">
+  <input type="text" id="coverCodeLov" name="coverCodeLov" (dblclick)="onCoverCodeDoubleClick()" />
+</div>

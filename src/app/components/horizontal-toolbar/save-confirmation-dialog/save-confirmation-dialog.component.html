@@ -1,0 +1,44 @@
+<div class="save-confirmation-dialog">
+  <h2>Confirm Save</h2>
+  <p>Are you sure you want to save the changes?</p>
+  <button (click)="confirmSave()">Yes</button>
+  <button (click)="closeDialog()">No</button>
+</div>
+
+<script>
+  import { Component } from '@angular/core';
+  import { MatDialogRef } from '@angular/material/dialog';
+  import { SaveService } from 'src/app/services/save.service';
+  import { NGXLogger } from 'ngx-logger';
+
+  @Component({
+    selector: 'app-save-confirmation-dialog',
+    templateUrl: './save-confirmation-dialog.component.html',
+    styleUrls: ['./save-confirmation-dialog.component.css']
+  })
+  export class SaveConfirmationDialogComponent {
+    constructor(
+      private dialogRef: MatDialogRef<SaveConfirmationDialogComponent>,
+      private saveService: SaveService,
+      private logger: NGXLogger
+    ) {}
+
+    confirmSave(): void {
+      this.logger.info('Save action confirmed by user.');
+      this.saveService.saveChanges().subscribe(
+        (response) => {
+          this.logger.info('Changes saved successfully.', response);
+          this.dialogRef.close(true);
+        },
+        (error) => {
+          this.logger.error('Error saving changes.', error);
+          this.dialogRef.close(false);
+        }
+      );
+    }
+
+    closeDialog(): void {
+      this.dialogRef.close(false);
+    }
+  }
+</script>

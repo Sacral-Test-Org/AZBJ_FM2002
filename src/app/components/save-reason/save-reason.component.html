@@ -1,0 +1,20 @@
+<div class="save-reason-container">
+  <h2>Enter Reason for Exiting</h2>
+  <form>
+    <div class="form-group">
+      <label for="exitReason">Reason:</label>
+      <textarea id="exitReason" name="exitReason" rows="10" maxlength="4000" [(ngModel)]="exitReason" class="form-control" placeholder="Enter your reason here..."></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="button" class="btn btn-primary" (click)="saveReason()">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="confirmExit()">Exit</button>
+    </div>
+  </form>
+
+  <!-- Confirmation Dialog -->
+  <div *ngIf="showConfirmDialog" class="confirm-dialog">
+    <p>Are you sure you want to exit without saving?</p>
+    <button type="button" class="btn btn-danger" (click)="exitWithoutSaving()">Yes</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelExit()">No</button>
+  </div>
+</div>

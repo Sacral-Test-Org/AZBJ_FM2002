@@ -1,0 +1,90 @@
+/* Styles for the list of second-time FRAR requirements */
+.requirements-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.requirements-list th, .requirements-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.requirements-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Styles for input fields */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styles for buttons */
+button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Processed Field Style */
+.processed-field {
+  border: 2px solid #4CAF50;
+}
+
+/* Password Field Style */
+#password {
+  background-color: #f9f9f9;
+  border: 2px solid #4CAF50;
+}
+
+/* Dropdown menu styling */
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Label 'Life' styling (bold and centered) */
+label[for="life"] {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+/* No horizontal or vertical scrollbars */
+select::-webkit-scrollbar {
+  display: none;
+}
+
+/* Validation message styles */
+.validation-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* Form field styles */
+.form-field {
+  margin-bottom: 15px;
+}

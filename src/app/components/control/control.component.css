@@ -1,0 +1,198 @@
+/* Supervisor ID Input Field Styles */
+.supervisor-id-input {
+  text-transform: uppercase;
+  max-length: 10;
+  border: 2px solid #4CAF50; /* Specific visual attribute */
+}
+
+/* SPW Flag Checkbox and SPW Percentage Field Styles */
+.spw-flag-checkbox {
+  margin-right: 10px;
+}
+
+.spw-percentage-field {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* SPW Freq Dropdown Field Styles */
+.spw-freq-dropdown {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Exit Button Styles */
+.exit-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* DRC Category Editor Styles */
+.drc-category-editor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Relationship to Child Dropdown and Modal Styles */
+.relationship-to-child-dropdown {
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+}
+
+.nominee-child-cover-details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Refer To Supervisor Checkbox and Supervisor List Styles */
+.refer-to-supervisor-checkbox {
+  margin-right: 10px;
+}
+
+.supervisor-list {
+  display: none;
+}
+
+.refer-to-supervisor-checkbox:checked ~ .supervisor-list {
+  display: block;
+}
+
+/* Add Senior Underwriter Button and View Styles */
+.add-senior-underwriter-button {
+  background-color: #5bc0de;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.add-senior-underwriter-view {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Remove Split Policy Checkbox and Remove Split Reason Field Styles */
+.remove-split-policy-checkbox {
+  margin-right: 10px;
+}
+
+.remove-split-reason-field {
+  background-color: gray;
+  color: black;
+  font-family: 'MS Sans Serif';
+  font-size: 8px;
+  font-weight: bold;
+  font-style: normal;
+  width: 153px;
+  height: 20px;
+  position: absolute;
+  top: 394px;
+  left: 711px;
+}
+
+/* Retention Flag Reason Field and Confirmation Message Styles */
+.retention-flag-reason-field {
+  display: none;
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.confirmation-message {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Reinsurance Flag Reason Field and Confirmation Alert Styles */
+.reinsurance-flag-reason-field {
+  display: none;
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.confirmation-alert {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* DOB Match List Item Styles */
+.dob-match-list-item {
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* OK Button Styles */
+.ok-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Name Match Dropdown Styles */
+.name-match-dropdown {
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}

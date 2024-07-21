@@ -1,0 +1,123 @@
+/* Occupation Status Field Styles */
+.occupation-label {
+  font-weight: bold;
+  text-align: right;
+}
+
+.occupation-dropdown {
+  width: 200px;
+  height: 30px;
+  background-color: #f0f0f0;
+  color: #000;
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  pointer-events: none; /* Make it read-only */
+}
+
+/* MICR Code Field Styles */
+.micr-code-field {
+  background-color: #e0f7fa;
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+}
+
+/* Checkbox for Health Conditions Styles */
+.health-conditions-checkbox {
+  margin: 10px 0;
+}
+
+/* Panel Doctor ID Field Styles */
+.panel-doctor-id-field {
+  position: absolute;
+  left: 343px;
+  top: 281px;
+  width: 118px;
+  height: 20px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'MS Sans Serif';
+  font-size: 8px;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* New Proposal Number Field Styles */
+.new-proposal-number-field {
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  color: #000;
+}
+
+/* Telephone2 Field Styles */
+.telephone2-field {
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  color: #000;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* Father Name Field Styles */
+.father-name-field {
+  position: absolute;
+  left: 85px;
+  top: 52px;
+  font-weight: bold;
+}
+
+/* PAN Issuance Date Not Available Checkbox Styles */
+.pan-issuance-date-checkbox {
+  margin: 10px 0;
+}
+
+.pan-issuance-date-field:disabled {
+  background-color: #f0f0f0;
+}
+
+/* Surrogate Income Proof List Styles */
+.surrogate-income-proof-list {
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  color: #000;
+}
+
+.surrogate-income-proof-detail {
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  color: #000;
+}
+
+/* IP Income Proof Field Styles */
+.ip-income-proof-field {
+  background-color: #fff;
+  color: #000;
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+}
+
+/* Mother's Title Dropdown Styles */
+.mothers-title-dropdown {
+  position: absolute;
+  left: 17px;
+  top: 88px;
+  width: 53px;
+  height: 18px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'MS Sans Serif';
+  font-size: 8px;
+  font-weight: normal;
+}
+
+/* Account Type Field Styles */
+.account-type-field {
+  text-transform: uppercase;
+  max-length: 50;
+  font-family: 'MS Sans Serif';
+  font-size: 14px;
+  color: #000;
+}

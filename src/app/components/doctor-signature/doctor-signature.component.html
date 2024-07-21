@@ -1,0 +1,40 @@
+<div class="doctor-signature-container">
+  <h2>Manage Doctor Signatures</h2>
+  <form (ngSubmit)="verifyDoctorSignature()">
+    <label for="doctorCode">Doctor Code:</label>
+    <input type="text" id="doctorCode" name="doctorCode" [(ngModel)]="doctorCode" required>
+    <button type="submit">Verify</button>
+  </form>
+  <div *ngIf="message" class="message">{{ message }}</div>
+  <div class="signature-area" *ngIf="signature">
+    <h3>Signature</h3>
+    <div class="signature-image-container">
+      <img [src]="signature" alt="Doctor's Signature">
+    </div>
+  </div>
+  <button (click)="addSignature()">Signature</button>
+  <button (click)="navigateBack()" style="background-color: gray; color: black;">Back</button>
+  <button (click)="resetForm()">Reset</button>
+</div>
+
+<style>
+  .doctor-signature-container {
+    padding: 20px;
+  }
+  .signature-area {
+    margin-top: 20px;
+  }
+  .signature-image-container {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 400px;
+  }
+  .signature-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  .message {
+    margin-top: 10px;
+    color: red;
+  }
+</style>
